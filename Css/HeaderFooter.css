@@ -59,13 +59,12 @@ a{
 
 .nav-header-menu .nav-header-mainMenu-container li{
     margin-right: 25px;
-
 }
 
 .nav-header-menu .nav-header-mainMenu-container a{
     text-decoration: none;
     color: white;
-    font-size: 16px;
+    font-size: 20px;
     opacity: 1;
     letter-spacing: 1px;
 }
