@@ -1,0 +1,491 @@
+
+/*-----------------cart-----------------*/
+.cart{
+    z-index: 3;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    bottom: 0%;
+    width: 100%;
+    height: 100%;
+
+}
+
+.cart .cart-modal{
+    display: flex;
+    justify-content: flex-end;
+    height: 100%;
+}
+
+.cart .cart-modal .cart-modal-content{
+    width: 500px;
+    background-color: #fff;
+    
+}
+
+.cart .cart-modal .cart-modal-content-top{
+    display: flex;
+    width: 500px;
+    justify-content: space-between;
+}
+
+.cart .cart-modal .cart-modal-content-top .cart-modal-content-top-title{
+    font-size: 24px;
+    font-weight: bold;
+    margin: 20px;
+}
+
+.cart .cart-modal .cart-modal-content-top .cart-modal-content-top-xmark{
+    font-size: 24px;
+    font-weight: bold;
+    margin: 20px;
+}
+
+.cart .cart-modal .cart-modal-content-main-information{
+    width: 350px;
+    margin: 0 5px;
+}
+
+.cart .cart-modal .cart-modal-content-main{
+    display: flex;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: 5px;
+    
+    margin: 0 auto;
+    width: 450px;
+}
+
+.cart .cart-modal  .cart-modal-content-main-img{
+    width: 100px;
+}
+
+.cart .cart-modal  .cart-modal-content-main-img img{
+    width: 100px;
+    display: block;
+}
+
+.cart .cart-modal .cart-modal-content-main-information ul{
+    display: flex;
+    padding: 5px;
+}
+
+.cart .cart-modal .cart-modal-content-main-information ul li{
+    margin: 0 10px;
+    font-size: 18px;
+}
+
+.cart .cart-modal .cart-modal-content-main-information ul li i{
+    font-size: 12px;
+    border: 0.5px solid #9E472D;
+    border-radius: 50%;
+    padding: 0.5px;
+
+}
+
+.cart .cart-modal .cart-modal-content-main-cancel{
+    margin-top: 10px;
+}
+
+.cart .cart-modal .cart-modal-content-main-information > span{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: block;
+        padding: 5px;
+}
+
+
+.cart .cart-modal .cart-modal-content-total{
+    display: flex;
+    width: 450px;
+    justify-content: space-between;
+
+    margin: 30px auto;
+}
+
+.cart .cart-modal .cart-modal-content-bill{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.cart .cart-modal .cart-modal-content-bill a{
+    display: block;
+    text-align: center;
+    line-height: 1.6;
+    text-decoration: none;
+    padding: 5px 150px;
+    background-color: #9E472D;
+    color: white;
+    border: 0px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/*-----------------brandstory breadcrumb-----------------*/
+main .main-productIntroduce-breadcrumb{
+    margin: 0 auto;
+    width: 100%;
+    background-color: #D9D9D9;
+    height: auto;
+}
+
+main .main-productIntroduce-breadcrumb .main-productIntroduce-breadcrumb-link{
+    width: 1440px;
+    margin: 0 auto;
+    padding-left: 60px;
+}
+
+
+main .main-productIntroduce-breadcrumb .main-productIntroduce-breadcrumb-link a{
+    text-decoration: none;
+    line-height: 2;
+    font-size: 14px;
+    font-weight: bold;
+    color: black;
+}
+
+
+main .productIntroduce-template-productsmallPic{
+    display: flex;
+    flex-direction: column;
+    height: 480px;
+    margin-right: 20px;
+}
+
+main .productIntroduce-template-productsmallPic li {
+    border: 1px solid #9E472D;
+    margin-bottom: 48px;
+}
+
+main .productIntroduce-template-productsmallPic li:nth-child(5) {
+    margin-bottom: 0;
+}
+
+main .productIntroduce-template-productsmallPic li img{
+    width: 80px;
+    display: block;
+}
+
+
+
+
+main .productIntroduce-template-productPic{
+    border: 1px solid #9E472D;
+    margin-right: 36px;
+    height: 600px;
+}
+
+main .productIntroduce-template-productPic img{
+    display: block;
+    padding: 0px 5px;
+}
+
+main .productIntroduce{
+    margin-bottom: 60px;
+}
+/*-----------------.productIntroduce-template-----------------*/
+
+
+
+main .productIntroduce-template{
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+main .productIntroduce-template-productMain{
+    width: 550px;
+}
+main .productIntroduce-template-productMain .productIntroduce-template-productMain-contain{
+    text-align: left;
+}
+
+main .productIntroduce-template-productMain .productIntroduce-template-productMain-contain h1{
+    font-size: 18px;
+    letter-spacing: 3px;
+    line-height: 2;
+}
+
+main .productIntroduce-template-productMain .productIntroduce-template-productMain-contain h2{
+    font-size: 16px;
+    letter-spacing: 3px;
+    line-height: 2;
+}
+
+main .productIntroduce-template-productMain .productIntroduce-template-productMain-contain h3{
+    font-size: 16px;
+    letter-spacing: 3px;
+    line-height: 2;
+}
+
+/*-----------------productIntroduce-template-productMain-quantity-----------------*/
+main .productIntroduce-template-productMain .productIntroduce-template-productMain-quantity{
+    margin: 30px 0;
+}
+
+main .productIntroduce-template-productMain .productIntroduce-template-productMain-quantity ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .productIntroduce-template-productMain .productIntroduce-template-productMain-quantity ul li:nth-child(1){
+    border: 1.5px solid ;
+    border-radius: 50%;
+    padding: 3px;
+}
+
+main .productIntroduce-template-productMain .productIntroduce-template-productMain-quantity ul li:nth-child(3){
+    border: 1.5px solid ;
+    border-radius: 50%;
+    padding: 3px;
+}
+
+main .productIntroduce-template-productMain .productIntroduce-template-productMain-quantity ul li:nth-child(2){
+    margin: 0 30px;
+}
+
+main .productIntroduce-template-productMain .productIntroduce-template-productMain-quantity ul li a{
+    color: #9E472D;
+}
+
+/*-----------------productIntroduce-template-productMain-cart-----------------*/
+
+main .productIntroduce-template-productMain .productIntroduce-template-productMain-cart{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #9E472D;
+    margin: 20px 0;
+}
+
+main .productIntroduce-template-productMain .productIntroduce-template-productMain-cart ul{
+    width: 100%;
+}
+main .productIntroduce-template-productMain .productIntroduce-template-productMain-cart a{
+    display: block;
+    color: white;
+    text-decoration: none;
+    line-height: 2;
+    text-align: center;
+    width: 100%;
+}
+main .productIntroduce-template-productMain .productIntroduce-template-productMain-cart a i{
+    padding-right: 20px;
+}
+
+/*-----------------productIntroduce-template-productMain-followList-----------------*/
+
+main .productIntroduce-template-productMain .productIntroduce-template-productMain-followList{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 20px 0;
+
+}
+
+main .productIntroduce-template-productMain .productIntroduce-template-productMain-followList a{
+    color: #9E472D;
+    text-decoration: none;
+    line-height: 1.6;
+    text-align: center;
+}
+
+main .productIntroduce-template-productMain .productIntroduce-template-productMain-followList a i{
+    padding-right: 10px;
+}
+
+/*-----------------productIntroduce-template-productMain-introduce-----------------*/
+
+main .productIntroduce-template-productMain .productIntroduce-template-productMain-introduce{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 20px 0;
+    background-color: #9E472D;
+}
+
+main .productIntroduce-template-productMain .productIntroduce-template-productMain-introduce a{
+    color: white;
+    text-decoration: none;
+    line-height: 2;
+    text-align: center;
+    width: 550px;
+}
+
+main .productIntroduce-template-productMain .productIntroduce-template-productMain-introduce a i{
+    padding-left: 20px;
+}
+
+main .productIntroduce-template-productMain  .productIntroduce-template-productMain-introduce-detail{
+    line-height: 1.6;
+}
+
+main .productIntroduce-template-productMain  .productIntroduce-template-productMain-introduce-detail p{
+   font-size: 16px;
+}
+
+/*-----------------productIntroduce-template-productMain-remark-----------------*/
+
+
+main .productIntroduce-template-productMain .productIntroduce-template-productMain-remark{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #9E472D;
+    margin: 20px 0;
+
+}
+
+main .productIntroduce-template-productMain .productIntroduce-template-productMain-remark a{
+    color: white;
+    text-decoration: none;
+    line-height: 2;
+    text-align: center;
+}
+
+main .productIntroduce-template-productMain .productIntroduce-template-productMain-remark a i{
+    padding-left: 20px;
+}
+
+main .productIntroduce-template-productMain  .productIntroduce-template-productMain-remark-detail{
+    line-height: 1.6;
+}
+
+main .productIntroduce-template-productMain  .productIntroduce-template-productMain-remark-detail h3{
+    font-size: 16px;
+    font-weight: bold;
+ }
+
+main .productIntroduce-template-productMain  .productIntroduce-template-productMain-remark-detail p{
+   font-size: 16px;
+}
+
+
+/*-----------------best seller-----------------*/
+main .banner-bestSeller{
+    width: 1440px;
+    margin: 100px auto;
+}
+
+main .banner-bestSeller h2{
+    text-align: center;
+    font-size: 32px;
+    color: black;
+    margin: 20px auto 50px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+main .banner-bestSeller-select{
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 48px;
+}
+
+main .banner-product-bestSeller{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding: 4px;
+    flex: 4;
+    overflow: hidden;
+}
+
+
+main .banner-product-bestSeller li{
+    border: 0.5px solid rgba(0, 0, 0, 0.2);
+    width: 250px;
+    padding: 5px;
+    margin: 20px 43px;
+}
+main .banner-product-bestSeller-one:hover{
+    box-shadow: 1px 8px 12px rgba(31, 31, 31, 0.8);
+}
+
+
+main .banner-product-bestSeller a{
+    text-decoration: none;
+}
+
+main .banner-product-bestSeller img{
+    width: 100%;
+    display: block;
+    opacity: 1;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+main .banner-product-bestSeller-one{
+    position: relative;
+}
+main .banner-product-bestSeller-one:hover img{
+    opacity: 0.4;
+    background-color: black;
+}
+
+main .banner-product-bestSeller-one:hover .banner-product-bestSeller-middle{
+    opacity: 1;
+}
+
+main .banner-product-bestSeller-middle{
+    margin-bottom: 10px;
+}
+
+main .banner-product-bestSeller-middle a{
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    width: 200px;
+    line-height: 4;
+    display: block;
+}
+
+main .banner-product-bestSeller-middle a i{
+    padding-right: 30px; 
+}
+
+main .banner-product-bestSeller-middle{
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+main .banner-product-bestSeller p{
+
+    padding: 0px 15px 15px;
+    font-size: 16px;
+    line-height: 26px;
+    color: black;
+    text-align: center;
+}
+
+main .banner-product-bestSeller br + p{
+    color: #9E472D;
+}
+
+main .banner-bestSeller .banner-bestSeller-ReadMore{
+    display: block;
+    margin: 70px auto 0;
+    text-align: center;
+    text-decoration: none;
+    background-color: #9E472D;
+    line-height: 3;
+    width: 490px;
+    color: white;
+    letter-spacing: 1.5px;
+    font-weight: bold;
+}
+
+main .banner-bestSeller .banner-bestSeller-ReadMore:hover{
+    -webkit-box-shadow: 0 0 15px black;
+	-moz-box-shadow: 0 0 15px black;
+	box-shadow: 0 0 15px black;
+}

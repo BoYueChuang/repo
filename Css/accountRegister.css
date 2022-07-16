@@ -1,0 +1,146 @@
+main {
+    display: flex;  
+    justify-content: center;
+}
+
+a{
+    text-decoration: none;
+}
+
+main .account{
+    width: 800px;
+    border: 0.5px solid #d9d9d9;
+    border-radius: 20px;
+    margin: 100px 0;
+}
+
+main .account .account-link ul{
+    display: flex;
+}
+main .account .account-link ul li{
+    text-align: center;
+
+}
+
+main .account .account-link ul li:first-child{
+    background-color: #fff;
+    width: 400px;
+    border-radius: 20px 0 0 0;
+    
+}
+
+main .account .account-link ul li:last-child{
+    background-color: #d9d9d977;
+    width: 400px;
+    border-radius: 0 20px 0 0;
+    
+}
+
+
+main .account .account-link ul li a{
+    text-decoration: none;
+    line-height: 4;
+    font-size: 20px;
+    color: black;
+    letter-spacing: 2px;
+    font-weight: bold;
+    width: 400px;
+    display: block;
+}
+main .account .account-content-login{
+    margin: 30px;
+}
+main .account .account-content-login ul li{
+    text-align: center;
+    width: 400px;
+    margin: 0 auto;
+}
+
+main .account .account-content-login ul li:first-child{
+    background-color: #00c300;
+    margin-bottom: 25px;
+}
+
+main .account .account-content-login ul li:first-child:hover,main .account .account-content-login ul li:first-child:focus {
+	box-shadow: 0 0 0 2px white, 0 0 0 3px #00c300;
+}
+
+main .account .account-content-login ul li:last-child{
+    background-color: #3B5998;
+}
+
+main .account .account-content-login ul li:last-child:hover,main .account .account-content-login ul li:last-child:focus {
+	box-shadow: 0 0 0 2px white, 0 0 0 3px #3B5998;
+}
+
+main .account .account-content-login ul li a{
+    text-decoration: none;
+    line-height: 2;
+    color: white;
+    letter-spacing: 2px;
+    width: 400px;
+    display: block;
+}
+
+main .account .account-content-login ul li i{
+    margin-right: 5px;
+    font-size: 16px;
+}
+
+main .account .account-content-form form{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 405px;
+}
+
+main .account .account-content-form form .join{
+    width: 408px;
+    margin: 5px auto;
+    color: white;
+    background-color: #9E472D;
+    font-size: 16px;
+    line-height: 2.5;
+    display: block;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+
+main .account .account-content-form form .join:hover,main .account .account-content-form form .join:focus {
+	box-shadow: 0 0 0 2px white, 0 0 0 3px #9E472D;
+}
+
+main .account .account-content-form form h1{
+    font-size: 20px;
+    margin: 15px 0;
+}
+
+
+
+main .account .account-content-form form input{
+    width: 400px;
+    margin: 15px auto;
+    line-height: 2;
+}
+
+main .account .account-content-form form h2{
+    font-size: 20px;
+    font-weight: bold;
+    display: block;
+    margin: 20px 0;
+    text-align: left;
+}
+main .account .account-content-form .checkMessage {
+    text-align: left;
+}
+main .account .account-content-form .checkMessage input{
+    width: 20px;
+}
+
+
+
+main .account .account-content-form form input:hover{
+    border: 1px solid #9E472D;
+}
+

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../Css/HeaderFooter.css">
+    <link rel="stylesheet" href="../Css/cart.css">
+    <title>search</title>
+</head>
+<body>
+    <div class="cart" id="showCart">
+        <div class="cart-modal" >
+            <div class="cart-modal-content">
+
+                <div class="cart-modal-content-top">
+                    <div class="cart-modal-content-top-title">購物車</div>
+
+                    <div class="cart-modal-content-top-xmark"><a><i class="fa-solid fa-xmark"></i></a></div>
+                </div>
+                
+
+                <div class="cart-modal-content-main">
+                    <div class="cart-modal-content-main-img">
+                        <img src="../ALLITEMS/TENT/frontpageProductOne-one.jpeg" alt="">
+                    </div>
+                    <div class="cart-modal-content-main-information">
+                        <span>TOUGH SCREEN 2-ROOM HOUSE MDX / CM-38139M000</span>
+                        <ul>
+                            <li><span>NT$ 22000 &nbsp x</span></li>
+                            <li><a id="subtract" style="vertical-align: middle;"><i class="fa-solid fa-minus"></i></a></li>
+                            <li style="width: 10%;"><input type="text" name="" id="text" value="1" style="width: 100%; ; border:0px ; outline: 0px; vertical-align: middle;"></li>
+                            <li><a id="plus"><i class="fa-solid fa-plus"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="cart-modal-content-main-cancel">
+                        <a><i class="fa-solid fa-xmark"></i></a>
+                    </div>
+                </div>
+
+                
+
+                <div class="cart-modal-content-total">
+                    <div class="cart-modal-content-total-title">
+                        <span>合計:</span>
+                    </div>
+                    <div class="cart-modal-content-total-money">
+                        <input type="text" name="" id="money" value="22000" style="width: 100% ; border:0px; ; outline: 0px;" disabled>
+                    </div>
+                </div>
+
+
+                <div class="cart-modal-content-bill">
+                    <button onclick="location.href='../Html/cartSystem.html'">訂單結帳</button>
+                </div>
+
+            </div>  
+        </div>
+    </div>
+    <script>
+        window.onload = function(){
+				var plus = document.getElementById("plus");
+				var i = document.getElementById("text").value;
+				var subtract = document.getElementById("subtract");
+				var money = document.getElementById("money").value;
+				plus.onclick = function(){
+					i++;
+					document.getElementById("text").value = i;
+					document.getElementById("money").value = i*money;
+				}
+				subtract.onclick = function(){
+					if (i>0) {
+						i--;
+						document.getElementById("text").value = i;
+						document.getElementById("money").value = i*money;
+					} else{
+						i=0;
+						document.getElementById("text").value = i;
+						document.getElementById("money").value = i*money;
+					}
+				}				
+		}		
+    </script>
+</body>
+</html>

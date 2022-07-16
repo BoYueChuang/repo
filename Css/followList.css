@@ -1,0 +1,159 @@
+main {
+    display: flex;  
+    justify-content: center;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+}
+label{
+    font-size: 18px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+a{
+    text-decoration: none;
+}
+input{
+    padding: 10px 0 ;
+}
+select{
+    padding: 10px 0 ;
+}
+main .account{
+    width: 100%;
+    border-radius: 20px;
+    margin: 60px 0;
+    border: 0.5px solid #d9d9d9;
+}
+
+main .account .account-link ul{
+    display: flex;
+    justify-content: center;
+}
+main .account .account-link ul li{
+    text-align: center;
+
+}
+
+main .account .account-link ul li:first-child{
+    background-color: #d9d9d977;
+    width: 400px;
+    border-radius: 20px 0 0 0;
+    
+}
+
+main .account .account-link ul .asd{
+    background-color: #d9d9d977;
+    width: 400px;
+
+}
+
+main .account .account-link ul li:last-child{
+    background-color: #fff;
+    width: 400px;
+    border-radius: 0 20px 0 0;
+    
+}
+
+
+main .account .account-link ul li a{
+    text-decoration: none;
+    line-height: 4;
+    font-size: 20px;
+    color: black;
+    letter-spacing: 2px;
+    font-weight: bold;
+    width: 400px;
+    display: block;
+}
+
+
+
+main .account .account-content-form form h1{
+    font-size: 20px;
+    margin: 15px 0;
+}
+
+
+
+main .account .account-content-form form input{
+    width: 400px;
+    margin: 15px auto;
+    line-height: 2;
+}
+
+
+main .account .account-content-form .checkMessage {
+    text-align: left;
+}
+
+
+
+
+main .account .account-content-form form input:hover{
+    border: 1px solid #9E472D;
+}
+
+table{
+    margin: 0 auto;
+    width: 100%;
+}
+td{
+    text-align: left;
+    font-size: 18px;
+    letter-spacing: 2px;
+    line-height: 1.6;
+    vertical-align: middle
+}
+
+thead{
+    border-bottom: 1px solid #d9d9d9;
+    font-weight: bold;
+}
+
+thead td{
+    padding-bottom: 5px;
+}
+.account-content{
+    border: 1px solid #d9d9d9;
+    max-width: 1000px;
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+    padding: 15px;
+}
+
+td .goCart{
+    padding: 2px 5px;
+    color: white;
+    background-color: #9E472D;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.goCart:hover, .goCart:focus {
+	box-shadow: 0 0 0 2px white, 0 0 0 3px #9E472D;
+}
+
+.account-content img{
+    width: 100px;
+}
+
+.fa-angle-down{
+    padding-left: 2px;
+}
+
+.status{
+
+    color: black;
+}
+
+.information td{
+    font-size: 14px;
+}
+
+.main{
+    width: 50%;
+}

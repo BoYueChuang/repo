@@ -1,0 +1,300 @@
+/*-----------------main-----------------*/
+.main {
+    /* margin: 0 auto; */
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+}
+
+main .banner{
+    margin: 0 auto;
+    height: auto;
+}
+
+main .banner .banner-img{
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    background-size: cover;
+}
+
+main .banner .banner-text{
+    /* border: 1px solid red; */
+    margin-top: -425px;
+    margin-left: 125px;
+}
+
+main .banner .banner-text h1{
+    font-size: 55px;
+    color: white;
+    letter-spacing: 1.5px;
+    margin-top: 5px;
+    line-height: 1;
+}
+
+main .banner .banner-text h2{
+    font-size: 30px;
+    color: white;
+    letter-spacing: 1.5px;
+    line-height: 1.6;
+}
+
+.imageGallerySlider{
+    display: flex;
+    justify-content: center;
+    margin: 320px auto 0px;
+    max-width: 1000px;
+    
+}
+
+.swiper-wrapper{
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+.swiper-wrapper img{
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.swiper-button-next,.swiper-button-prev{
+    background-size:20px 20px;
+}
+
+main .banner-product{
+    display: flex;
+    /* justify-content: center; */
+    margin: 0 auto;
+    margin-top: 75px;
+    width: 1000px;
+}
+
+main .banner-product img{
+    display: block;
+    width: 490px;
+}
+
+main .banner-product .banner-product-apparel{
+    display: block;
+    margin-right: 20px;
+    
+}
+
+main .banner-product h1{
+    width: 100%;
+    line-height: 40px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    font-size: 32px;
+    margin-top: -152px;
+    letter-spacing: 3px;
+    /* vertical-align: middle; */
+    letter-spacing: 5px;
+    display: block;
+}
+
+main .banner-product .banner-product-camping{
+    display: block;
+}
+
+/*-----------------best seller-----------------*/
+main .banner-bestSeller{
+    margin: 0 auto;
+    margin-top: 175px;
+    width: 1000px;
+}
+
+main .banner-bestSeller h2{
+    text-align: center;
+    font-size: 32px;
+    color: black;
+    margin: 20px auto 50px;
+    font-weight: bold;
+    letter-spacing: 2px;
+
+}
+
+main .banner-product-bestSeller{
+    display: flex;
+    text-align: center;
+}
+
+
+main .banner-product-bestSeller li{
+    border: 0.5px solid rgba(0, 0, 0, 0.2);
+    width: 300px;
+    padding: 5px;
+}
+
+
+main .banner-product-bestSeller a{
+    text-decoration: none;
+}
+
+main .banner-product-bestSeller li:nth-child(2){
+    margin: 0 50px;
+}
+
+main .banner-product-bestSeller img{
+    width: 100%;
+    display: block;
+    opacity: 1;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+main .banner-product-bestSeller-one{
+    position: relative;
+}
+
+main .banner-product-bestSeller-one:hover{
+    box-shadow: 1px 8px 12px rgba(31, 31, 31, 0.8);
+}
+
+main .banner-product-bestSeller-one:hover img{
+    opacity: 0.4;
+    background-color: black;
+}
+
+main .banner-product-bestSeller-one:hover .banner-product-bestSeller-middle{
+    opacity: 1;
+}
+
+main .banner-product-bestSeller-middle{
+    margin-bottom: 10px;
+}
+
+main .banner-product-bestSeller-middle a{
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    width: 200px;
+    line-height: 4;
+    display: block;
+}
+
+main .banner-product-bestSeller-middle a i{
+    padding-right: 30px; 
+}
+
+main .banner-product-bestSeller-middle{
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+main .banner-product-bestSeller p{
+    padding: 0px 15px 15px;
+    font-size: 16px;
+    line-height: 26px;
+    color: black;
+}
+
+main .banner-product-bestSeller br + p{
+    color: #9E472D;
+}
+
+main .banner-bestSeller .banner-bestSeller-ReadMore{
+    display: block;
+    margin: 70px auto 0;
+    text-align: center;
+    text-decoration: none;
+    background-color: #9E472D;
+    line-height: 3;
+    width: 490px;
+    color: white;
+    letter-spacing: 1.5px;
+    font-weight: bold;
+}
+
+main .banner-bestSeller .banner-bestSeller-ReadMore:hover{
+    -webkit-box-shadow: 0 0 10px black;
+	-moz-box-shadow: 0 0 10px black;
+	box-shadow: 0 0 10px black;
+}
+
+
+/*-----------------brandStory-----------------*/
+main .banner-brandStory{
+    display: flex;
+    width: 1200px;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 387px;
+}
+
+main .banner-brandStory img{
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+main .banner-brandStory-text{
+    padding-left: 70px;
+    margin-top: -434px;
+}
+
+main .banner-brandStory h1{
+    display: block;
+    font-size: 50px;
+    color: white;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+main .banner-brandStory  .banner-brandStory-text h2{
+    display: block;
+    font-size: 30px;
+    color: white;
+    letter-spacing: 2px;
+    padding-bottom: 20px;
+}
+
+
+
+
+@media screen and (max-width: 1440px){
+    main .banner .banner-img img{
+        display: block;
+        width: 100%;
+        background-size: cover;
+        margin: 0 auto;
+    }
+
+    main .banner .banner-text{
+        /* border: 1px solid red; */
+        margin-top: -350px;
+        margin-left: 125px;
+    }
+
+    .imageGallerySlider{
+        display: flex;
+        justify-content: center;
+        margin: 270px auto 0px;
+        max-width: 1000px;
+        
+    }
+}
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,154 @@
+main{
+    width: 100%;
+}
+main .goodNews{
+    margin: 0 auto;
+    width: 100%;
+}
+
+
+/*-----------------brandstory breadcrumb-----------------*/
+main .main-goodNews-breadcrumb{
+    margin: 0 auto;
+    width: 100%;
+    background-color: #D9D9D9;
+    height: auto;
+}
+
+main .main-goodNews-breadcrumb .main-goodNews-breadcrumb-link{
+    width: 1440px;
+    margin: 0 auto;
+    padding-left: 60px;
+}
+
+
+main .main-goodNews-breadcrumb .main-goodNews-breadcrumb-link a{
+    text-decoration: none;
+    line-height: 2;
+    font-size: 14px;
+    font-weight: bold;
+    color: black;
+}
+
+/*-----------------goodNews-one-----------------*/
+main .goodNews .goodNews-one{
+    width: 1440px;
+    height: 1000px;
+    background-image: url("../pic/goodnewOne.jpg");
+    text-align: center;
+    background-size: cover;
+    margin: 0 auto;
+}
+
+main .goodNews-one-text{
+    margin-left: 400px;
+    padding-top: 200px;
+}
+main .goodNews .goodNews-one h1{
+    font-size: 80px;
+    color: white;
+    padding-bottom: 20px;
+
+}
+main .goodNews .goodNews-one h2{
+    font-size: 40px;
+    color: white;
+    padding-bottom: 50px;
+}
+
+main .goodNews .goodNews-one a{
+    text-decoration: none;
+    color: white;
+    border: 2px solid white;
+    padding: 10px 60px;
+}
+
+main .goodNews .goodNews-one a:hover{
+    background-color: #9E472D;
+    border: 2px solid #9E472D;
+    font-weight: bolder;
+}
+
+
+/*-----------------goodNews-two-----------------*/
+
+main .goodNews .goodNews-two{
+    width: 1440px;
+    height: 1000px;
+    background-image: url("../pic/goodnewTwo.png");
+    text-align: center;
+    background-size: cover;
+    margin: 0 auto;
+    
+}
+
+main .goodNews-two-text{
+    margin-right: 700px;
+    padding-top: 340px;
+    text-align: center;
+}
+
+main .goodNews .goodNews-two h1{
+    font-size: 80px;
+    color: white;
+    padding-bottom: 20px;
+
+}
+main .goodNews .goodNews-two h2{
+    font-size: 40px;
+    color: white;
+    padding-bottom: 50px;
+}
+
+main .goodNews .goodNews-two a{
+    text-decoration: none;
+    color: white;
+    border: 2px solid white;
+    padding: 10px 60px;
+}
+
+main .goodNews .goodNews-two a:hover{
+    background-color: #9E472D;
+    border: 2px solid #9E472D;
+    font-weight: bolder;
+}
+
+/*-----------------goodNews-three-----------------*/
+main .goodNews .goodNews-three{
+    width: 1440px;
+    height: 1000px;
+    background-image: url("../pic/goodnewThree.jpg");
+    text-align: center;
+    background-size: cover;
+    margin: 0 auto;
+}
+
+main .goodNews-three-text{
+    margin-left: 400px;
+    padding-top: 270px;
+}
+
+main .goodNews .goodNews-three h1{
+    font-size: 80px;
+    color: white;
+    padding-bottom: 20px;
+
+}
+main .goodNews .goodNews-three h2{
+    font-size: 40px;
+    color: white;
+    padding-bottom: 50px;
+}
+
+main .goodNews .goodNews-three a{
+    text-decoration: none;
+    color: white;
+    border: 2px solid white;
+    padding: 10px 60px;
+}
+
+main .goodNews .goodNews-three a:hover{
+    background-color: #9E472D;
+    border: 2px solid #9E472D;
+    font-weight: bolder;
+}

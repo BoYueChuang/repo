@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../Css/HeaderFooter.css">
+    <link rel="stylesheet" href="../Css/goodNews.css">
+    <title>Good News</title>
+</head>
+<body>
+
+    
+     <!-----------------------header----------------------->
+     <nav class="nav">
+        <div class="nav-wrapper">
+                <div class="nav-header-logo">
+                    <a href="./frontPage.html"><img src="../LOGOVersion/1x/white.png" alt=""></a>
+                </div>
+
+                <div class="nav-header-menu">
+                    <ul class="nav-header-mainMenu-container">
+                        <li><a href="../Html/productCategories.html">All Items</a></li>
+                        <li><a href="../Html/brandStory.html">Brand Story</a></li>
+                        <li><a href="../Html/goodNews.html">Good News</a></li>
+                        <li><a class="btn">Contact Us</a></li>
+                    </ul>
+                    <ul class="nav-header-actionMenu-container">
+                        <li><a href="../Html/account.html"><i class="fa-regular fa-circle-user"></i></a></li>
+                        <li><a id="cart"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                        <li><a id="btn3"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+                    </ul>
+                </div>
+        </div>
+    </nav>
+
+    <!-----------------------contactUS----------------------->
+    <div class="contactUS" id="contactUS" style="display: none;">
+        <div class="contactUS-modal" >
+            <div class="contactUS-modal-content">
+                <form>
+                    <a id="btn2"><i class="fa-solid fa-xmark"></i></a> 
+                    <h1>聯絡我們</h1>
+                    <h2>謝謝您的主動聯絡，請留下要諮詢的問題，我們會用以下資訊進行回覆。</h2>
+                    <input type="text" placeholder=" 請輸入電子郵件">
+                    <textarea name="" id="" cols="30" rows="10" placeholder=" 請輸入您的訊息，若是詢問店內商品，請備註商品名稱"></textarea>
+                    <button>發送</button>
+                </form>
+            </div>  
+        </div>
+    </div>
+
+    <!-----------------------cart----------------------->
+    <div class="cart" id="showCart"  style="display: none;">
+        
+            <div class="cart-modal" >
+                <div class="cart-modal-content">
+
+                    <div class="cart-modal-content-top">
+                        <div class="cart-modal-content-top-title">購物車</div>
+
+                        <div class="cart-modal-content-top-xmark"><a id="closeCart"><i class="fa-solid fa-xmark"></i></a></div>
+                    </div>
+                    
+
+                    <div class="cart-modal-content-main">
+                        <div class="cart-modal-content-main-img">
+                            <img src="../ALLITEMS/TENT/frontpageProductOne-one.jpeg" alt="">
+                        </div>
+                        <div class="cart-modal-content-main-information">
+                            <span>TOUGH SCREEN 2-ROOM HOUSE MDX / CM-38139M000</span>
+                            <ul>
+                                <li><span>NT$ 22000 &nbsp x</span></li>
+                                <li><a href=""><i class="fa-solid fa-minus"></i></a></li>
+                                <li>1</li>
+                                <li><a href=""><i class="fa-solid fa-plus"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="cart-modal-content-main-cancel">
+                            <a><i class="fa-solid fa-xmark"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="cart-modal-content-total">
+                        <div class="cart-modal-content-total-title">
+                            <span>合計:</span>
+                        </div>
+                        <div class="cart-modal-content-total-money">
+                            <span>NT$ 22000</span>
+                        </div>
+                    </div>
+
+
+                    <div class="cart-modal-content-bill">
+                        <button onclick="location.href='../Html/cartSystem.html'">訂單結帳</button>
+                    </div>
+
+                </div>  
+            </div>
+
+    </div>
+
+    <!-----------------------search----------------------->
+    <div class="search" id="search" style="display: none;">
+        <div class="search-modal" >
+            <div class="search-modal-content">
+                <form>
+                    <input type="text" placeholder="找商品" class="search-modal-content-text">
+
+                    <div class="search-modal-content-icon">
+                        <a id="btn4"><i class="fa-solid fa-xmark"></i></a>
+                        <a href="" ><i class="fa-solid fa-magnifying-glass"></i></a>
+                    </div>
+                </form>
+            </div>  
+        </div>
+    </div>
+
+    <!-----------------------main----------------------->
+    <main>
+        <div class="main-goodNews-breadcrumb">
+            <div class="main-goodNews-breadcrumb-link">
+                <a href="">Good News</a>
+            </div>
+        </div>
+        <div class="goodNews">
+            <div class="goodNews-one">
+                <div class="goodNews-one-text">
+                    <h1>Enjoy Journey</h1>
+                    <h2>Enjoy Glamping</h2>
+                    <a href="">Read More</a>
+                </div>
+            </div>
+            <div class="goodNews-two">
+                <div class="goodNews-two-text">
+                    <h1>Enjoy Journey</h1>
+                    <h2>Enjoy Glamping</h2>
+                    <a href="">Read More</a>
+                </div>
+            </div>
+            <div class="goodNews-three">
+                <div class="goodNews-three-text">
+                    <h1>Enjoy Journey</h1>
+                    <h2>Enjoy Glamping</h2>
+                    <a href="./goodNewsMain.html">Read More</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-----------------------footer----------------------->
+    <footer>
+        <div class="footer-grid">
+
+            <div class="footer-grid-menu">
+
+                <div class="footer-grid-menu-information">
+                    <div class="footer-grid-menu-information-img">
+                        <img src="../LOGOVersion/1x/smallWhite.png">
+                        <h1>Glamping</h1>  
+                    </div>
+                    <p>Glamping 成立於2022春初，起因身為好友的兩位主理人，一起接觸了第一次戶外露營，體驗了從未有過的野營生活，沒想到才一次就愛上大自然，身為設計人，認為戶外露營時尚感與帥可以同時並存，基於這樣的精神，開啟了 Glamping 設計之路。</p>
+                </div>
+
+                <div class="footer-grid-menu-container">
+                    <ul>
+                        <li><h1>ABOUT</h1></li>
+                        <li><a href="../Html/productCategories.html"><i class="fa-solid fa-angle-right"></i>&nbsp;All Items</a></li>
+                        <li><a href="../Html/brandStory.html"><i class="fa-solid fa-angle-right"></i>&nbsp;Brand Story</a></li>
+                        <li><a href="../Html/goodNews.html"><i class="fa-solid fa-angle-right"></i>&nbsp;Good News</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-grid-menu-contact">
+                    <h1>CONTACT</h1>
+                    <h1>Time :</h1>
+                    <h2>Monday - Friday / 11am ~ 7pm</h2>
+                    <h1>CSH :</h1>
+                    <h2>02-12345678</h2>
+                    <h1>E-mail :</h1>
+                    <h2>02-12345678</h2>
+                </div>
+
+                <div class="footer-grid-menu-icon">
+                    <ul class="footer-grid-menu-icon-container">
+                        <li><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a></li>
+                        <li><a href="https://twitter.com/?lang=zh-tw"><i class="fa-brands fa-twitter-square"></i></a></li>
+                        <li><a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+                
+            </div>
+
+
+            <div class="footer-grid-underLine">
+                <p>本網站為緯育TibaMe前端工程師班第78期學員專題作品，本平台僅供學習、展示之用。<a href="https://docs.google.com/document/d/1hYP9o2V7iHyWgnHVRYCyHDTE5Ax8DIRU_7Wd6Znbumk/edit" target="_blank" style="text-decoration: none;">參考資料</a></p>
+            </div>
+        </div>
+    </footer>
+    <script src="../JS/headerfooter.js"></script>
+</body>
+</html>

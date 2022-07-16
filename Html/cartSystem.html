@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../Css/HeaderFooter.css">
+    <link rel="stylesheet" href="../Css/cartSystem.css">
+    <title>cartSystem</title>
+</head>
+<body>
+    <!-----------------------header----------------------->
+    <nav class="nav">
+        <div class="nav-wrapper">
+                <div class="nav-header-logo">
+                    <a href="./frontPage.html"><img src="../LOGOVersion/1x/white.png" alt=""></a>
+                </div>
+
+                <div class="nav-header-menu">
+                    <ul class="nav-header-mainMenu-container">
+                        <li><a href="../Html/productCategories.html">All Items</a></li>
+                        <li><a href="../Html/brandStory.html">Brand Story</a></li>
+                        <li><a href="../Html/goodNews.html">Good News</a></li>
+                        <li><a class="btn">Contact Us</a></li>
+                    </ul>
+                    <ul class="nav-header-actionMenu-container">
+                        <li><a href="../Html/account.html"><i class="fa-regular fa-circle-user"></i></a></li>
+                        <li><a id="cart"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                        <li><a id="btn3"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+                    </ul>
+                </div>
+        </div>
+    </nav>
+
+    <!-----------------------contactUS----------------------->
+    <div class="contactUS" id="contactUS" style="display: none;">
+        <div class="contactUS-modal" >
+            <div class="contactUS-modal-content">
+                <form>
+                    <a id="btn2"><i class="fa-solid fa-xmark"></i></a> 
+                    <h1>聯絡我們</h1>
+                    <h2>謝謝您的主動聯絡，請留下要諮詢的問題，我們會用以下資訊進行回覆。</h2>
+                    <input type="text" placeholder=" 請輸入電子郵件">
+                    <textarea name="" id="" cols="30" rows="10" placeholder=" 請輸入您的訊息，若是詢問店內商品，請備註商品名稱"></textarea>
+                    <button>發送</button>
+                </form>
+            </div>  
+        </div>
+    </div>
+
+    <!-----------------------cart----------------------->
+    <div class="cart" id="showCart"  style="display: none;">
+        
+            <div class="cart-modal" >
+                <div class="cart-modal-content">
+
+                    <div class="cart-modal-content-top">
+                        <div class="cart-modal-content-top-title">購物車</div>
+
+                        <div class="cart-modal-content-top-xmark"><a id="closeCart"><i class="fa-solid fa-xmark"></i></a></div>
+                    </div>
+                    
+
+                    <div class="cart-modal-content-main">
+                        <div class="cart-modal-content-main-img">
+                            <img src="../ALLITEMS/TENT/frontpageProductOne-one.jpeg" alt="">
+                        </div>
+                        <div class="cart-modal-content-main-information">
+                            <span>TOUGH SCREEN 2-ROOM HOUSE MDX / CM-38139M000</span>
+                            <ul>
+                                <li><span>NT$ 22000 &nbsp x</span></li>
+                                <li><a href=""><i class="fa-solid fa-minus"></i></a></li>
+                                <li>1</li>
+                                <li><a href=""><i class="fa-solid fa-plus"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="cart-modal-content-main-cancel">
+                            <a><i class="fa-solid fa-xmark"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="cart-modal-content-total">
+                        <div class="cart-modal-content-total-title">
+                            <span>合計:</span>
+                        </div>
+                        <div class="cart-modal-content-total-money">
+                            <span>NT$ 22000</span>
+                        </div>
+                    </div>
+
+
+                    <div class="cart-modal-content-bill">
+                        <button onclick="location.href='../Html/cartSystem.html'">訂單結帳</button>
+                    </div>
+
+                </div>  
+            </div>
+
+    </div>
+
+    <!-----------------------search----------------------->
+    <div class="search" id="search" style="display: none;">
+        <div class="search-modal" >
+            <div class="search-modal-content">
+                <form>
+                    <input type="text" placeholder="找商品" class="search-modal-content-text">
+
+                    <div class="search-modal-content-icon">
+                        <a id="btn4"><i class="fa-solid fa-xmark"></i></a>
+                        <a href="" ><i class="fa-solid fa-magnifying-glass"></i></a>
+                    </div>
+                </form>
+            </div>  
+        </div>
+    </div>
+
+
+<!-----------------------cartSystem----------------------->
+
+<div class="cartForm">
+    <form class="cartForm-main">
+
+        <ul id="progressbar">
+            <li class="active">購物車</li>
+            <li>填寫資料</li>
+            <li>訂單確認</li>
+        </ul>
+        <!-- fieldsets -->
+        <fieldset>
+            <div class="cartForm-main-title">
+                <h1>購物車</h1>    
+            </div>
+            <div class="cartForm-main-information">
+                <ul>
+                    <li>商品資料</li>
+                    <li>單件價格</li>
+                    <li>數量</li>
+                    <li>小計</li>
+                </ul>
+            </div>
+
+            <div class="cartForm-main-content">
+                <div class="cartForm-main-content-title">
+                    <img src="../ALLITEMS/TENT/frontpageProductOne-one.jpeg" alt="">
+                    <p>TOUGH SCREEN 2-ROOM HOUSE MDX / CM-38139M000</p>
+                </div>
+                <div class="cartForm-main-content-price">
+                    <p>NT$ 22000</p>
+                </div>
+                <div class="cartForm-main-content-quantity">
+                    <ul>
+                        <li><a href=""><i class="fa-solid fa-minus"></i></a></li>
+                        <li>1</li>
+                        <li><a href=""><i class="fa-solid fa-plus"></i></a></li>
+                    </ul>
+                </div>
+                <div class="cartForm-main-content-finalPrice">
+                    <p>NT$ 22000</p>
+                </div>
+
+                <div class="cartForm-main-content-trash">
+                    <a href=""><i class="fa-solid fa-trash-can"></i></a>
+                </div>
+            </div>
+
+
+            <div class="cart-modal-content-total">
+                <div class="cart-modal-content-total-title">
+                    <span>合計:</span>
+                </div>
+                <div class="cart-modal-content-total-money">
+                    <span>NT$ 22000</span>
+                </div>
+            </div>
+            <input type="button" name="goCart"  class="goCart" value="繼續購物" onclick="location.href='../Html/productCategories.html'">
+            <input type="button" name="next" class="next action-button" value="前往結帳" />
+            
+        </fieldset>
+        <!-------------------- 訂單確認  -------------------->
+        <fieldset>
+            <div class="cartForm-main-title">
+                <h1>購物車</h1>    
+            </div>
+            <div class="cartForm-main-information">
+                <ul>
+                    <li>商品資料</li>
+                    <li>單件價格</li>
+                    <li>數量</li>
+                    <li>小計</li>
+                </ul>
+            </div>
+
+            <div class="cartForm-main-content">
+                <div class="cartForm-main-content-title">
+                    <img src="../ALLITEMS/TENT/frontpageProductOne-one.jpeg" alt="">
+                    <p>TOUGH SCREEN 2-ROOM HOUSE MDX / CM-38139M000</p>
+                </div>
+                <div class="cartForm-main-content-price">
+                    <p>NT$ 22000</p>
+                </div>
+                <div class="cartForm-main-content-quantity">
+                    <ul>
+                        <li><a href=""><i class="fa-solid fa-minus"></i></a></li>
+                        <li>1</li>
+                        <li><a href=""><i class="fa-solid fa-plus"></i></a></li>
+                    </ul>
+                </div>
+                <div class="cartForm-main-content-finalPrice">
+                    <p>NT$ 22000</p>
+                </div>
+
+                <div class="cartForm-main-content-trash">
+                    <a href=""><i class="fa-solid fa-trash-can"></i></a>
+                </div>
+            </div>
+
+
+            <div class="cart-modal-content-total">
+                <div class="cart-modal-content-total-title">
+                    <span>合計:</span>
+                </div>
+                <div class="cart-modal-content-total-money">
+                    <span>NT$ 22000</span>
+                </div>
+            </div>
+
+            <div class="cart-modal-content-form">
+                <div class="cart-modal-content-formFirst">
+                    <div class="cart-modal-content-form-title">
+                        <h3>選擇送貨及付款方式</h3>
+                    </div>
+                    <div class="cart-modal-content-form-pay">
+                       
+                            <div class="cart-modal-content-form-address">
+                                <label for="deliverAddress">送貨地址</label>
+                                <div class="cart-modal-content-form-deliverAddress">
+                                    <select name="" id="" class="cart-modal-content-form-deliverCounty">
+                                        <option value="">縣市</option>
+                                        <option value="">新北市</option>
+                                    </select>
+                                    <select name="" id="" class="cart-modal-content-form-deliverPlace">
+                                        <option value="">地區</option>
+                                        <option value="">板橋區</option>
+                                    </select>
+                                </div>
+                                <input type="text" name="" id="deliverAddress" placeholder="請輸入地址">
+                            </div>
+
+
+                            <div class="cart-modal-content-form-addressWay">
+                                <label for="">送貨方式</label>
+                                <div class="cart-modal-content-form-deliverWay">
+                                    <select name="" id="">
+                                        <option value="">7-11 取貨不付款 (取件人姓名請與證件相同)</option>
+                                        <option value="">郵寄</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="cart-modal-content-form-payWay">
+                                <label for="">付款方式</label>
+                                <div class="cart-modal-content-form-payWay-way">
+                                    <select name="" id="">
+                                        <option value="">信用卡（支援國內外 Visa, Master, JCB）</option>
+                                        <option value="">銀行轉帳／ATM (下單後24小時內完成轉帳)</option>
+                                    </select>
+                                    
+                                </div>
+                            </div>
+                  
+                    </div>
+                </div>
+                
+                <div class="cart-modal-content-formSecond">
+                    <div class="cart-modal-content-form-title">
+                        <h3>顧客資料</h3>
+                    </div>
+                    <div class="cart-modal-content-form-information">
+                        
+                            <div class="cart-modal-content-form-Name">
+                                <label for="userName">顧客名稱</label>
+                                <div class="cart-modal-content-form-cusName">
+                                        <input type="text" id="userName">
+                                </div>
+                            </div>
+                            <div class="cart-modal-content-form-mail">
+                                <label for="mail">電子信箱</label>
+                                <div class="cart-modal-content-form-cusMail">
+                                    <div>
+                                        <input type="text" id="mail">
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="cart-modal-content-form-phone">
+                                <label for="phone">電話號碼</label>
+                                <div class="cart-modal-content-form-cusPhone">
+                                    <div>
+                                        <input type="text " id="phone">
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                    
+                    </div>
+                </div>
+
+                <div class="cart-modal-content-formThird">
+                    <div class="cart-modal-content-form-title">
+                        <h3>送貨資料</h3>
+                    </div>
+                    <div class="cart-modal-content-form-deliver">
+                        
+                        
+                            <div class="cart-modal-content-form-addressWay">
+                                <label for="">送貨方式</label>
+                                <div class="cart-modal-content-form-deliverWay">
+                                    <select name="" id="">
+                                        <option value="">7-11 取貨不付款 (取件人姓名請與證件相同)</option>
+                                        <option value="">郵寄</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="cart-modal-content-form-payWay">
+                                <label for="">付款方式</label>
+                                <div class="cart-modal-content-form-payWay-way">
+                                    <select name="" id="">
+                                        <option value="">信用卡（支援國內外 Visa, Master, JCB）</option>
+                                        <option value="">銀行轉帳／ATM (下單後24小時內完成轉帳)</option>
+                                    </select>
+                                    
+                                </div>
+                            </div>
+                            <div class="cart-modal-content-form-address">
+                                <label for="deliverWay">送貨地址</label>
+                                <div class="cart-modal-content-form-deliverAddress">
+                                    <select name="" id="" class="cart-modal-content-form-deliverCounty">
+                                        <option value="">縣市</option>
+                                        <option value="">新北市</option>
+                                    </select>
+                                    <select name="" id="" class="cart-modal-content-form-deliverPlace">
+                                        <option value="">地區</option>
+                                        <option value="">板橋區</option>
+                                    </select>
+                                </div>  
+                                <input type="text" name="" id="deliverWay"  placeholder="請輸入地址">
+                            </div>
+                    </div>
+                </div>
+                <div class="cart-modal-content-formFour">
+                    <div class="cart-modal-content-form-title">
+                        <h3>付款資料</h3>
+                    </div>
+                    <div class="cart-modal-content-form-patInformation"> 
+                            <input type="text" placeholder="卡號">
+                            <input type="text" placeholder="持卡人姓名">
+                            <input type="text" placeholder="有效期(MM/YY)">
+                            <input type="text" placeholder="安全碼">
+                    </div>
+                </div>
+
+                <div class="cart-modal-content-formFive">
+                    <div class="cart-modal-content-form-title">
+                        <h3>索取發票</h3>
+                    </div>
+                    <div class="cart-modal-content-form-ticket"> 
+                            <select name="" id="">
+                                <option value="">雲端發票</option>
+                                <option value="">捐贈發票</option>
+                            </select>
+                    </div>
+                </div>
+            </div>
+            <input type="button" name="previous" class="previous action-button" value="返回購物車" />
+            <input type="button" name="next" class="next action-button" value="提交訂單" />
+        </fieldset>
+        
+        <fieldset>
+            <div class="cartForm-main-title">
+                <h1>購物車</h1>    
+            </div>
+            <div class="cartForm-main-information">
+                <ul>
+                    <li>商品資料</li>
+                    <li>單件價格</li>
+                    <li>數量</li>
+                    <li>小計</li>
+                </ul>
+            </div>
+
+            <div class="cartForm-main-content">
+                <div class="cartForm-main-content-title">
+                    <img src="../ALLITEMS/TENT/frontpageProductOne-one.jpeg" alt="">
+                    <p>TOUGH SCREEN 2-ROOM HOUSE MDX / CM-38139M000</p>
+                </div>
+                <div class="cartForm-main-content-price">
+                    <p>NT$ 22000</p>
+                </div>
+                <div class="cartForm-main-content-quantity">
+                    <ul>
+                        <li><a href=""><i class="fa-solid fa-minus"></i></a></li>
+                        <li>1</li>
+                        <li><a href=""><i class="fa-solid fa-plus"></i></a></li>
+                    </ul>
+                </div>
+                <div class="cartForm-main-content-finalPrice">
+                    <p>NT$ 22000</p>
+                </div>
+
+                <div class="cartForm-main-content-trash">
+                    <a href=""><i class="fa-solid fa-trash-can"></i></a>
+                </div>
+            </div>
+
+
+            <div class="cart-modal-content-total">
+                <div class="cart-modal-content-total-title">
+                    <span>合計:</span>
+                </div>
+                <div class="cart-modal-content-total-money">
+                    <span>NT$ 22000</span>
+                </div>
+            </div>
+
+
+            <div class="cart-modal-content-orderInformation">
+                <div class="cart-modal-content-orderInformation-title">
+                    <h2>訂單編號：94036193</h2>
+                    <h2>訂單日期：111 / 06 /23</h2>
+                </div>
+                <div class="cart-modal-content-orderInformation-order">
+                    <div class="cart-modal-content-orderInformation-order-title">
+                        <h2>收貨資訊</h2>
+                    </div>
+                    <div class="cart-modal-content-orderInformation-order-total">
+                        <div class="cart-modal-content-orderInformation-order-first">
+                            <ul>
+                                <li>姓名 : otis</li>
+                                <li>Email : a123456@gmail.com</li>
+                                <li>手機 : 0912-34567</li>
+                            </ul>
+                        </div>
+                        <div class="cart-modal-content-orderInformation-order-second">
+                            <ul>
+                                <li>取貨方式 : 宅配</li>
+                                <li>取貨地址  :  220新北市板橋區三民路一段200號</li>
+                                <li>訂單狀態 : 已確認</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <input type="button" name="previous" class="previous action-button" value="回首頁" onclick="location.href='../Html/frontPage.html'">
+        </fieldset>
+    </form>
+</div>
+
+
+<!-----------------------footer----------------------->
+<footer>
+    <div class="footer-grid">
+
+        <div class="footer-grid-menu">
+
+            <div class="footer-grid-menu-information">
+                <div class="footer-grid-menu-information-img">
+                    <img src="../LOGOVersion/1x/smallWhite.png">
+                    <h1>Glamping</h1>  
+                </div>
+                <p>Glamping 成立於2022春初，起因身為好友的兩位主理人，一起接觸了第一次戶外露營，體驗了從未有過的野營生活，沒想到才一次就愛上大自然，身為設計人，認為戶外露營時尚感與帥可以同時並存，基於這樣的精神，開啟了 Glamping 設計之路。</p>
+            </div>
+
+            <div class="footer-grid-menu-container">
+                <ul>
+                    <li><h1>ABOUT</h1></li>
+                    <li><a href="../Html/productCategories.html"><i class="fa-solid fa-angle-right"></i>&nbsp;All Items</a></li>
+                    <li><a href="../Html/brandStory.html"><i class="fa-solid fa-angle-right"></i>&nbsp;Brand Story</a></li>
+                    <li><a href="../Html/goodNews.html"><i class="fa-solid fa-angle-right"></i>&nbsp;Good News</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-grid-menu-contact">
+                <h1>CONTACT</h1>
+                <h1>Time :</h1>
+                <h2>Monday - Friday / 11am ~ 7pm</h2>
+                <h1>CSH :</h1>
+                <h2>02-12345678</h2>
+                <h1>E-mail :</h1>
+                <h2>02-12345678</h2>
+            </div>
+
+            <div class="footer-grid-menu-icon">
+                <ul class="footer-grid-menu-icon-container">
+                    <li><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="https://twitter.com/?lang=zh-tw"><i class="fa-brands fa-twitter-square"></i></a></li>
+                    <li><a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a></li>
+                </ul>
+            </div>
+            
+        </div>
+
+
+        <div class="footer-grid-underLine">
+            <p>本網站為緯育TibaMe前端工程師班第78期學員專題作品，本平台僅供學習、展示之用。<a href="https://docs.google.com/document/d/1hYP9o2V7iHyWgnHVRYCyHDTE5Ax8DIRU_7Wd6Znbumk/edit" target="_blank" style="text-decoration: none;">參考資料</a></p>
+        </div>
+    </div>
+</footer>
+
+<script src="../JS/headerfooter.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="http://thecodeplayer.com/uploads/js/jquery.easing.min.js" type="text/javascript"></script>
+<script>
+    var current_fs, next_fs, previous_fs; //fieldsets
+    var left, opacity, scale; //fieldset properties which we will animate
+    var animating; //flag to prevent quick multi-click glitches
+
+    $(".next").click(function(){
+        if(animating) return false;
+        animating = true;
+        
+        current_fs = $(this).parent();
+        next_fs = $(this).parent().next();
+        
+        //activate next step on progressbar using the index of next_fs
+        $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+        
+        //show the next fieldset
+        next_fs.show(); 
+        //hide the current fieldset with style
+        current_fs.animate({opacity: 0}, {
+            step: function(now, mx) {
+                //as the opacity of current_fs reduces to 0 - stored in "now"
+                //1. scale current_fs down to 80%
+                scale = 1 - (1 - now) * 0.2;
+                //2. bring next_fs from the right(50%)
+                left = (now * 50)+"%";
+                //3. increase opacity of next_fs to 1 as it moves in
+                opacity = 1 - now;
+                current_fs.css({'transform': 'scale('+scale+')'});
+                next_fs.css({'left': left, 'opacity': opacity});
+            }, 
+            duration: 800, 
+            complete: function(){
+                current_fs.hide();
+                animating = false;
+            }, 
+            //this comes from the custom easing plugin
+            easing: 'easeInOutBack'
+        });
+    });
+
+    $(".previous").click(function(){
+        if(animating) return false;
+        animating = true;
+        
+        current_fs = $(this).parent();
+        previous_fs = $(this).parent().prev();
+        
+        //de-activate current step on progressbar
+        $("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
+        
+        //show the previous fieldset
+        previous_fs.show(); 
+        //hide the current fieldset with style
+        current_fs.animate({opacity: 0}, {
+            step: function(now, mx) {
+                //as the opacity of current_fs reduces to 0 - stored in "now"
+                //1. scale previous_fs from 80% to 100%
+                scale = 0.8 + (1 - now) * 0.2;
+                //2. take current_fs to the right(50%) - from 0%
+                left = ((1-now) * 50)+"%";
+                //3. increase opacity of previous_fs to 1 as it moves in
+                opacity = 1 - now;
+                current_fs.css({'left': left});
+                previous_fs.css({'transform': 'scale('+scale+')', 'opacity': opacity});
+            }, 
+            duration: 800, 
+            complete: function(){
+                current_fs.hide();
+                animating = false;
+            }, 
+            //this comes from the custom easing plugin
+            easing: 'easeInOutBack'
+        });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+/*-----------------brandstory breadcrumb-----------------*/
+main .main-brandstory-breadcrumb{
+    margin: 0 auto;
+    width: 100%;
+    background-color: #D9D9D9;
+    height: auto;
+}
+
+main .main-brandstory-breadcrumb .main-brandstory-breadcrumb-link{
+    width: 1440px;
+    margin: 0 auto;
+    padding-left: 60px;
+}
+
+
+main .main-brandstory-breadcrumb .main-brandstory-breadcrumb-link a{
+    text-decoration: none;
+    line-height: 2;
+    font-size: 14px;
+    font-weight: bold;
+    color: black;
+}
+
+/*-----------------brandstory header-----------------*/
+main .main-brandstory-header{
+    display: flex;
+    width: 1440px;
+    margin: 30px auto;
+    align-items: center;
+}
+
+main .main-brandstory-header-text h1{
+    font-size: 24px;
+    line-height: 2;
+    font-weight: bolder;
+    padding-bottom: 10px;
+    margin-left: 82px;
+    width: 460px;
+    border-right: 2px solid #9E472D;
+    border-bottom: 2px solid #9E472D;
+    
+}
+main .main-brandstory-header-pic img{
+    display: block;
+}
+
+
+/*-----------------brandstory footer-----------------*/
+
+main .main-brandstory-footer{
+    display: flex;
+    width: 1440px;
+    margin: 30px auto;
+    align-items: center;
+
+}
+
+
+main .main-brandstory-footer-text h1{
+    font-size: 24px;
+    line-height: 2;
+    font-weight: bolder;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    margin: 0px 105px 0px 40px;
+    /* width: 600px; */
+    border-left: 2px solid #9E472D;
+    border-bottom: 2px solid #9E472D;
+}
+
+main .main-brandstory-footer-pic img{
+    display: block;
+}
+/*-----------------brandstory center-----------------*/
+main .main-brandstory-center{
+    margin: 0 auto;
+    max-width: 1440px;
+    width: 1440px;
+    height: 1000px;
+    background-image: url("../pic/brandstory-center.png");
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    background-position: center;
+}
+
+
+main .main-brandstory-center .main-brandstory-center-p p{
+    margin: 0 auto;
+    color: black;
+    font-size: 24px;
+    text-align: center;
+    width: 900px;
+    line-height: 1.6;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+
+
+/*-----------------brandstory lastText-----------------*/
+
+main .main-brandstory-lastText{
+    text-align: center;
+    border-left: 4px solid #9E472D;
+    border-right: 4px solid #9E472D;
+    width: 600px;
+    margin: 180px auto;
+    line-height: 1.6;
+}
+
+main .main-brandstory-lastText h2{
+    font-size: 28px;
+}
+
+main .main-brandstory-lastText h3{
+    font-size: 26px;
+}
+
