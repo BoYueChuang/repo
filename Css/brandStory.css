@@ -7,7 +7,8 @@ main .main-brandstory-breadcrumb{
 }
 
 main .main-brandstory-breadcrumb .main-brandstory-breadcrumb-link{
-    width: 1440px;
+    max-width: 1440px;
+    width: 100%;
     margin: 0 auto;
     padding-left: 60px;
 }
@@ -110,6 +111,7 @@ main .main-brandstory-lastText{
 
 main .main-brandstory-lastText h2{
     font-size: 28px;
+    font-weight: 700;
 }
 
 main .main-brandstory-lastText h3{

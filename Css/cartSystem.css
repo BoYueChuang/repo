@@ -81,6 +81,12 @@
     margin: 0 148px;
 }
 
+.cartForm .cartForm-main .cartForm-main-content .cartForm-main-content-quantity-final{
+	display: flex;
+    align-items: center;
+    margin: 0 192px;
+}
+
 .cartForm .cartForm-main .cartForm-main-content .cartForm-main-content-quantity ul{
     display: flex;
 }
