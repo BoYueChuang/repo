@@ -16,24 +16,19 @@
                 <div class="nav-header-logo">
                     <a href="./frontPage.html"><img src="../LOGOVersion/1x/white.png" alt=""></a>
                 </div>
-                <div  class="nav-header-bars">
-                    <a id="navBar"><i class="fa-solid fa-bars"></i></a>
-                </div>
-                <div class="nav-header-menu" id="headerMenu">
-                    <div class="sideInner" id="sideInner"></div>
-                    <div class="sideOuter">
-                        <ul class="nav-header-mainMenu-container">
-                            <li><a href="../Html/productCategories.html">All Items</a></li>
-                            <li><a href="../Html/brandStory.html">Brand Story</a></li>
-                            <li><a href="../Html/goodNews.html">Good News</a></li>
-                            <li><a class="btn">Contact Us</a></li>
-                        </ul>
-                        <ul class="nav-header-actionMenu-container">
-                            <li><a href="../Html/account.html" title="User"><i class="fa-regular fa-circle-user"></i></a></li>
-                            <li><a id="cart" title="Cart"><i class="fa-solid fa-cart-shopping"></i></a></li>
-                            <li><a id="btn3" title="Search"><i class="fa-solid fa-magnifying-glass"></i></a></li>
-                        </ul>
-                    </div>
+
+                <div class="nav-header-menu">
+                    <ul class="nav-header-mainMenu-container">
+                        <li><a href="../Html/productCategories.html">All Items</a></li>
+                        <li><a href="../Html/brandStory.html">Brand Story</a></li>
+                        <li><a href="../Html/goodNews.html">Good News</a></li>
+                        <li><a class="btn"  onclick="show()" onkeypress="show()">Contact Us</a></li>
+                    </ul>
+                    <ul class="nav-header-actionMenu-container">
+                        <li><a href="../Html/account.html"><i class="fa-regular fa-circle-user"></i></a></li>
+                        <li><a id="cart"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                        <li><a id="btn3"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+                    </ul>
                 </div>
         </div>
     </nav>
@@ -53,10 +48,9 @@
         </div>
     </div>
 
-    <div class="cartWrapper"  id="cartWrapper" style="display: none;">
-        <div class="cartInner" id="cartInner"></div>
-        <div class="cart" id="showCart">
-            <div class="cart-modal">
+    <div class="cart" id="showCart"  style="display: none;" >
+        
+            <div class="cart-modal" >
                 <div class="cart-modal-content">
 
                     <div class="cart-modal-content-top">
@@ -99,9 +93,9 @@
                     </div>
 
                 </div>  
-            </div>  
             </div>
-        </div>
+
+    </div>
 
     <div class="search" id="search" style="display: none;">
         <div class="search-modal" >
@@ -257,121 +251,10 @@
             </div>
         </div>
     </footer>
-    <script src="../JS/headerfooter.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/js/swiper.min.js"></script>
 
 <script>
-        var getSlideActiveIndex, slide, getSlideCaptionText, getSlideCreditText;
-
-        var imageGallerySlider = new Swiper ('.imageGallerySlider', {
-            direction: 'horizontal',
-            loop: true,
-            noSwiping: true,
-            on: {
-                init: function () {
-                getSlideActiveIndex = this.activeIndex; //start from 1
-                slide = this.slides[getSlideActiveIndex];
-                updateSlideProfile(getSlideCaptionText,getSlideCreditText);
-                },
-            },
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            pagination: {
-                el: '.imageGallerySwiperPagination'
-            }
-        });
-
-        imageGallerySlider.on('slideChange', function () {
-        getSlideActiveIndex = this.activeIndex; //start from 1
-        slide = this.slides[getSlideActiveIndex];
-        getSlideCaptionText = jQuery(slide).find("span.slideCaptionText").text();
-        getSlideCreditText = jQuery(slide).find("span.slideCreditText").text();
-        updateSlideProfile(getSlideCaptionText,getSlideCreditText);
-        });
-
-        function updateSlideProfile(captionText,creditText){
-        jQuery(".caption-box").text(captionText);
-        }
-
-        const cart = document.getElementById('cart');
-        cart.addEventListener('click', () => {
-        const cartWrapper = document.getElementById('cartWrapper');
-
-        if (cartWrapper.style.display === 'none') {
-            cartWrapper.style.display = 'block';
-        } else {
-            cartWrapper.style.display = 'none';
-        }
-        });
-
-        const cartInner = document.getElementById('cartInner');
-        cartInner.addEventListener('click', () => {
-            console.log("123");
-        const cartWrapper = document.getElementById('cartWrapper');
-        if (cartWrapper.style.display === 'block') {
-            cartWrapper.style.display = 'none';
-        } else {
-            cartWrapper.style.display = 'block';
-        }
-        });
-
-        const closeCart = document.getElementById('closeCart');
-        closeCart.addEventListener('click', () => {
-        const cartWrapper = document.getElementById('cartWrapper');
-
-        if (cartWrapper.style.display === 'none') {
-            cartWrapper.style.display = 'block';
-        } else {
-            cartWrapper.style.display = 'none';
-        }
-        });
-
-        
-        const goCart = document.querySelector('.goCart');
-        goCart.addEventListener('click', function(){
-            console.log("123");
-        const cartWrapper = document.getElementById('cartWrapper');
-
-        if (cartWrapper.style.display === 'none') {
-            cartWrapper.style.display = 'block';
-        } else {
-
-            cartWrapper.style.display = 'none';
-        }
-        });
-
-        const goCart1 = document.querySelector('.goCart1');
-        goCart1.addEventListener('click', function(){
-            console.log("123");
-        const cartWrapper = document.getElementById('cartWrapper');
-
-        if (cartWrapper.style.display === 'none') {
-            cartWrapper.style.display = 'block';
-        } else {
-
-            cartWrapper.style.display = 'none';
-        }
-        });
-
-        const goCart2 = document.querySelector('.goCart2');
-        goCart2.addEventListener('click', function(){
-            console.log("123");
-        const cartWrapper = document.getElementById('cartWrapper');
-
-        if (cartWrapper.style.display === 'none') {
-            cartWrapper.style.display = 'block';
-        } else {
-
-            cartWrapper.style.display = 'none';
-        }
-        });
-
-
-
-
 
 </script>
         

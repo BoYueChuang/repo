@@ -79,7 +79,6 @@
     border: 0.5px solid #9E472D;
     border-radius: 50%;
     padding: 0.5px;
-
 }
 
 .cart .cart-modal .cart-modal-content-main-cancel{
@@ -154,7 +153,7 @@ main .productIntroduce-template-productsmallPic{
 }
 
 main .productIntroduce-template-productsmallPic li {
-    border: 1px solid #9E472D;
+    border: 1px solid black;
     margin-bottom: 48px;
 }
 
@@ -171,7 +170,7 @@ main .productIntroduce-template-productsmallPic li img{
 
 
 main .productIntroduce-template-productPic{
-    border: 1px solid #9E472D;
+    border: 1px solid black;
     margin-right: 36px;
     height: 600px;
 }
@@ -399,11 +398,10 @@ main .banner-product-bestSeller li{
     padding: 5px;
     margin: 20px 43px;
 }
+
 main .banner-product-bestSeller-one:hover{
-    box-shadow: 1px 8px 12px rgba(31, 31, 31, 0.8);
+    box-shadow: 2px 3px 5px rgba(31, 31, 31, 0.8);
 }
-
-
 main .banner-product-bestSeller a{
     text-decoration: none;
 }

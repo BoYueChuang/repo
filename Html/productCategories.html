@@ -16,19 +16,24 @@
             <div class="nav-header-logo">
                 <a href="./frontPage.html"><img src="../LOGOVersion/1x/white.png" alt=""></a>
             </div>
-
-            <div class="nav-header-menu">
-                <ul class="nav-header-mainMenu-container">
-                    <li><a href="../Html/productCategories.html">All Items</a></li>
-                    <li><a href="../Html/brandStory.html">Brand Story</a></li>
-                    <li><a href="../Html/goodNews.html">Good News</a></li>
-                    <li><a class="btn">Contact Us</a></li>
-                </ul>
-                <ul class="nav-header-actionMenu-container">
-                    <li><a href="../Html/account.html"><i class="fa-regular fa-circle-user"></i></a></li>
-                    <li><a id="cart"><i class="fa-solid fa-cart-shopping"></i></a></li>
-                    <li><a id="btn3"><i class="fa-solid fa-magnifying-glass"></i></a></li>
-                </ul>
+            <div  class="nav-header-bars">
+                <a id="navBar"><i class="fa-solid fa-bars"></i></a>
+            </div>
+            <div class="nav-header-menu" id="headerMenu">
+                <div class="sideInner" id="sideInner"></div>
+                <div class="sideOuter">
+                    <ul class="nav-header-mainMenu-container">
+                        <li><a href="../Html/productCategories.html">All Items</a></li>
+                        <li><a href="../Html/brandStory.html">Brand Story</a></li>
+                        <li><a href="../Html/goodNews.html">Good News</a></li>
+                        <li><a class="btn">Contact Us</a></li>
+                    </ul>
+                    <ul class="nav-header-actionMenu-container">
+                        <li><a href="../Html/account.html" title="User"><i class="fa-regular fa-circle-user"></i></a></li>
+                        <li><a id="cart" title="Cart"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                        <li><a id="btn3" title="Search"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+                    </ul>
+                </div>
             </div>
     </div>
 </nav>
@@ -50,9 +55,10 @@
 </div>
 
 <!-----------------------cart----------------------->
-<div class="cart" id="showCart"  style="display: none;">
-    
-        <div class="cart-modal" >
+<div class="cartWrapper"  id="cartWrapper" style="display: none;">
+    <div class="cartInner" id="cartInner"></div>
+    <div class="cart" id="showCart">
+        <div class="cart-modal">
             <div class="cart-modal-content">
 
                 <div class="cart-modal-content-top">
@@ -95,9 +101,9 @@
                 </div>
 
             </div>  
+        </div>  
         </div>
-
-</div>
+    </div>
 
 <!-----------------------search----------------------->
 <div class="search" id="search" style="display: none;">
@@ -178,7 +184,7 @@
                             </a>
                             <div class="banner-product-bestSeller-middle">
                                 <a class="goCart"><i class="fa-solid fa-cart-shopping"></i>Add To Cart</a>
-                            </div>
+                            </div>                       
                         </li>
 
 
@@ -260,8 +266,6 @@
                                 <a href=""><i class="fa-solid fa-cart-shopping"></i>Add To Cart</a>
                             </div>
                         </li>
-
-
 
                         <li class="banner-product-bestSeller-one">
                             <a href=""><img src="../ALLITEMS/TENT/frontpageProductOne-ten.jpeg" alt="">
@@ -395,6 +399,30 @@
             });
         }
     });
+    const goCart = document.querySelector('.goCart');
+    goCart.addEventListener('click', function(){
+        console.log("123");
+    const cartWrapper = document.getElementById('cartWrapper');
+
+    if (cartWrapper.style.display === 'none') {
+        cartWrapper.style.display = 'block';
+    } else {
+
+        cartWrapper.style.display = 'none';
+    }
+    });
+
+    const cartInner = document.getElementById('cartInner');
+    cartInner.addEventListener('click', () => {
+        console.log("123");
+    const cartWrapper = document.getElementById('cartWrapper');
+    if (cartWrapper.style.display === 'block') {
+        cartWrapper.style.display = 'none';
+    } else {
+        cartWrapper.style.display = 'block';
+    }
+    });
+
     </script>
 </body>
 </html>

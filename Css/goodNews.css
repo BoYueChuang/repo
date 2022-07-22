@@ -32,7 +32,7 @@ main .main-goodNews-breadcrumb .main-goodNews-breadcrumb-link a{
 
 /*-----------------goodNews-one-----------------*/
 main .goodNews .goodNews-one{
-    width: 1440px;
+    width: 100%;
     height: 1000px;
     background-image: url("../pic/goodnewOne.jpg");
     text-align: center;
@@ -73,7 +73,7 @@ main .goodNews .goodNews-one a:hover{
 /*-----------------goodNews-two-----------------*/
 
 main .goodNews .goodNews-two{
-    width: 1440px;
+    width: 100%;
     height: 1000px;
     background-image: url("../pic/goodnewTwo.png");
     text-align: center;
@@ -115,7 +115,7 @@ main .goodNews .goodNews-two a:hover{
 
 /*-----------------goodNews-three-----------------*/
 main .goodNews .goodNews-three{
-    width: 1440px;
+    width: 100%;
     height: 1000px;
     background-image: url("../pic/goodnewThree.jpg");
     text-align: center;

@@ -99,7 +99,6 @@ main .banner-bestSeller-select{
 main .banner-product-bestSeller{
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
     padding: 2px;
     flex: 3;
     overflow: hidden;
@@ -110,7 +109,7 @@ main .banner-product-bestSeller li{
     border: 0.5px solid rgba(0, 0, 0, 0.2);
     max-width: 300px;
     padding: 5px;
-    margin: 30px;
+    margin: 40px;
 }
 
 
@@ -130,10 +129,11 @@ main .banner-product-bestSeller img{
 main .banner-product-bestSeller-one{
     position: relative;
 }
-main .banner-product-bestSeller-one:hover{
-    box-shadow: 1px 8px 12px rgba(31, 31, 31, 0.8);
-}
 
+
+main .banner-product-bestSeller-one:hover{
+    box-shadow: 2px 3px 5px rgba(31, 31, 31, 0.8);
+}
 main .banner-product-bestSeller-one:hover img{
     opacity: 0.4;
     background-color: black;
@@ -184,24 +184,6 @@ main .banner-product-bestSeller br + p{
     color: #9E472D;
 }
 
-main .banner-bestSeller .banner-bestSeller-ReadMore{
-    display: block;
-    margin: 70px auto 0;
-    text-align: center;
-    text-decoration: none;
-    background-color: #9E472D;
-    line-height: 3;
-    width: 490px;
-    color: white;
-    letter-spacing: 1.5px;
-    font-weight: bold;
-}
-
-main .banner-bestSeller .banner-bestSeller-ReadMore:hover{
-    -webkit-box-shadow: 0 0 15px black;
-	-moz-box-shadow: 0 0 15px black;
-	box-shadow: 0 0 15px black;
-}
 
 main .main-productCategories-number ul{
     display: flex;
@@ -211,11 +193,16 @@ main .main-productCategories-number ul{
 main .main-productCategories-number ul li{
     margin: 20px;
     border: 1.5px solid #9E472D;
-    padding: 8px;
+    
 }
-
+main .main-productCategories-number ul li a{
+    display: block;
+    padding: 8px;
+    text-decoration: none;
+}
 main .main-productCategories-number ul li i{
     color: #9E472D;
+    display: block;
 }
 
 main .main-productCategories-number ul li:hover{
@@ -223,4 +210,230 @@ main .main-productCategories-number ul li:hover{
 }
 main .main-productCategories-number ul li:hover i{
     color: white;
+}
+
+@media screen and (max-width: 415px) {
+    /*-----------------productCategories breadcrumb-----------------*/
+    main .main-productCategories-breadcrumb{
+        margin: 55px auto 0;
+        width: 100%;
+        max-width: 414px;
+        background-color: #D9D9D9;
+        height: auto;
+    }
+    
+    main .main-productCategories-breadcrumb .main-productCategories-breadcrumb-link{
+        width: 370px;
+        margin: 0 auto;
+        padding-left: 0px;
+    }
+    
+    
+    main .main-productCategories-breadcrumb .main-productCategories-breadcrumb-link a{
+        text-decoration: none;
+        line-height: 2;
+        font-size: 10px;
+        font-weight: bold;
+        color: black;
+    }
+
+
+/*-----------------productCategories-----------------*/
+main section{
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+main section .main-productCategories-section{
+    display: none;
+    margin-top: 20px;
+    padding: 16px;
+}
+
+main section .main-productCategories-section h1{
+    font-size: 24px;
+    color: black;
+    font-weight: bold;
+    letter-spacing: 2px;
+    padding-bottom: 20px;
+}
+
+main section .main-productCategories-section-subＭenu{
+    display: none;
+    overflow: hidden;
+    padding-left: 20px;
+}
+
+main section .main-productCategories-section .main-productCategories-section-mainＭenu a{
+    text-decoration: none;
+    line-height: 2;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    margin-bottom: 20px;
+    
+}
+
+main section .main-productCategories-section .main-productCategories-section-mainＭenu i{
+    color: black;
+    padding-top: 10px;
+    padding-left: 40px;
+}
+
+main section .main-productCategories-section .main-productCategories-section-mainＭenu a:hover {
+    color: #9E472D;
+}
+main section .main-productCategories-section .main-productCategories-section-mainＭenu :hover i{
+    color: #9E472D;
+}
+
+
+
+/*-----------------best seller-----------------*/
+main .banner-bestSeller{
+    /* display: none; */
+    width: 100%;
+    max-width: 414px;
+}
+
+main .banner-bestSeller h2{
+    text-align: center;
+    font-size: 20px;
+    color: black;
+    margin: 0px auto 10px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+main .banner-bestSeller-select{
+
+    display: none;
+    padding-right: 4px;
+}
+
+main .banner-product-bestSeller{
+    display: flex;
+    max-width: 380px;
+    margin: 0 auto;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding: 0px;
+    overflow: hidden;
+}
+
+
+main .banner-product-bestSeller li{
+    border: 0.5px solid rgba(0, 0, 0, 0.2);
+    max-width: 180px;
+    padding: 0px;
+    margin: 10px 0px;
+}
+
+
+main .banner-product-bestSeller a{
+    text-decoration: none;
+}
+
+main .banner-product-bestSeller img{
+    width: 100%;
+    max-width: 180px;
+    display: block;
+    opacity: 1;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+main .banner-product-bestSeller-one{
+    position: relative;
+}
+
+
+main .banner-product-bestSeller-one:hover{
+    box-shadow: 0px 0px 0px rgba(31, 31, 31, 0.8);
+}
+main .banner-product-bestSeller-one:hover img{
+    opacity: 1;
+    background-color: black;
+}
+
+main .banner-product-bestSeller-one:hover .banner-product-bestSeller-middle{
+    opacity: 1;
+}
+
+main .banner-product-bestSeller-middle{
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(14%, -10%);
+    -ms-transform: translate(-0%, -0%);
+    text-align: center;
+}
+
+main .banner-product-bestSeller-middle a{
+    background-color: rgb(114, 114, 114);
+    border-radius: 3px;
+    color: white;
+    font-size: 10px;
+    width: 130px;
+    line-height: 3;
+}
+main .banner-product-bestSeller-middle a i{
+    padding-right: 5px; 
+}
+
+main .banner-product-bestSeller-middle{
+    transition: .5s ease;
+    opacity: 1;
+    position: static;
+}
+
+main .banner-product-bestSeller p{
+    padding: 4px;
+    font-size: 12px;
+    line-height: 20px;
+    color: black;
+    text-align: center;
+}
+
+main .banner-product-bestSeller br + p{
+    color: #9E472D;
+    margin-bottom: 10px;
+    
+}
+
+
+
+main .main-productCategories-number ul{
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+main .main-productCategories-number ul li{
+    margin: 10px;
+    border: 1.5px solid #9E472D;
+    
+}
+main .main-productCategories-number ul li a{
+    display: block;
+    padding: 5px;
+    text-decoration: none;
+    font-size: 8px;
+}
+main .main-productCategories-number ul li i{
+    color: #9E472D;
+    display: block;
+}
+
+main .main-productCategories-number ul li:hover{
+    background-color: #9E472D;
+}
+main .main-productCategories-number ul li:hover i{
+    color: white;
+}
 }

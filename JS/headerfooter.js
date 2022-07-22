@@ -1,8 +1,6 @@
 const btn = document.querySelector('.btn');
-    
+const contactUS = document.querySelector('#contactUS');    
 btn.addEventListener('click', () => {
-const contactUS = document.querySelector('#contactUS');
-
 if (contactUS.style.display === 'none') {
     // 👇️ this SHOWS the form
     contactUS.style.display = 'block';
@@ -49,52 +47,26 @@ if (search.style.display === 'none') {
 }
 });
 
-const cart = document.getElementById('cart');
-cart.addEventListener('click', () => {
-const showCart = document.getElementById('showCart');
-
-if (showCart.style.display === 'none') {
-    showCart.style.display = 'block';
-} else {
-
-    showCart.style.display = 'none';
-}
-});
-
-const closeCart = document.getElementById('closeCart');
-closeCart.addEventListener('click', () => {
-const showCart = document.getElementById('showCart');
-
-if (showCart.style.display === 'none') {
-    showCart.style.display = 'block';
-} else {
-
-    showCart.style.display = 'none';
-}
-});
-
-const goCart = document.querySelector('.goCart');
-goCart.addEventListener('click', () => {
-const showCart = document.getElementById('showCart');
-
-if (showCart.style.display === 'none') {
-    showCart.style.display = 'block';
-} else {
-
-    showCart.style.display = 'none';
-}
-});
 
 
-const goCart1 = document.querySelector('.goCart1');
-goCart1.addEventListener('click', () => {
-const showCart = document.getElementById('showCart');
 
-if (showCart.style.display === 'none') {
-    showCart.style.display = 'block';
-} else {
+const navBar = document.getElementById('navBar');
+    navBar.addEventListener('click', () => {
+    const headerMenu = document.getElementById('headerMenu');
+    if (headerMenu.style.display === 'none') {
+        headerMenu.style.display = 'block';
+    } else {
 
-    showCart.style.display = 'none';
-}
-});
+        headerMenu.style.display = 'none';
+    }
+    });
 
+    const sideInner = document.getElementById('sideInner');
+    sideInner.addEventListener('click', () => {
+    const headerMenu = document.getElementById('headerMenu');
+    if (headerMenu.style.display === 'block') {
+        headerMenu.style.display = 'none';
+    } else {
+        headerMenu.style.display = 'block';
+    }
+    });

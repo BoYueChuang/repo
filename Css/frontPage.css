@@ -3,28 +3,24 @@
     /* margin: 0 auto; */
     display: flex;
     flex-direction: column;
-    max-width: 100%;
     margin: 0 auto;
     width: 100%;
     height: 100%;
+    max-width: 1920px;
 }
 
 main .banner{
-    margin: 0 auto;
-    height: auto;
-}
-
-main .banner .banner-img{
-    display: block;
-    max-width: 100%;
     width: 100%;
+    height: 1000px;
+    background-image: url("../pic/balkan-campers-lFCb0Zq9qJU-unsplash.jpg");
     background-size: cover;
+    margin: 0 auto;
 }
 
 main .banner .banner-text{
-    /* border: 1px solid red; */
-    margin-top: -426px;
-    margin-left: 179px;
+    position: relative;
+    top: 60%;
+    left: 10%;
 }
 
 main .banner .banner-text h1{
@@ -42,10 +38,13 @@ main .banner .banner-text h2{
     line-height: 1.6;
 }
 
+.swiper-pagination-bullet-active {
+    background-color: gray;
+  }
 .imageGallerySlider{
     display: flex;
     justify-content: center;
-    margin: 320px auto 0px;
+    margin: 80px auto 0px;
     max-width: 1000px;
     
 }
@@ -67,37 +66,48 @@ main .banner .banner-text h2{
 
 main .banner-product{
     display: flex;
-    /* justify-content: center; */
     margin: 0 auto;
     margin-top: 75px;
-    width: 1000px;
-}
-
-main .banner-product img{
-    display: block;
-    width: 490px;
+    max-width: 1000px;
+    width: 100%;
 }
 
 main .banner-product .banner-product-apparel{
     display: block;
     margin-right: 20px;
-    
+    background-image: url("../pic/frontpageApparel.png");
+    width: 100%;
+    height: 490px;
+    max-width: 490px;
+    background-size: cover;
+}
+
+main .banner-product .banner-product-camping{
+    display: block;
+    background-image: url("../pic/frontpageCamping.png");
+    width: 100%;
+    height: 490px;
+    max-width: 490px;
+    background-size: cover;
 }
 
 main .banner-product h1{
     width: 100%;
+    height: 100%;
     line-height: 40px;
     color: white;
     font-weight: bold;
     text-align: center;
     font-size: 32px;
-    margin-top: -152px;
-    letter-spacing: 3px;
-    /* vertical-align: middle; */
     letter-spacing: 5px;
     display: block;
+    padding-top: 334px;
 }
-
+main .banner-product a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
 main .banner-product .banner-product-camping{
     display: block;
 }
@@ -105,7 +115,7 @@ main .banner-product .banner-product-camping{
 /*-----------------best seller-----------------*/
 main .banner-bestSeller{
     margin: 0 auto;
-    margin-top: 175px;
+    margin-top: 100px;
     width: 1000px;
 }
 
@@ -116,7 +126,6 @@ main .banner-bestSeller h2{
     margin: 20px auto 50px;
     font-weight: bold;
     letter-spacing: 2px;
-
 }
 
 main .banner-product-bestSeller{
@@ -155,7 +164,7 @@ main .banner-product-bestSeller-one{
 }
 
 main .banner-product-bestSeller-one:hover{
-    box-shadow: 1px 8px 12px rgba(31, 31, 31, 0.8);
+    box-shadow: 2px 3px 5px rgba(31, 31, 31, 0.8);
 }
 
 main .banner-product-bestSeller-one:hover img{
@@ -228,24 +237,23 @@ main .banner-bestSeller .banner-bestSeller-ReadMore:hover{
 
 /*-----------------brandStory-----------------*/
 main .banner-brandStory{
-    display: flex;
-    width: 1200px;
-    justify-content: center;
+    max-width: 1200px;
+    width: 100%;
+    height: 700px;
+    background-size: cover;
     margin: 0 auto;
-    margin-top: 50px;
-    margin-bottom: 387px;
+    background-image: url("../pic/kevin-schmid--grs8iMGqQE-unsplash.png");
+    margin-top: 70px;
+    margin-bottom: 70px; 
 }
-
-main .banner-brandStory img{
+main .banner-brandStory a{
     display: block;
     width: 100%;
-    margin: 0 auto;
+    height: 100%;
 }
-
-
 main .banner-brandStory-text{
     padding-left: 70px;
-    margin-top: -434px;
+    padding-top: 405px;
 }
 
 main .banner-brandStory h1{
@@ -265,22 +273,7 @@ main .banner-brandStory  .banner-brandStory-text h2{
 }
 
 
-
-
 @media screen and (max-width: 1440px){
-    main .banner .banner-img img{
-        display: block;
-        width: 100%;
-        background-size: cover;
-        margin: 0 auto;
-    }
-
-    main .banner .banner-text{
-        /* border: 1px solid red; */
-        margin-top: -350px;
-        margin-left: 125px;
-    }
-
     .imageGallerySlider{
         display: flex;
         justify-content: center;
@@ -288,7 +281,312 @@ main .banner-brandStory  .banner-brandStory-text h2{
         max-width: 1000px;
         
     }
+    main .banner{
+        max-width: 1440px;
+        width: 100%;
+        height: 800px;
+    }
+
+    main .banner .banner-text{
+        position: relative;
+        top: 58%;
+        left: 5%;
+    }
+
+    .imageGallerySlider{
+        display: flex;
+        justify-content: center;
+        margin: 65px auto 0px;
+        max-width: 1000px;
+        
+    }
 }
+
+@media screen and (max-width: 418px){
+    /*-----------------main-----------------*/
+.main {
+    /* margin: 0 auto; */
+    display: flex;
+    flex-direction: column;
+    margin: 55px auto 0;
+    max-width: 414px;
+    width: 100%;
+    height: 100%;
+}
+
+main .banner{
+    /* display: none; */
+    max-width: 414px;
+    width: 100%;
+    height: 227px;
+    background-image: url("../pic/balkan-campers-lFCb0Zq9qJU-unsplash.jpg");
+    background-size: cover;
+    margin: 0 auto;
+}
+
+main .banner .banner-text{
+    position: relative;
+    top: 0%;
+    left: 0%;
+    padding-top: 140px;
+    padding-left: 30px;
+}
+
+main .banner .banner-text h1{
+    font-size: 14px;
+    color: white;
+    letter-spacing: 1.5px;
+    margin-top: 5px;
+    line-height: 1;
+}
+
+main .banner .banner-text h2{
+    font-size: 12px;
+    color: white;
+    letter-spacing: 1.5px;
+    line-height: 1;
+}
+
+.imageGallerySlider{
+    display: flex;
+    justify-content: center;
+    margin: 40px auto 0px;
+    max-width: 414px;
+    
+}
+
+.swiper-wrapper{
+    margin: 0 auto;
+    max-width: 370px;
+}
+
+.swiper-wrapper img{
+    width: 100%;
+    margin: 0 auto;
+}
+
+.swiper-button-next,.swiper-button-prev{
+    background-size:10px 10px;
+}
+
+main .banner-product{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-top: 40px;
+    max-width: 370px;
+    width: 100%;
+}
+
+main .banner-product .banner-product-apparel{
+    display: block;
+    margin-right: 0px;
+    background-image: url("../pic/frontpageApparel.png");
+    width: 100%;
+    height: 180px;
+    max-width: 180px;
+    background-size: cover;
+}
+
+main .banner-product .banner-product-camping{
+    display: block;
+    background-image: url("../pic/frontpageCamping.png");
+    width: 100%;
+    height: 180px;
+    max-width: 180px;
+    background-size: cover;
+}
+
+main .banner-product h1{
+    width: 100%;
+    height: 100%;
+    line-height: 20px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    font-size: 14px;
+    letter-spacing: 3px;
+    display: block;
+    padding-top: 100px;
+}
+main .banner-product a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+main .banner-product .banner-product-camping{
+    display: block;
+}
+
+/*-----------------best seller-----------------*/
+main .banner-bestSeller{
+    /* display: none; */
+    margin: 0 auto;
+    margin-top: 40px;
+    width: 100%;
+    max-width: 350px;
+}
+
+main .banner-bestSeller h2{
+    text-align: center;
+    font-size: 20px;
+    color: black;
+    margin: 20px auto 50px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+main .banner-product-bestSeller{
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+}
+
+
+main .banner-product-bestSeller li{
+    border: 0.5px solid rgba(0, 0, 0, 0.2);
+    width: 100px;
+    padding: 1px;
+}
+
+
+main .banner-product-bestSeller a{
+    text-decoration: none;
+}
+
+main .banner-product-bestSeller li:nth-child(2){
+    margin: 0 ;
+}
+
+main .banner-product-bestSeller img{
+    width: 100%;
+    display: block;
+    opacity: 1;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+main .banner-product-bestSeller-one{
+    position: relative;
+}
+
+main .banner-product-bestSeller p{
+    padding: 2px;
+    font-size: 8px;
+    line-height: 10px;
+    color: black;
+    text-align: center;
+}
+
+main .banner-product-bestSeller br + p{
+    margin-bottom: 10px;
+}
+
+main .banner-product-bestSeller-one:hover{
+    box-shadow: 2px 3px 5px rgba(31, 31, 31, 0.8);
+}
+
+main .banner-product-bestSeller-one:hover img{
+    opacity: 0.4;
+    background-color: black;
+}
+
+main .banner-product-bestSeller-one:hover .banner-product-bestSeller-middle{
+    opacity: 1;
+}
+
+main .banner-product-bestSeller-middle{
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(10.5%, -2%);
+    -ms-transform: translate(-0%, -0%);
+    text-align: center;
+}
+
+main .banner-product-bestSeller-middle a{
+    background-color: rgb(114, 114, 114);
+    border-radius: 3px;
+    color: white;
+    font-size: 6px;
+    width: 80px;
+    line-height: 3;
+}
+main .banner-product-bestSeller-middle a i{
+    padding-right: 5px; 
+}
+
+main .banner-product-bestSeller-middle{
+    transition: .5s ease;
+    opacity: 1;
+    position: static;
+}
+
+main .banner-bestSeller .banner-bestSeller-ReadMore{
+    display: block;
+    margin: 30px auto 10px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #9E472D;
+    line-height: 2;
+    width: 200px;
+    color: white;
+    letter-spacing: 1px;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+main .banner-bestSeller .banner-bestSeller-ReadMore:hover{
+    -webkit-box-shadow: 0 0 6px black;
+	-moz-box-shadow: 0 0 6px black;
+	box-shadow: 0 0 6px black;
+}
+
+
+/*-----------------brandStory-----------------*/
+main .banner-brandStory{
+    /* display: none; */
+    max-width: 370px;
+    width: 100%;
+    height: 250px;
+    background-size: cover;
+    margin: 0 auto;
+    background-image: url("../pic/kevin-schmid--grs8iMGqQE-unsplash.png");
+    margin-top: 30px;
+    margin-bottom: 30px; 
+}
+main .banner-brandStory a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+main .banner-brandStory-text{
+    padding-left: 15px;
+    padding-top: 140px;
+}
+
+main .banner-brandStory h1{
+    display: block;
+    font-size: 10px;
+    color: white;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+main .banner-brandStory  .banner-brandStory-text h2{
+    display: block;
+    font-size: 8px;
+    color: white;
+    letter-spacing: 2px;
+    padding-bottom: 8px;
+}
+
+}
+
+
 
 
 

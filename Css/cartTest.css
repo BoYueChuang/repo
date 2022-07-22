@@ -1,8 +1,6 @@
 
-
 /*-----------------cart-----------------*/
 .cartInner{
-    z-index: 7;
     position: fixed;
     background-color: rgba(0, 0, 0, 0.5);
     bottom: 0%;
@@ -10,15 +8,12 @@
     height: 100%;
 }
 .cart{
-    z-index: 8;
     width: 100%;
     max-width: 500px;
     animation: fadein 1s ease; 
     background-color: #fff;
-    position:fixed;
-    top: 0%;
+    position:absolute;
     right: 0%;
-    height: 100%;
 }
 
 @keyframes fadein {

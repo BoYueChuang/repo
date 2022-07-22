@@ -10,13 +10,19 @@
 </head>
 <body>
     <!-----------------------header----------------------->
+    
     <nav class="nav">
         <div class="nav-wrapper">
                 <div class="nav-header-logo">
                     <a href="./frontPage.html"><img src="../LOGOVersion/1x/white.png" alt=""></a>
                 </div>
+                <div  class="nav-header-bars">
+                    <a id="navBar"><i class="fa-solid fa-bars"></i></a>
+                </div>
 
-                <div class="nav-header-menu">
+                <div class="nav-header-menu" id="headerMenu">
+                <div class="sideInner" id="sideInner"></div>
+                <div class="sideOuter">
                     <ul class="nav-header-mainMenu-container">
                         <li><a href="#">All Items</a></li>
                         <li><a href="#">Brand Story</a></li>
@@ -24,10 +30,11 @@
                         <li><a href="#">Contact Us</a></li>
                     </ul>
                     <ul class="nav-header-actionMenu-container">
-                        <li><a href=""><i class="fa-regular fa-circle-user"></i></a></li>
-                        <li><a href=""><i class="fa-solid fa-cart-shopping"></i></a></li>
-                        <li><a href=""><i class="fa-solid fa-magnifying-glass"></i></a></li>
+                        <li><a href="" title="User"><i class="fa-regular fa-circle-user"></i></a></li>
+                        <li><a href="" title="Cart"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                        <li><a href="" title="Search"><i class="fa-solid fa-magnifying-glass"></i></a></li>
                     </ul>
+                    </div>
                 </div>
         </div>
     </nav>
@@ -84,5 +91,27 @@
             </div>
         </div>
     </footer>
+    <script>
+        const navBar = document.getElementById('navBar');
+        navBar.addEventListener('click', () => {
+        const headerMenu = document.getElementById('headerMenu');
+        if (headerMenu.style.display === 'none') {
+            headerMenu.style.display = 'block';
+        } else {
+
+            headerMenu.style.display = 'none';
+        }
+        });
+
+        const sideInner = document.getElementById('sideInner');
+        sideInner.addEventListener('click', () => {
+        const headerMenu = document.getElementById('headerMenu');
+        if (headerMenu.style.display === 'block') {
+            headerMenu.style.display = 'none';
+        } else {
+            headerMenu.style.display = 'block';
+        }
+        });
+    </script>
 </body>
 </html>

@@ -4,7 +4,6 @@
 @import url("../Css/contactus.css");
 
 body{
-    width: 100%;
     font-family: "微軟正黑體",Verdana, Tahoma, sans-serif;
     background-color: white;
     overflow-x: hidden;
@@ -46,6 +45,9 @@ a{
 
 /*-----------------主選單-----------------*/
 .nav-header-menu{
+    display: flex;
+}
+.sideOuter{
     display: flex;
 }
 
@@ -103,7 +105,6 @@ a{
 footer{
     background-color: rgb(0, 0, 0);
     width: 100%;
-    height: 700px;
     color: white;
 }
 
@@ -219,8 +220,258 @@ footer .footer-grid-underLine{
     display: flex;
     justify-content: center;
     flex-wrap: nowrap;
-
+    padding-bottom: 15px;
 }
 
+
+
+@media screen and (max-width: 415px) {
+    /*-----------------header-----------------*/
+    .nav{
+        background-color: rgb(0, 0, 0);
+        max-width: 414px;
+        width: 100%;
+        height: 55px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 5;
+    }
+
+    .sideInner{
+        z-index: 7;
+        position: fixed;
+        background-color: rgba(0, 0, 0, 0.5);
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .nav .nav-wrapper{
+        max-width: 414px;
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        height: 55px;
+        justify-content: space-between;
+    }
+    
+
+    .nav-header-logo{
+        height: 40px;
+        max-width: 91px;
+    }
+
+    .nav-header-logo img{
+        height: 40px;
+        padding: 8px 0px 10px 20px ;
+        
+    }
+    .nav-header-bars{
+        max-width: 20px;
+        align-items: center;
+        padding-right:20px;
+        padding-top: 20px;
+        
+    }
+
+    .nav-header-bars a{
+        color: white;
+        display: block;
+    }
+   
+
+    /*-----------------主選單-----------------*/
+    .nav-header-menu{
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        max-width: 414px;
+        width: 100%;
+    }
+    .sideOuter{
+        background-color: white;
+        z-index: 10;
+        position: fixed;
+        box-sizing: border-box;
+        right: 0;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 280px;
+        animation: fadein 1s ease;
+    }
+
+    @keyframes fadein {
+        0% {opacity: 0;}
+        100% {opacity: 1;}
+    }
+    .nav-header-menu .nav-header-mainMenu-container{
+        display: flex;
+        flex-direction: column;
+    }
+    .nav-header-menu{
+        border: 1px solid red;
+
+    }
+    .nav-header-menu .nav-header-mainMenu-container li{
+        width: 100%;
+        margin-right: 0px;
+        text-align: center;
+        border-bottom:1px solid red ;
+
+    }
+
+    .nav-header-menu .nav-header-mainMenu-container a{
+        display: block;
+        text-decoration: none;
+        color: white;
+        opacity: 1;
+        letter-spacing: 1px;
+        color: black;
+        font-size: 14px;
+        padding: 12px 24px;
+    }
+
+    .nav-header-menu .nav-header-mainMenu-container a:hover{
+        font-weight: bold;
+    }
+
+    /*-----------------ICON選單-----------------*/
+
+    .nav-header-menu .nav-header-actionMenu-container {
+        margin-top: 0px;
+        display: flex;
+        margin: 0px;
+        flex-direction: column;
+    }
+    .nav-header-menu .nav-header-actionMenu-container li{
+        margin-right: 0px;
+        text-align: center;
+        border-bottom:1px solid black ;
+    }
+
+    .nav-header-menu .nav-header-actionMenu-container a{
+        display: block;
+        text-decoration: none;
+        color: black;
+        font-size: 14px;
+        padding: 12px 24px;
+        opacity: 1;
+    }
+
+
+    .nav-header-menu .nav-header-actionMenu-container a:after{
+        content: attr(title);
+        margin-left: 10px;
+      }
+    .nav-header-menu .nav-header-actionMenu-container a:hover{
+        opacity: 1;
+    }
+
+   
+    /*-----------------footer-----------------*/
+
+    footer{
+        background-color: rgb(0, 0, 0);
+        max-width: 414px;
+        width: 100%;
+        color: white;
+    }
+    
+    footer .footer-grid{
+        max-width: 414px;
+        margin: 0 auto;
+    }
+
+    footer .footer-grid .footer-grid-menu{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        padding: 0px;
+        justify-content: center;
+    }
+
+/*-----------------footer故事-----------------*/
+footer .footer-grid-menu .footer-grid-menu-information{
+    padding-top: 10px;
+    height: 100%;
+    max-width: 300px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    text-align: center;
+    margin: 0 auto;
+}
+.footer-grid-menu-information-img{
+    margin-bottom: 5px;
+}
+footer .footer-grid-menu .footer-grid-menu-information{
+    margin-bottom: 20px;
+}
+footer .footer-grid-menu .footer-grid-menu-information img{
+    height: 18px;
+    vertical-align: middle;
+}
+
+footer .footer-grid-menu .footer-grid-menu-information h1{
+    line-height: 0px;
+    display: inline-block;
+    vertical-align:auto;
+    letter-spacing: 1px;
+}
+
+footer .footer-grid-menu .footer-grid-menu-information p{
+    line-height: 20px;
+    letter-spacing: 1px;
+}
+
+/*-----------------footer關於我們-----------------*/
+
+.footer-grid-menu-container{
+    display: none;
+}
+
+/*-----------------footer聯絡方式-----------------*/
+
+.footer-grid-menu-contact{
+    display: none;
+}
+/*-----------------footerICON-----------------*/
+footer .footer-grid-menu .footer-grid-menu-icon{
+    padding-left: 0px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    
+}
+footer .footer-grid-menu .footer-grid-menu-icon .footer-grid-menu-icon-container{
+    display: flex;
+}
+footer .footer-grid-menu .footer-grid-menu-icon li{
+    padding: 0 10px;
+}
+footer .footer-grid-menu .footer-grid-menu-icon a{
+    color: white;
+    font-size: 20px;
+}
+
+footer .footer-grid-menu .footer-grid-menu-icon a:hover{
+    color: white;
+    font-size: 22px;
+}
+
+/*-----------------footerunderLine-----------------*/
+    footer .footer-grid-underLine{
+        max-width: 300px;
+        width: 100%;
+        text-align: center;
+        letter-spacing: 1px;
+        margin: 0 auto;
+    }
+}
 
 
