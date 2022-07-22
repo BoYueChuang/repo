@@ -229,9 +229,9 @@ main .banner-bestSeller .banner-bestSeller-ReadMore{
 }
 
 main .banner-bestSeller .banner-bestSeller-ReadMore:hover{
-    -webkit-box-shadow: 0 0 10px black;
-	-moz-box-shadow: 0 0 10px black;
-	box-shadow: 0 0 10px black;
+    -webkit-box-shadow: 0 0 6px black;
+	-moz-box-shadow: 0 0 6px black;
+	box-shadow: 0 0 6px black;
 }
 
 
