@@ -10,35 +10,42 @@
     <title>Brand Story</title>
 </head>
 <body>
-    <!-----------------------header----------------------->
+    <!-- nav -->
     <nav class="nav">
         <div class="nav-wrapper">
                 <div class="nav-header-logo">
                     <a href="./frontPage.html"><img src="../LOGOVersion/1x/white.png" alt=""></a>
                 </div>
-
-                <div class="nav-header-menu">
-                    <ul class="nav-header-mainMenu-container">
-                        <li><a href="../Html/productCategories.html">All Items</a></li>
-                        <li><a href="../Html/brandStory.html">Brand Story</a></li>
-                        <li><a href="../Html/goodNews.html">Good News</a></li>
-                        <li><a class="btn">Contact Us</a></li>
-                    </ul>
-                    <ul class="nav-header-actionMenu-container">
-                        <li><a href="../Html/account.html"><i class="fa-regular fa-circle-user"></i></a></li>
-                        <li><a id="cart"><i class="fa-solid fa-cart-shopping"></i></a></li>
-                        <li><a id="btn3"><i class="fa-solid fa-magnifying-glass"></i></a></li>
-                    </ul>
+                <div  class="nav-header-bars">
+                    <a id="navBar"><i class="fa-solid fa-bars"></i></a>
+                </div>
+                <div class="nav-header-menu" id="headerMenu">
+                    <div class="sideInner" id="sideInner"></div>
+                    <div class="sideOuter">
+                        <ul class="nav-header-mainMenu-container">
+                            <li><a href="../Html/productCategories.html">All Items</a></li>
+                            <li><a href="../Html/brandStory.html">Brand Story</a></li>
+                            <li><a href="../Html/goodNews.html">Good News</a></li>
+                            <li><a id="contactUSbtn">Contact Us</a></li>
+                        </ul>
+                        <ul class="nav-header-actionMenu-container">
+                            <li><a href="../Html/account.html" title="User"><i class="fa-regular fa-circle-user"></i></a></li>
+                            <li><a id="cart" title="Cart"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                            <li><a id="searchbtn" title="Search"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+                        </ul>
+                    </div>
                 </div>
         </div>
     </nav>
 
-    <!-----------------------contactUS----------------------->
-    <div class="contactUS" id="contactUS" style="display: none;">
+
+    <!-- contactUS -->
+    <div class="contactUS" id="form" style="display: none;">
+        <div class="contactUSInner" id="contactUSInner"></div>
         <div class="contactUS-modal" >
             <div class="contactUS-modal-content">
                 <form>
-                    <a id="btn2"><i class="fa-solid fa-xmark"></i></a> 
+                    <a href="" id="closeContactUSbtn"><i class="fa-solid fa-xmark"></i></a>
                     <h1>聯絡我們</h1>
                     <h2>謝謝您的主動聯絡，請留下要諮詢的問題，我們會用以下資訊進行回覆。</h2>
                     <input type="text" placeholder=" 請輸入電子郵件">
@@ -49,10 +56,12 @@
         </div>
     </div>
 
-    <!-----------------------cart----------------------->
-    <div class="cart" id="showCart"  style="display: none;">
-        
-            <div class="cart-modal" >
+
+    <!-- cart -->
+    <div class="cartWrapper"  id="cartWrapper" style="display: none;">
+        <div class="cartInner" id="cartInner"></div>
+        <div class="cart" id="showCart">
+            <div class="cart-modal">
                 <div class="cart-modal-content">
 
                     <div class="cart-modal-content-top">
@@ -95,20 +104,21 @@
                     </div>
 
                 </div>  
+            </div>  
             </div>
+        </div>
 
-    </div>
-
-    <!-----------------------search----------------------->
-    <div class="search" id="search" style="display: none;">
+    <!-- search -->   
+    <div class="search" style="display: none;" id="search">
+        <div class="searchInner" id="searchInner"></div>
         <div class="search-modal" >
             <div class="search-modal-content">
                 <form>
                     <input type="text" placeholder="找商品" class="search-modal-content-text">
 
                     <div class="search-modal-content-icon">
-                        <a id="btn4"><i class="fa-solid fa-xmark"></i></a>
-                        <a href="" ><i class="fa-solid fa-magnifying-glass"></i></a>
+                        <a href="" id="closeSearchbtn"><i class="fa-solid fa-xmark"></i></a>
+                        <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
                     </div>
                 </form>
             </div>  
@@ -209,5 +219,8 @@
         </div>
     </footer>
     <script src="../JS/headerfooter.js"></script>
+    <script>
+
+    </script>
 </body>
 </html>

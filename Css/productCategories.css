@@ -43,34 +43,33 @@ main section .main-productCategories-section h1{
     padding-bottom: 20px;
 }
 
-main section .main-productCategories-section-subＭenu{
+main section .main-productCategories-section-subMenu{
     display: none;
     overflow: hidden;
     padding-left: 20px;
 }
 
-main section .main-productCategories-section .main-productCategories-section-mainＭenu a{
+main section .main-productCategories-section .main-productCategories-section-mainMenu a{
     text-decoration: none;
     line-height: 2;
     color: black;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: nowrap;
     font-size: 20px;
     margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     
 }
 
-main section .main-productCategories-section .main-productCategories-section-mainＭenu i{
+main section .main-productCategories-section .main-productCategories-section-mainMenu i{
     color: black;
-    padding-top: 10px;
-    padding-left: 40px;
+    margin-left: 50px;
 }
 
-main section .main-productCategories-section .main-productCategories-section-mainＭenu a:hover {
+main section .main-productCategories-section .main-productCategories-section-mainMenu a:hover {
     color: #9E472D;
 }
-main section .main-productCategories-section .main-productCategories-section-mainＭenu :hover i{
+main section .main-productCategories-section .main-productCategories-section-mainMenu :hover i{
     color: #9E472D;
 }
 
@@ -106,10 +105,9 @@ main .banner-product-bestSeller{
 
 
 main .banner-product-bestSeller li{
-    border: 0.5px solid rgba(0, 0, 0, 0.2);
     max-width: 300px;
-    padding: 5px;
-    margin: 40px;
+    padding: 10px;
+    margin: 38px;
 }
 
 
@@ -132,7 +130,7 @@ main .banner-product-bestSeller-one{
 
 
 main .banner-product-bestSeller-one:hover{
-    box-shadow: 2px 3px 5px rgba(31, 31, 31, 0.8);
+    box-shadow: 1px 1px 30px 4px rgb(153 149 149 / 32%);
 }
 main .banner-product-bestSeller-one:hover img{
     opacity: 0.4;
@@ -247,50 +245,9 @@ main section{
 
 main section .main-productCategories-section{
     display: none;
-    margin-top: 20px;
-    padding: 16px;
+    margin-top: 0px;
+    padding: 0px;
 }
-
-main section .main-productCategories-section h1{
-    font-size: 24px;
-    color: black;
-    font-weight: bold;
-    letter-spacing: 2px;
-    padding-bottom: 20px;
-}
-
-main section .main-productCategories-section-subＭenu{
-    display: none;
-    overflow: hidden;
-    padding-left: 20px;
-}
-
-main section .main-productCategories-section .main-productCategories-section-mainＭenu a{
-    text-decoration: none;
-    line-height: 2;
-    color: black;
-    display: flex;
-    justify-content: space-between;
-    font-size: 20px;
-    margin-bottom: 20px;
-    
-}
-
-main section .main-productCategories-section .main-productCategories-section-mainＭenu i{
-    color: black;
-    padding-top: 10px;
-    padding-left: 40px;
-}
-
-main section .main-productCategories-section .main-productCategories-section-mainＭenu a:hover {
-    color: #9E472D;
-}
-main section .main-productCategories-section .main-productCategories-section-mainＭenu :hover i{
-    color: #9E472D;
-}
-
-
-
 /*-----------------best seller-----------------*/
 main .banner-bestSeller{
     /* display: none; */
@@ -308,9 +265,7 @@ main .banner-bestSeller h2{
 }
 
 main .banner-bestSeller-select{
-
-    display: none;
-    padding-right: 4px;
+    padding-right: 8px;
 }
 
 main .banner-product-bestSeller{
@@ -325,7 +280,6 @@ main .banner-product-bestSeller{
 
 
 main .banner-product-bestSeller li{
-    border: 0.5px solid rgba(0, 0, 0, 0.2);
     max-width: 180px;
     padding: 0px;
     margin: 10px 0px;
@@ -354,6 +308,7 @@ main .banner-product-bestSeller-one{
 main .banner-product-bestSeller-one:hover{
     box-shadow: 0px 0px 0px rgba(31, 31, 31, 0.8);
 }
+
 main .banner-product-bestSeller-one:hover img{
     opacity: 1;
     background-color: black;
@@ -369,7 +324,7 @@ main .banner-product-bestSeller-middle{
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(14%, -10%);
+    transform: translate(15%, -10%);
     -ms-transform: translate(-0%, -0%);
     text-align: center;
 }

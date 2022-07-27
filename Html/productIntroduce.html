@@ -10,35 +10,42 @@
     <title>productIntroduce</title>
 </head>
 <body>
-    <!-----------------------header----------------------->
+    <!-- nav -->
     <nav class="nav">
         <div class="nav-wrapper">
                 <div class="nav-header-logo">
                     <a href="./frontPage.html"><img src="../LOGOVersion/1x/white.png" alt=""></a>
                 </div>
-
-                <div class="nav-header-menu">
-                    <ul class="nav-header-mainMenu-container">
-                        <li><a href="../Html/productCategories.html">All Items</a></li>
-                        <li><a href="../Html/brandStory.html">Brand Story</a></li>
-                        <li><a href="../Html/goodNews.html">Good News</a></li>
-                        <li><a class="btn">Contact Us</a></li>
-                    </ul>
-                    <ul class="nav-header-actionMenu-container">
-                        <li><a href="../Html/account.html"><i class="fa-regular fa-circle-user"></i></a></li>
-                        <li><a id="cart"><i class="fa-solid fa-cart-shopping"></i></a></li>
-                        <li><a id="btn3"><i class="fa-solid fa-magnifying-glass"></i></a></li>
-                    </ul>
+                <div  class="nav-header-bars">
+                    <a id="navBar"><i class="fa-solid fa-bars"></i></a>
+                </div>
+                <div class="nav-header-menu" id="headerMenu">
+                    <div class="sideInner" id="sideInner"></div>
+                    <div class="sideOuter">
+                        <ul class="nav-header-mainMenu-container">
+                            <li><a href="../Html/productCategories.html">All Items</a></li>
+                            <li><a href="../Html/brandStory.html">Brand Story</a></li>
+                            <li><a href="../Html/goodNews.html">Good News</a></li>
+                            <li><a id="contactUSbtn">Contact Us</a></li>
+                        </ul>
+                        <ul class="nav-header-actionMenu-container">
+                            <li><a href="../Html/account.html" title="User"><i class="fa-regular fa-circle-user"></i></a></li>
+                            <li><a id="cart" title="Cart"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                            <li><a id="searchbtn" title="Search"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+                        </ul>
+                    </div>
                 </div>
         </div>
     </nav>
 
-    <!-----------------------contactUS----------------------->
-    <div class="contactUS" id="contactUS" style="display: none;">
+
+    <!-- contactUS -->
+    <div class="contactUS" id="form" style="display: none;">
+        <div class="contactUSInner" id="contactUSInner"></div>
         <div class="contactUS-modal" >
             <div class="contactUS-modal-content">
                 <form>
-                    <a id="btn2"><i class="fa-solid fa-xmark"></i></a> 
+                    <a href="" id="closeContactUSbtn"><i class="fa-solid fa-xmark"></i></a>
                     <h1>聯絡我們</h1>
                     <h2>謝謝您的主動聯絡，請留下要諮詢的問題，我們會用以下資訊進行回覆。</h2>
                     <input type="text" placeholder=" 請輸入電子郵件">
@@ -49,10 +56,12 @@
         </div>
     </div>
 
-    <!-----------------------cart----------------------->
-    <div class="cart" id="showCart"  style="display: none;">
-        
-            <div class="cart-modal" >
+
+    <!-- cart -->
+    <div class="cartWrapper"  id="cartWrapper" style="display: none;">
+        <div class="cartInner" id="cartInner"></div>
+        <div class="cart" id="showCart">
+            <div class="cart-modal">
                 <div class="cart-modal-content">
 
                     <div class="cart-modal-content-top">
@@ -95,20 +104,21 @@
                     </div>
 
                 </div>  
+            </div>  
             </div>
+        </div>
 
-    </div>
-
-    <!-----------------------search----------------------->
-    <div class="search" id="search" style="display: none;">
+    <!-- search -->   
+    <div class="search" style="display: none;" id="search">
+        <div class="searchInner" id="searchInner"></div>
         <div class="search-modal" >
             <div class="search-modal-content">
                 <form>
                     <input type="text" placeholder="找商品" class="search-modal-content-text">
 
                     <div class="search-modal-content-icon">
-                        <a id="btn4"><i class="fa-solid fa-xmark"></i></a>
-                        <a href="" ><i class="fa-solid fa-magnifying-glass"></i></a>
+                        <a href="" id="closeSearchbtn"><i class="fa-solid fa-xmark"></i></a>
+                        <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
                     </div>
                 </form>
             </div>  
@@ -140,7 +150,9 @@
                 </div>
                 <div class="productIntroduce-template-productPic">
                     <ul>
-                        <li class="big"><img src="../ALLITEMS/TENT/frontpageProductOne-one.jpeg" alt="" ></li>
+                        <li class="big"><img src="../ALLITEMS/TENT/frontpageProductOne-one.jpeg" alt=""  class="image">
+                            <div class="round-loope"></div>
+                        </li>
                     </ul>
                 </div>
                     
@@ -157,28 +169,32 @@
                             <li>1</li>
                             <li><a href=""><i class="fa-solid fa-plus"></i></a></li>
                         </ul>
-                    </div>  
-                    <div class="productIntroduce-template-productMain-cart">
-                        <ul>
-                            <li><a class="goCart"><i class="fa-solid fa-cart-shopping"></i>加入購物車</a></li>
-                        </ul>
                     </div>
-                    <div class="productIntroduce-template-productMain-followList">
-                        <ul>
-                            <li><a href="../Html/folllowList.html"><i class="fa-regular fa-heart"></i>加入追蹤清單</a></li>
-                        </ul>
+                    <div class="productIntroduce-template-productMain-cart-followList">
+                        <div class="productIntroduce-template-productMain-cart">
+                            <ul>
+                                <li><a class="goCart"><i class="fa-solid fa-cart-shopping"></i>加入購物車</a></li>
+                            </ul>
+                        </div>
+                        <div class="productIntroduce-template-productMain-followList">
+                            <ul>
+                                <li><a href="../Html/folllowList.html"><i class="fa-regular fa-heart"></i>加入追蹤清單</a></li>
+                            </ul>
+                        </div>
                     </div>
 
-                    <div class="accordion" >
+
+
+                    <div class="accordionOne" id="accordionOne">
                         <div class="productIntroduce-template-productMain-introduce">
                                 <ul>
-                                    <li ><a class="accordion">商品描述<i class="fa-solid fa-angle-down"></i></a></li>
+                                    <li ><a class="accordion">商品描述<i class="fa-solid fa-angle-down" id="downOne"></i></a></li>
                                 </ul>
                                 
                         </div>
                     </div>
                     
-                    <div class="panel">
+                    <div class="panelOne" id="panelOne">
                         <div class="productIntroduce-template-productMain-introduce-detail">
                                 <p>
                                     人數 ：4～5人<br>
@@ -196,16 +212,16 @@
                     </div>
 
 
-                    <div class="accordion">
+                    <div class="accordionTwo" id="accordionTwo">
                         <div class="productIntroduce-template-productMain-remark">
                             <ul>
-                                <li><a>備註<i class="fa-solid fa-angle-down"></i></a></li>
+                                <li><a>備註<i class="fa-solid fa-angle-up" id="downTwo"></i></a></li>
                             </ul>
                         </div>
                     </div>
 
 
-                    <div class="panel">
+                    <div class="panel"  id="panelTwo" style="display: none;">
                         <div class="productIntroduce-template-productMain-remark-detail">
                             <h3>送貨方式</h3>
                             <p>
@@ -321,27 +337,74 @@
         </div>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="../JS/zoom.js"></script>
+
     <script src="../JS/headerfooter.js"></script>
     <script>
-    var acc = document.getElementsByClassName("accordion");
-    var i;
-
-    for (i = 0; i < acc.length; i++) {
-    acc[i].addEventListener("click", function() {
-        this.classList.toggle("active");
-        var panel = this.nextElementSibling;
-        if (panel.style.display === "block") {
-        panel.style.display = "none";
+    var acc = document.getElementById("accordionOne");
+    acc.addEventListener("click", function() {
+        console.log("123");
+        var panelOne = document.getElementById("panelOne");
+        var downOne = document.getElementById("downOne")
+        if (panelOne.style.display === "none") {
+            panelOne.style.display = "block";
+            downOne.style.transform = "rotate(0deg)";
         } else {
-        panel.style.display = "block";
+            panelOne.style.display = "none";
+            downOne.style.transform = "rotate(180deg)";
         }
     });
-    }
+
+    var acc1 = document.getElementById("accordionTwo");
+    acc1.addEventListener("click", function() {
+        console.log("123");
+        var panelTwo = document.getElementById("panelTwo");
+        var downTwo = document.getElementById("downTwo")
+        if (panelTwo.style.display === "none") {
+            panelTwo.style.display = "block";
+            downTwo.style.transform = "rotate(180deg)";
+        } else {
+            panelTwo.style.display = "none";
+            downTwo.style.transform = "rotate(0deg)";
+        }
+    });
+    
 
     jQuery(".small img").click(function(){
         jQuery(".big img").prop("src",jQuery(this).prop("src"));
     });
+    const goCart = document.querySelector('.goCart');
+    goCart.addEventListener('click', function(){
+        console.log("123");
+    const cartWrapper = document.getElementById('cartWrapper');
 
+    if (cartWrapper.style.display === 'none') {
+        cartWrapper.style.display = 'block';
+    } else {
+
+        cartWrapper.style.display = 'none';
+    }
+    });
+
+    jQuery(function(){
+    
+    if(!$.fn.imagezoomsl){
+
+        $('.msg').show();
+        return;
+    }
+    else $('.msg').hide();
+
+    // plugin initialization
+    $('.image').imagezoomsl({
+        innerzoommagnifier: true,
+        classmagnifier: "magnifier",
+        magnifycursor: 'crosshair',
+        magnifiersize: [100, 100],
+        // disables the scrolling of the document with the mouse wheel when the cursor is over the image
+        disablewheel: false
+    });
+    });
     
 
     </script>

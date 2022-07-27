@@ -1,0 +1,6 @@
+1. input 格式是否輸入正確 (sweetalert) maxlength
+2. 購物車訂單
+3. swiper
+4. jquery
+5. 商品會隨著數量增加而價錢改變
+6. 放大鏡

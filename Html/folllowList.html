@@ -50,9 +50,10 @@
     </div>
 
     <!-----------------------cart----------------------->
-    <div class="cart" id="showCart"  style="display: none;">
-        
-            <div class="cart-modal" >
+    <div class="cartWrapper"  id="cartWrapper" style="display: none;">
+        <div class="cartInner" id="cartInner"></div>
+        <div class="cart" id="showCart">
+            <div class="cart-modal">
                 <div class="cart-modal-content">
 
                     <div class="cart-modal-content-top">
@@ -95,8 +96,8 @@
                     </div>
 
                 </div>  
-            </div>
-
+            </div>  
+        </div>
     </div>
 
     <!-----------------------search----------------------->
@@ -197,5 +198,21 @@
         </div>
     </footer>
     <script src="../JS/headerfooter.js"></script>
+    <script>
+    //加入購物車
+    const goCart = document.querySelector('.goCart');
+    goCart.addEventListener('click', function(){
+        console.log("123");
+    const cartWrapper = document.getElementById('cartWrapper');
+
+    if (cartWrapper.style.display === 'none') {
+        cartWrapper.style.display = 'block';
+    } else {
+
+        cartWrapper.style.display = 'none';
+    }
+    });
+
+    </script>
 </body>
 </html>

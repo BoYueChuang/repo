@@ -135,7 +135,6 @@ main .banner-product-bestSeller{
 
 
 main .banner-product-bestSeller li{
-    border: 0.5px solid rgba(0, 0, 0, 0.2);
     width: 300px;
     padding: 5px;
 }
@@ -164,7 +163,7 @@ main .banner-product-bestSeller-one{
 }
 
 main .banner-product-bestSeller-one:hover{
-    box-shadow: 2px 3px 5px rgba(31, 31, 31, 0.8);
+    box-shadow: 1px 1px 30px 4px rgb(153 149 149 / 32%);
 }
 
 main .banner-product-bestSeller-one:hover img{
@@ -202,6 +201,7 @@ main .banner-product-bestSeller-middle{
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     text-align: center;
+    
 }
 
 main .banner-product-bestSeller p{
@@ -229,10 +229,9 @@ main .banner-bestSeller .banner-bestSeller-ReadMore{
 }
 
 main .banner-bestSeller .banner-bestSeller-ReadMore:hover{
-    -webkit-box-shadow: 0 0 6px black;
-	-moz-box-shadow: 0 0 6px black;
-	box-shadow: 0 0 6px black;
+    transform: scale(1.1);
 }
+
 
 
 /*-----------------brandStory-----------------*/
@@ -315,10 +314,9 @@ main .banner-brandStory  .banner-brandStory-text h2{
 }
 
 main .banner{
-    /* display: none; */
     max-width: 414px;
     width: 100%;
-    height: 227px;
+    height: 230px;
     background-image: url("../pic/balkan-campers-lFCb0Zq9qJU-unsplash.jpg");
     background-size: cover;
     margin: 0 auto;
@@ -341,7 +339,7 @@ main .banner .banner-text h1{
 }
 
 main .banner .banner-text h2{
-    font-size: 12px;
+    font-size: 10px;
     color: white;
     letter-spacing: 1.5px;
     line-height: 1;
@@ -420,11 +418,10 @@ main .banner-product .banner-product-camping{
 
 /*-----------------best seller-----------------*/
 main .banner-bestSeller{
-    /* display: none; */
     margin: 0 auto;
     margin-top: 40px;
     width: 100%;
-    max-width: 350px;
+    max-width: 370px;
 }
 
 main .banner-bestSeller h2{
@@ -444,8 +441,7 @@ main .banner-product-bestSeller{
 
 
 main .banner-product-bestSeller li{
-    border: 0.5px solid rgba(0, 0, 0, 0.2);
-    width: 100px;
+    width: 110px;
     padding: 1px;
 }
 
@@ -484,11 +480,11 @@ main .banner-product-bestSeller br + p{
 }
 
 main .banner-product-bestSeller-one:hover{
-    box-shadow: 2px 3px 5px rgba(31, 31, 31, 0.8);
+    box-shadow: 0px 0px 0px rgba(31, 31, 31, 0.8);
 }
 
 main .banner-product-bestSeller-one:hover img{
-    opacity: 0.4;
+    opacity: 1;
     background-color: black;
 }
 
@@ -502,7 +498,7 @@ main .banner-product-bestSeller-middle{
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(10.5%, -2%);
+    transform: translate(12.5%, -2%);
     -ms-transform: translate(-0%, -0%);
     text-align: center;
 }
@@ -527,7 +523,7 @@ main .banner-product-bestSeller-middle{
 
 main .banner-bestSeller .banner-bestSeller-ReadMore{
     display: block;
-    margin: 30px auto 10px;
+    margin: 30px auto 20px;
     text-align: center;
     text-decoration: none;
     background-color: #9E472D;
@@ -536,14 +532,9 @@ main .banner-bestSeller .banner-bestSeller-ReadMore{
     color: white;
     letter-spacing: 1px;
     font-weight: bold;
-    font-size: 12px;
+    font-size: 10px;
 }
 
-main .banner-bestSeller .banner-bestSeller-ReadMore:hover{
-    -webkit-box-shadow: 0 0 6px black;
-	-moz-box-shadow: 0 0 6px black;
-	box-shadow: 0 0 6px black;
-}
 
 
 /*-----------------brandStory-----------------*/

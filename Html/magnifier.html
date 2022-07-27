@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style/jqzoom.css" media="screen"/>
+    <style>
+        .image {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        transition: 0.3s;
+        }
+
+        .round-loope {
+        /* border-radius: 50%; */
+        /*   box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset; */
+        box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    
+    <img src="../ALLITEMS/TENT/frontpageProductOne-eight.jpeg"alt="" class="image">
+    <div class="round-loope"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="../JS/zoom.js"></script>
+    <script>
+
+
+        jQuery(function(){
+ 
+        if(!$.fn.imagezoomsl){
+
+            $('.msg').show();
+            return;
+        }
+        else $('.msg').hide();
+
+        // plugin initialization
+        $('.image').imagezoomsl({
+            loadopacity: 0.1,
+            innerzoommagnifier: true,
+            classmagnifier: "magnifier",
+            magnifycursor: 'crosshair',
+            magnifiersize: [150, 150],
+            // disables the scrolling of the document with the mouse wheel when the cursor is over the image
+            disablewheel: false
+        });
+        });
+    </script>
+</body>
+</html>
+
+
+
+<!--<link rel="stylesheet" type="text/css" href="style/style.css" media="screen"/>-->
+
+
+

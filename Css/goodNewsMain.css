@@ -134,6 +134,139 @@ main .goodNewsMain-main .goodNewsMain-main-underPic h3{
     }
 } 
 
+@media screen and (max-width: 418px){
+    
+/*-----------------goodNewsmain-----------------*/
+main .goodNewsMain .goodNewsMain-contain{
+    margin: 55px 0 ;
+    max-width: 414px;
+    width: 100%;
+    height: 500px;
+    background-image: url("../pic/goodnewThree.jpg");
+    margin: 0 auto;
+    background-size: cover;
+    background-position: 55% 0%;
+    text-align: center;
+}
+
+main .goodNewsMain-contain-text{
+    margin: 55px 0 0 0 ;
+    margin-left: 0px;
+    padding-top: 20px;
+}
+
+main .goodNewsMain-contain h1{
+    margin-top: 50px;
+    font-size: 40px;
+    color: white;
+    padding-bottom: 20px;
+
+}
+main .goodNewsMain-contain h2{
+    font-size: 20px;
+    color: white;
+    padding-bottom: 0px;
+}
+
+
+
+/*-----------------goodNewsMain-main-----------------*/
+main .goodNewsMain-main{
+    margin: 0 auto;
+}
+
+
+/*-----------------.goodNewsMain-main-topPic-----------------*/
+
+main .goodNewsMain-main .goodNewsMain-main-topPic{
+    background-image: url('../pic/goodnewmainTop.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    max-width: 414px;
+    width: 95%;
+    height: 400px;
+    margin: 30px auto 0px;
+
+}
+
+main .goodNewsMain-main .goodNewsMain-main-topPic h1{
+    font-size: 30px;
+    color: white;
+    padding: 50px 15px ;
+}
+
+
+
+main .goodNewsMain-main .goodNewsMain-main-text{
+    max-width: 414px;
+    width: 90%;
+    text-align: center;
+    margin: 20px auto ;
+    border: 1px solid #9E472D;
+    padding: 10px;
+}
+
+main .goodNewsMain-main .goodNewsMain-main-text h1{
+    font-size: 18px;
+    padding-bottom: 15px;
+
+}
+
+main .goodNewsMain-main .goodNewsMain-main-text p{
+    font-size: 14px;
+    line-height: 1.6;
+    
+}
+
+
+/*-----------------goodNewsMain-main-underPic-----------------*/
+
+main .goodNewsMain-main .goodNewsMain-main-underPic{
+    background-image: url('../pic/goodnewmainUnder.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    max-width: 414px;
+    width: 95%;
+    height: 500px;
+    margin: 30px auto;
+
+}
+
+
+
+main .goodNewsMain-main .goodNewsMain-main-underPic .goodNewsMain-main-underPic-uptext h2{
+    font-size: 26px;
+    letter-spacing: 10px;
+    color: white;
+    transform: rotate(270deg);
+    
+}
+
+main .goodNewsMain-main .goodNewsMain-main-underPic .goodNewsMain-main-underPic-uptext{
+    padding-top: 50px;
+    padding-left: 248px;
+
+}
+
+
+main .goodNewsMain-main .goodNewsMain-main-underPic .goodNewsMain-main-underPic-undertext{
+    padding-top: 120px;
+    padding-left: 100px;
+    text-align: center;
+    line-height: 1.6;
+    color: white;
+}
+
+
+main .goodNewsMain-main .goodNewsMain-main-underPic h1{
+    font-size: 26px;
+}
+
+main .goodNewsMain-main .goodNewsMain-main-underPic h3{
+    font-size: 20px;
+}
+}
+
 
 
 

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css">
+    <link rel="stylesheet" href="../Css/reset.css">
+
+    <style>
+        @media screen and (max-width: 415px) {
+    /*-----------------header-----------------*/
+    .navRwd{
+        background-color: rgb(0, 0, 0);
+        max-width: 414px;
+        width: 100%;
+        height: 55px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 5;
+    }
+
+    .navRwd .sideInner{
+        z-index: 7;
+        position: fixed;
+        background-color: rgba(0, 0, 0, 0.5);
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .navRwd .nav-wrapper{
+        max-width: 414px;
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        height: 55px;
+        justify-content: space-between;
+    }
+    
+
+    .navRwd .nav-header-logo{
+        height: 40px;
+        max-width: 91px;
+    }
+
+    .navRwd .nav-header-logo img{
+        height: 40px;
+        padding: 8px 0px 10px 20px ;
+        
+    }
+    .navRwd .nav-header-bars{
+        max-width: 20px;
+        align-items: center;
+        padding-right:20px;
+        padding-top: 20px;
+        color: white;
+        
+    }
+
+    .navRwd .nav-header-bars a{
+        color: white;
+        display: block;
+    }
+   
+
+    /*-----------------主選單-----------------*/
+    .navRwd .nav-header-menu{
+        flex-direction: column;
+        position: fixed;
+        max-width: 414px;
+        width: 100%;
+    }
+    .navRwd .sideOuter{
+        background-color: white;
+        z-index: 10;
+        position: fixed;
+        box-sizing: border-box;
+        right: 0;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 280px;
+        animation: fadein 1s ease;
+    }
+
+    @keyframes fadein {
+        0% {opacity: 0;}
+        100% {opacity: 1;}
+    }
+    .navRwd .nav-header-menu .nav-header-mainMenu-container{
+        display: flex;
+        flex-direction: column;
+    }
+    .navRwd .nav-header-menu{
+        border: 1px solid red;
+
+    }
+    .navRwd .nav-header-menu .nav-header-mainMenu-container li{
+        width: 100%;
+        margin-right: 0px;
+        text-align: center;
+        border-bottom:1px solid red ;
+
+    }
+
+    .navRwd .nav-header-menu .nav-header-mainMenu-container a{
+        display: block;
+        text-decoration: none;
+        color: white;
+        opacity: 1;
+        letter-spacing: 1px;
+        color: black;
+        font-size: 14px;
+        padding: 12px 24px;
+    }
+
+    .navRwd .nav-header-menu .nav-header-mainMenu-container a:hover{
+        font-weight: bold;
+    }
+
+    /*-----------------ICON選單-----------------*/
+
+    .navRwd .nav-header-menu .nav-header-actionMenu-container {
+        margin-top: 0px;
+        display: flex;
+        margin: 0px;
+        flex-direction: column;
+    }
+    .navRwd .nav-header-menu .nav-header-actionMenu-container li{
+        margin-right: 0px;
+        text-align: center;
+        border-bottom:1px solid black ;
+    }
+
+    .navRwd .nav-header-menu .nav-header-actionMenu-container a{
+        display: block;
+        text-decoration: none;
+        color: black;
+        font-size: 14px;
+        padding: 12px 24px;
+        opacity: 1;
+    }
+
+
+    .navRwd .nav-header-menu .nav-header-actionMenu-container a:after{
+        content: attr(title);
+        margin-left: 10px;
+    }
+    .navRwd .nav-header-menu .nav-header-actionMenu-container a:hover{
+        opacity: 1;
+    }
+}
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <!-- nav -->
+    <nav class="navRwd">
+        <div class="nav-wrapper">
+                <div class="nav-header-logo">
+                    <a href="./frontPage.html"><img src="../LOGOVersion/1x/white.png" alt=""></a>
+                </div>
+                <div class="nav-header-bars">
+                    <a id="navBar"><i class="fa-solid fa-bars"></i></a>
+                </div>
+                <div class="nav-header-menu" id="headerMenu">
+                    <div class="sideInner" id="sideInner"></div>
+                    <div class="sideOuter">
+                        <ul class="nav-header-mainMenu-container">
+                            <li><a href="../Html/productCategories.html">All Items</a></li>
+                            <li><a href="../Html/brandStory.html">Brand Story</a></li>
+                            <li><a href="../Html/goodNews.html">Good News</a></li>
+                            <li><a id="contactUSbtn">Contact Us</a></li>
+                        </ul>
+                        <ul class="nav-header-actionMenu-container">
+                            <li><a href="../Html/account.html" title="User"><i class="fa-regular fa-circle-user"></i></a></li>
+                            <li><a id="cart" title="Cart"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                            <li><a id="searchbtn" title="Search"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+        </div>
+    </nav>
+</body>
+<script>
+    const navBar = document.getElementById('navBar');
+    navBar.addEventListener('click', () => {
+    const headerMenu = document.getElementById('headerMenu');
+    if (headerMenu.style.display === 'none') {
+        headerMenu.style.display = 'block';
+    } else {
+        headerMenu.style.display = 'none';
+    }
+    });
+
+    const sideInner = document.getElementById('sideInner');
+    sideInner.addEventListener('click', () => {
+    const headerMenu = document.getElementById('headerMenu');
+    if (headerMenu.style.display === 'block') {
+        headerMenu.style.display = 'none';
+    } else {
+        headerMenu.style.display = 'block';
+    }
+    });
+</script>
+</html>

@@ -14,7 +14,7 @@
 .cartForm .cartForm-main fieldset {
 	background: white;
 	border-radius: 3px;
-	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+	border: 0.5px solid rgba(0, 0, 0, 0.4);
 	position: absolute;
 	width: 80%;
 	margin: 0 10%;
@@ -441,7 +441,482 @@
 	margin: 10px;
 	flex-grow: 1;	
 }
-
+@media screen and (max-width: 418px){
+	body{
+		margin: 70px 0 0 0;
+	}
+	.cartForm{
+		max-width: 414px;
+		width: 100%;
+		margin: 0 auto;
+		position: relative;
+	}
+	
+	/*form styles*/
+	.cartForm .cartForm-main {
+		max-width: 414px;
+		width: 100%;
+		margin: 50px auto 1700px;
+		text-align: center;
+	}
+	.cartForm .cartForm-main fieldset {
+		background: white;
+		border-radius: 3px;
+		border: 0.5px solid rgba(0, 0, 0, 0.4);
+		position: absolute;
+		width: 90%;
+		margin: 0 2.5%;
+		padding: 10px;
+	}
+	
+	
+	/*Hide all except first fieldset*/
+	.cartForm .cartForm-main fieldset:not(:first-of-type) {
+		display: none;
+	}
+	
+	
+	.cartForm .cartForm-main .cartForm-main-cartSystem{
+		max-width: 414px;
+		width: 100%;
+	}
+	.cartForm .cartForm-main .cartForm-main-title {
+		padding: 10px;
+		border-bottom: 1px solid #9E472D;
+		margin-bottom: 20px;
+	}
+	.cartForm-main-content-title p{
+		display: none;
+	}
+	.cartForm .cartForm-main .cartForm-main-title h1{
+		font-size: 18px;
+		font-weight: bold;
+	}
+	.cartForm .cartForm-main .cartForm-main-information {
+		margin-bottom: 10px;
+	}
+	.cartForm .cartForm-main .cartForm-main-information ul{
+		display: flex;
+		justify-content: space-between;
+		width: 90%;
+	}
+	.cartForm .cartForm-main .cartForm-main-information ul li{
+		font-size: 14px;
+		font-weight:bold;
+	}
+	
+	.cartForm .cartForm-main .cartForm-main-content{
+		display: flex;
+		border-bottom: 1px solid #9E472D;
+		padding-bottom: 15px;
+		margin-bottom: 20px;
+	}
+	
+	.cartForm .cartForm-main .cartForm-main-content .cartForm-main-content-title{
+		display: flex;
+		align-items: center;
+		width: 10%;
+	}
+	.cartForm .cartForm-main .cartForm-main-content .cartForm-main-content-price{
+		display: flex;
+		align-items: center;
+		margin: 0 ;
+		margin-left: 70px;
+	}
+	.cartForm .cartForm-main .cartForm-main-content .cartForm-main-content-title img{
+		width: 50px;
+	}
+	
+	.cartForm .cartForm-main .cartForm-main-content .cartForm-main-content-quantity {
+		display: flex;
+		align-items: center;
+		margin: 0px;
+		margin-left: 20px;
+	}
+	
+	.cartForm .cartForm-main .cartForm-main-content .cartForm-main-content-quantity-final{
+		display: flex;
+		align-items: center;
+		margin: 0px;
+	}
+	
+	.cartForm .cartForm-main .cartForm-main-content .cartForm-main-content-quantity ul{
+		display: flex;
+	}
+	
+	.cartForm .cartForm-main .cartForm-main-content .cartForm-main-content-quantity ul li i{
+		font-size: 12px;
+		border: 1px solid #9E472D;
+		border-radius: 50%;
+		padding: 1px;
+		margin: 0 15px;
+		color: #9E472D;
+	}
+	
+	.cartForm .cartForm-main .cartForm-main-content .cartForm-main-content-quantity ul li{
+		font-size: 12px;
+	}
+	
+	.cartForm .cartForm-main .cartForm-main-content .cartForm-main-content-finalPrice{
+		display: flex;
+		align-items: center;
+		margin: 0px;
+	}
+	
+	.cartForm .cartForm-main .cartForm-main-content .cartForm-main-content-trash{
+		display: flex;
+		align-items: center;
+	}
+	
+	.cartForm .cartForm-main .cartForm-main-content .cartForm-main-content-trash i{
+		color: black;
+		margin-left: 10px;
+	}
+	
+	
+	.cartForm .cartForm-main .cartForm-main-cartSystem-information ul {
+		display: flex;
+		justify-content: space-between;
+	}
+	
+	.cartForm .cartForm-main .cart-modal-content-total{
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+	}
+	.cartForm .cartForm-main .cart-modal-content-total{
+		font-size: 14px;
+		margin-bottom: 10px;
+	}
+	
+	/*buttons*/
+	
+	.cartForm .cartForm-main .goCart{
+		width: 100px;
+		background: white;
+		font-weight: bold;
+		color: #9E472D;
+		border: 0 none;
+		border-radius: 1px;
+		cursor: pointer;
+		padding: 10px 5px;
+		margin: 10px 5px;
+		font-size: 12px;
+		border: 0.5px solid #9E472D;
+	
+	}
+	
+	.cartForm .cartForm-main .previous{
+		width: 100px;
+		background: white;
+		font-weight: bold;
+		color: #9E472D;
+		border: 0 none;
+		border-radius: 1px;
+		cursor: pointer;
+		padding: 10px 5px;
+		margin: 10px 5px;
+		font-size: 12px;
+		border: 0.5px solid #9E472D;
+	}
+	.cartForm .cartForm-main .next {
+		width: 100px;
+		background: #9E472D;
+		font-weight: bold;
+		color: white;
+		border: 0 none;
+		border-radius: 1px;
+		cursor: pointer;
+		padding: 10px 5px;
+		margin: 10px 5px;
+		font-size: 12px;
+	
+	}
+	.cartForm .cartForm-main .action-button:hover, .cartForm .cartForm-main .action-button:focus {
+		box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
+	}
+	
+	.cartForm .cartForm-main .goCart:hover, .cartForm .cartForm-main .goCart:focus {
+		box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
+	}
+	/*headings*/
+	.fs-title {
+		font-size: 15px;
+		text-transform: uppercase;
+		color: #2C3E50;
+		margin-bottom: 10px;
+	}
+	.fs-subtitle {
+		font-weight: normal;
+		font-size: 13px;
+		color: #666;
+		margin-bottom: 20px;
+	}
+	/*progressbar*/
+	#progressbar {
+		margin-bottom: 30px;
+		/*CSS counters to number the steps*/
+		counter-reset: step;
+		display: flex;
+		justify-content: center;
+	}
+	#progressbar li {
+		list-style-type: none;
+		color: black;
+		text-transform: uppercase;
+		font-size: 14px;
+		width: 30%;
+		position: relative;
+		font-weight: bold;
+		
+	
+	}
+	#progressbar li:before {
+		content: counter(step);
+		counter-increment: step;
+		width: 18px;
+		line-height: 20px;
+		display: block;
+		font-size: 14px;
+		color: #333;
+		background: white;
+		border-radius: 50%;
+		margin: 0 auto 5px auto;
+	}
+	/*progressbar connectors*/
+	#progressbar li:after {
+		content: '';
+		width: 100%;
+		height: 2px;
+		background: white;
+		position: absolute;
+		left: -50%;
+		top: 9px;
+		z-index: -5; /*put it behind the numbers*/
+	}
+	#progressbar li:first-child:after {
+		/*connector not needed before the first step*/
+		content: none; 
+	}
+	/*marking active/completed steps green*/
+	/*The number of the step and the connector before it = green*/
+	#progressbar li.active:before,  #progressbar li.active:after{
+		background: #9E472D;
+		color: white;
+	}
+	
+	
+	
+	/*-----------------填寫資料----------------*/
+	
+	
+	/* 選擇送貨及付款方式 */
+	.cart-modal-content-form{
+		display: flex;
+		flex-wrap: wrap;
+		margin-top: 50px;
+		max-width: 414px;
+		width: 100%;
+		justify-content: space-around;
+	}
+	
+	.cart-modal-content-form .cart-modal-content-formFirst{
+		display: flex;
+		flex-direction: column;
+		max-width: 414px;
+		width: 100%;
+		border: 1px solid #D9D9D9;
+		margin-bottom: 20px;
+	}
+	
+	.cart-modal-content-formFirst .cart-modal-content-form-pay{
+		padding: 10px;
+	}
+	
+	.cart-modal-content-form-address{
+		width: 306px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		margin: 0 auto;
+	}
+	.cart-modal-content-form-deliverAddress{
+		display: flex;
+		justify-content: space-between;
+		margin: 10px 0;
+	}
+	
+	.cart-modal-content-form-deliverAddress .cart-modal-content-form-deliverCounty{
+		width: 140px;
+	}
+	
+	.cart-modal-content-form-deliverAddress .cart-modal-content-form-deliverPlace{
+		width: 140px;
+	}
+	
+	
+	.cart-modal-content-form-addressWay{
+		margin-top: 10px;
+	}
+	.cart-modal-content-form-deliverWay{
+		margin: 10px 0;
+	}
+	.cart-modal-content-form-addressWay .cart-modal-content-form-deliverWay select{
+		width: 306px;
+	}
+	
+	.cart-modal-content-form-payWay .cart-modal-content-form-payWay-way{
+		margin: 10px;
+	}
+	
+	.cart-modal-content-form-payWay .cart-modal-content-form-payWay-way select{
+		width: 306px;
+	}
+	
+	/* 顧客資料 */
+	
+	.cart-modal-content-form .cart-modal-content-formSecond{
+		display: flex;
+		flex-direction: column;
+		max-width: 414px;
+		width: 100%;
+		border: 1px solid #D9D9D9;
+	}
+	
+	.cart-modal-content-form  .cart-modal-content-form-information{
+		padding: 10px;
+	}
+	
+	.cart-modal-content-formSecond .cart-modal-content-form-cusName{
+		margin: 10px 0 20px;
+	}
+	
+	.cart-modal-content-formSecond .cart-modal-content-form-cusMail{
+		margin: 10px 0 20px;
+	}
+	
+	.cart-modal-content-formSecond .cart-modal-content-form-cusPhone{
+		margin: 10px 0 20px;
+	}
+	
+	/* 送貨資料 */
+	
+	.cart-modal-content-form .cart-modal-content-formThird{
+		display: flex;
+		flex-direction: column;
+		max-width: 414px;
+		width: 100%;
+		margin-top: 20px;
+		border: 1px solid #D9D9D9;
+	}
+	
+	.cart-modal-content-form .cart-modal-content-form-deliver{
+		padding: 10px 0 20px;
+	}
+	
+	/* 付款資料 */
+	
+	.cart-modal-content-form .cart-modal-content-formFour{
+		display: flex;
+		flex-direction: column;
+		max-width: 414px;
+		width: 100%;
+		margin-top: 20px;
+		border: 1px solid #D9D9D9;
+	}
+	.cart-modal-content-formFour .cart-modal-content-form-payInformation{
+		padding: 10px;
+	}
+	
+	.cart-modal-content-form-patInformation input{
+		margin: 20px;
+	}
+	
+	/* 索取發票 */
+	.cart-modal-content-form .cart-modal-content-formFive{
+		display: flex;
+		flex-direction: column;
+		max-width: 414px;
+		width: 100%;
+		margin: 20px 0;
+		border: 1px solid #D9D9D9;
+	}
+	
+	.cart-modal-content-formFive .cart-modal-content-form-ticket{
+		padding: 10px;
+	}
+	
+	.cart-modal-content-form input{
+		width: 300px;
+		border: 1px solid #8E8E8E;
+	}
+	
+	.cart-modal-content-form select{
+		width: 250px;
+		border: 1px solid #8E8E8E;
+	}
+	.cart-modal-content-form  .cart-modal-content-form-title {
+		border-bottom: 1px solid #D9D9D9;
+		padding: 10px;
+	}
+	.cart-modal-content-form  .cart-modal-content-form-title h3{
+		font-size:14px;
+		font-weight: bold;
+	}
+	label{
+		font-size:14px
+	}
+	.cartForm-main-content-price-p{
+		margin-right: 65px;
+	}
+	.cartForm-main-content-price-final{
+		margin-right: 50px;
+	}
+	/*-----------------訂單確認-----------------*/
+	.cart-modal-content-orderInformation{
+		margin: 50px 0  30px;
+	}
+	.cart-modal-content-orderInformation-title{
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+		font-size: 14px;
+	}
+	.cart-modal-content-orderInformation-order-total {
+		display: block;
+		justify-content: center;
+		border: 1px solid #666;
+		padding: 20px;
+	}
+	.cart-modal-content-orderInformation-order-title{
+		border: 1px solid #666;
+		border-bottom: 0px;
+		padding: 10px;
+		margin-top: 20px;
+	}
+	.cart-modal-content-orderInformation-order-title h2{
+		font-size: 14px;
+		font-weight: bold;
+	}
+	.cart-modal-content-orderInformation-order-first{
+		margin: 10px;
+		flex-grow: 2;
+	}
+	.cart-modal-content-orderInformation-order-first ul li{
+		text-align: left;
+		line-height: 2;
+		font-size: 14px;
+	}
+	.cart-modal-content-orderInformation-order-second ul li{
+		text-align: left;
+		line-height: 2;
+		font-size: 14px;
+	}
+	.cart-modal-content-orderInformation-order-second{
+		margin: 10px;
+		flex-grow: 1;	
+	}
+}
 
 
 

@@ -1,19 +1,26 @@
 /*-----------------contact us-----------------*/
-.contactUS{
-    z-index: 5;
+.contactUSInner{
+    z-index: 7;
     position: fixed;
     background-color: rgba(0, 0, 0, 0.5);
     bottom: 0%;
     width: 100%;
     height: 100%;
 }
-.contactUS .contactUS-modal{
-    width: 800px;
+.contactUS{
     margin: 0 auto;
+}
+.contactUS .contactUS-modal{
+    z-index: 9;
+    position: fixed;
+    max-width: 800px;
+    width: 100%;
+    margin: 50px auto 0px;
+    top: 0%;
+    right: 0%;
+    left: 0%;
     text-align: center;
-    border: 1px solid red;  
     background-color: #fff;
-    margin-top: 50px;
     animation: fadein 1s ease; 
 }
 
@@ -78,4 +85,98 @@
 
 .contactUS .contactUS-modal .contactUS-modal-content form button:hover,.contactUS .contactUS-modal .contactUS-modal-content form button:focus {
 	box-shadow: 0 0 0 2px white, 0 0 0 3px #9E472D;
+}
+
+@media screen and (max-width: 418px){
+   /*-----------------contact us-----------------*/
+.contactUSInner{
+    z-index: 7;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    bottom: 0%;
+    max-width: 414px;
+    width: 100%;
+    height: 100%;
+}
+.contactUS{
+    margin: 0 auto;
+}
+.contactUS .contactUS-modal{
+    z-index: 9;
+    position: fixed;
+    max-width: 414px;
+    width: 90%;
+    margin: 50px auto 0px;
+    top: 0%;
+    right: 0%;
+    left: 0%;
+    text-align: center;
+    background-color: #fff;
+    animation: fadein 1s ease; 
+}
+
+@keyframes fadein {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+.contactUS .contactUS-modal .contactUS-modal-content{
+    max-width: 414px;
+    width: 100%;
+    margin: 0 auto;
+    
+}
+.contactUS .contactUS-modal .contactUS-modal-content form{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 35px;
+    padding: 10px;
+    
+}
+.contactUS .contactUS-modal .contactUS-modal-content form a{
+    text-decoration: none;
+}
+
+.contactUS .contactUS-modal .contactUS-modal-content form i{
+    display: flex;
+    justify-content: flex-end;
+    font-size: 16px;
+    color: black;
+}
+
+
+.contactUS .contactUS-modal .contactUS-modal-content form h1{
+    font-size: 18px;
+    padding: 0;
+}
+
+.contactUS .contactUS-modal .contactUS-modal-content form h2{
+    font-size: 14px;
+    padding: 10px 0;
+}
+
+.contactUS .contactUS-modal .contactUS-modal-content form input{
+    font-size: 10px;
+    margin: 10px 0;
+    line-height: 3;
+}
+
+.contactUS .contactUS-modal .contactUS-modal-content form textarea{
+    font-size: 10px;
+    margin: 15px 0 20px;
+    line-height: 1.6;
+    resize:none;
+}
+
+.contactUS .contactUS-modal .contactUS-modal-content form button{
+    font-size: 14px;
+    background-color: #9E472D;
+    color: #fff;
+    line-height: 2;
+    border: 0px;
+}
+
+.contactUS .contactUS-modal .contactUS-modal-content form button:hover,.contactUS .contactUS-modal .contactUS-modal-content form button:focus {
+	box-shadow: 0 0 0 2px white, 0 0 0 3px #9E472D;
+} 
 }

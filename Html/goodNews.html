@@ -11,36 +11,42 @@
 </head>
 <body>
 
-    
-     <!-----------------------header----------------------->
-     <nav class="nav">
+     <!-- nav -->
+    <nav class="nav">
         <div class="nav-wrapper">
                 <div class="nav-header-logo">
                     <a href="./frontPage.html"><img src="../LOGOVersion/1x/white.png" alt=""></a>
                 </div>
-
-                <div class="nav-header-menu">
-                    <ul class="nav-header-mainMenu-container">
-                        <li><a href="../Html/productCategories.html">All Items</a></li>
-                        <li><a href="../Html/brandStory.html">Brand Story</a></li>
-                        <li><a href="../Html/goodNews.html">Good News</a></li>
-                        <li><a class="btn">Contact Us</a></li>
-                    </ul>
-                    <ul class="nav-header-actionMenu-container">
-                        <li><a href="../Html/account.html"><i class="fa-regular fa-circle-user"></i></a></li>
-                        <li><a id="cart"><i class="fa-solid fa-cart-shopping"></i></a></li>
-                        <li><a id="btn3"><i class="fa-solid fa-magnifying-glass"></i></a></li>
-                    </ul>
+                <div  class="nav-header-bars">
+                    <a id="navBar"><i class="fa-solid fa-bars"></i></a>
+                </div>
+                <div class="nav-header-menu" id="headerMenu">
+                    <div class="sideInner" id="sideInner"></div>
+                    <div class="sideOuter">
+                        <ul class="nav-header-mainMenu-container">
+                            <li><a href="../Html/productCategories.html">All Items</a></li>
+                            <li><a href="../Html/brandStory.html">Brand Story</a></li>
+                            <li><a href="../Html/goodNews.html">Good News</a></li>
+                            <li><a id="contactUSbtn">Contact Us</a></li>
+                        </ul>
+                        <ul class="nav-header-actionMenu-container">
+                            <li><a href="../Html/account.html" title="User"><i class="fa-regular fa-circle-user"></i></a></li>
+                            <li><a id="cart" title="Cart"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                            <li><a id="searchbtn" title="Search"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+                        </ul>
+                    </div>
                 </div>
         </div>
     </nav>
 
-    <!-----------------------contactUS----------------------->
-    <div class="contactUS" id="contactUS" style="display: none;">
+
+    <!-- contactUS -->
+    <div class="contactUS" id="form" style="display: none;">
+        <div class="contactUSInner" id="contactUSInner"></div>
         <div class="contactUS-modal" >
             <div class="contactUS-modal-content">
                 <form>
-                    <a id="btn2"><i class="fa-solid fa-xmark"></i></a> 
+                    <a href="" id="closeContactUSbtn"><i class="fa-solid fa-xmark"></i></a>
                     <h1>聯絡我們</h1>
                     <h2>謝謝您的主動聯絡，請留下要諮詢的問題，我們會用以下資訊進行回覆。</h2>
                     <input type="text" placeholder=" 請輸入電子郵件">
@@ -51,10 +57,12 @@
         </div>
     </div>
 
-    <!-----------------------cart----------------------->
-    <div class="cart" id="showCart"  style="display: none;">
-        
-            <div class="cart-modal" >
+
+    <!-- cart -->
+    <div class="cartWrapper"  id="cartWrapper" style="display: none;">
+        <div class="cartInner" id="cartInner"></div>
+        <div class="cart" id="showCart">
+            <div class="cart-modal">
                 <div class="cart-modal-content">
 
                     <div class="cart-modal-content-top">
@@ -97,20 +105,21 @@
                     </div>
 
                 </div>  
+            </div>  
             </div>
+        </div>
 
-    </div>
-
-    <!-----------------------search----------------------->
-    <div class="search" id="search" style="display: none;">
+    <!-- search -->   
+    <div class="search" style="display: none;" id="search">
+        <div class="searchInner" id="searchInner"></div>
         <div class="search-modal" >
             <div class="search-modal-content">
                 <form>
                     <input type="text" placeholder="找商品" class="search-modal-content-text">
 
                     <div class="search-modal-content-icon">
-                        <a id="btn4"><i class="fa-solid fa-xmark"></i></a>
-                        <a href="" ><i class="fa-solid fa-magnifying-glass"></i></a>
+                        <a href="" id="closeSearchbtn"><i class="fa-solid fa-xmark"></i></a>
+                        <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
                     </div>
                 </form>
             </div>  
@@ -118,36 +127,46 @@
     </div>
 
     <!-----------------------main----------------------->
-    <main>
         <div class="main-goodNews-breadcrumb">
             <div class="main-goodNews-breadcrumb-link">
                 <a href="">Good News</a>
             </div>
         </div>
-        <div class="goodNews">
-            <div class="goodNews-one">
-                <div class="goodNews-one-text">
-                    <h1>Enjoy Journey</h1>
-                    <h2>Enjoy Glamping</h2>
-                    <a href="">Read More</a>
-                </div>
+        <section id="section01" class="demo">
+            <div class="goodNews-one-text">
+                <h1>Enjoy Journey</h1>
+                <h2>Enjoy Glamping</h2>
+                <a class="goodNews-one-text-a">Read More</a>
+                
             </div>
-            <div class="goodNews-two">
-                <div class="goodNews-two-text">
-                    <h1>Enjoy Journey</h1>
-                    <h2>Enjoy Glamping</h2>
-                    <a href="">Read More</a>
-                </div>
+            <div>
+            <a href="#section02" class="goodNews-one-text-scroll"><span></span></a>
             </div>
-            <div class="goodNews-three">
-                <div class="goodNews-three-text">
-                    <h1>Enjoy Journey</h1>
-                    <h2>Enjoy Glamping</h2>
-                    <a href="./goodNewsMain.html">Read More</a>
-                </div>
+        </section>
+        <section id="section02" class="demo">
+            <div class="goodNews-two-text">
+                <h1>Enjoy Journey</h1>
+                <h2>Enjoy Glamping</h2>
+                <a class="goodNews-one-text-a">Read More</a>
             </div>
-        </div>
-    </main>
+            <a href="#section03" class="goodNews-one-text-scroll"><span></span></a>
+        </section>
+        <section id="section03" class="demo">
+            <div class="goodNews-four-text">
+                <h1>Enjoy Journey</h1>
+                <h2>Enjoy Glamping</h2>
+                <a class="goodNews-one-text-a">Read More</a>
+            </div>
+            <a href="#section04" class="goodNews-one-text-scroll"><span></span></a>
+        </section>
+        <section id="section04" class="demo">
+            <div class="goodNews-three-text">
+                <h1>Enjoy Journey</h1>
+                <h2>Enjoy Glamping</h2>
+                <a href="./goodNewsMain.html" class="goodNews-one-text-a">Read More</a>
+            </div>
+            <a href="#section05" class=""><span></span></a>
+        </section>
 
     <!-----------------------footer----------------------->
     <footer>
@@ -198,6 +217,15 @@
             </div>
         </div>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js" integrity="sha512-egJ/Y+22P9NQ9aIyVCh0VCOsfydyn8eNmqBy+y2CnJG+fpRIxXMS6jbWP8tVKp0jp+NO5n8WtMUAnNnGoJKi4w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="../JS/headerfooter.js"></script>
+    <script>
+        $(function() {
+        $('a[href*=#]').on('click', function(e) {
+            e.preventDefault();
+            $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top}, 500, 'linear');
+        });
+        });
+    </script>
 </body>
 </html>

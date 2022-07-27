@@ -63,6 +63,10 @@ a{
     margin-right: 25px;
 }
 
+.nav-header-mainMenu-container-cateLi{
+    display: none;
+}
+
 .nav-header-menu .nav-header-mainMenu-container a{
     text-decoration: none;
     color: white;
@@ -70,7 +74,9 @@ a{
     opacity: 1;
     letter-spacing: 1px;
 }
-
+.fa-bars{
+    display: none;
+}
 .nav-header-menu .nav-header-mainMenu-container a:hover{
     font-weight: bold;
 }
@@ -280,7 +286,6 @@ footer .footer-grid-underLine{
         color: white;
         display: block;
     }
-   
 
     /*-----------------主選單-----------------*/
     .nav-header-menu{
@@ -303,16 +308,20 @@ footer .footer-grid-underLine{
         width: 280px;
         animation: fadein 1s ease;
     }
-
+    
     @keyframes fadein {
         0% {opacity: 0;}
         100% {opacity: 1;}
     }
+    .fa-bars{
+            display: block;
+    }
+
     .nav-header-menu .nav-header-mainMenu-container{
         display: flex;
         flex-direction: column;
     }
-    .nav-header-menu{
+    .nav-header-menu-rwd{
         border: 1px solid red;
 
     }
@@ -321,11 +330,36 @@ footer .footer-grid-underLine{
         margin-right: 0px;
         text-align: center;
         border-bottom:1px solid red ;
-
     }
 
-    .nav-header-menu .nav-header-mainMenu-container a{
+    .nav-header-mainMenu-container .nav-header-mainMenu-container-firstLi{
+        display: none;
+    }
+
+    .nav-header-mainMenu-container-cateLi{
         display: block;
+    }
+
+    .nav-header-mainMenu-container-cateUl{
+        border-top: 2px solid red;
+        display: none;
+    }
+
+    .nav-header-mainMenu-container-cateUl li:first-child ul li:nth-child(3){
+        border-bottom:0px solid red ;
+    }
+    .nav-header-mainMenu-container-cateUl li:last-child ul li:nth-child(3){
+        border-bottom:0px solid red ;
+    }
+    .nav-header-mainMenu-container-cateLi i{
+        margin-left: 10px;
+    }
+    .brand{
+        border: 0px;
+    }
+    .nav-header-menu .nav-header-mainMenu-container a{
+        display: flex;
+        justify-content: center;
         text-decoration: none;
         color: white;
         opacity: 1;
@@ -338,6 +372,7 @@ footer .footer-grid-underLine{
     .nav-header-menu .nav-header-mainMenu-container a:hover{
         font-weight: bold;
     }
+
 
     /*-----------------ICON選單-----------------*/
 

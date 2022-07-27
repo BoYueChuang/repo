@@ -12,12 +12,14 @@
 <body>
 
     
-
+        <button id="contactUSbtn"></button>
+        
         <div class="contactUS" id="form" style="display: none;">
+            <div class="contactUSInner" id="contactUSInner"></div>
             <div class="contactUS-modal" >
                 <div class="contactUS-modal-content">
                     <form>
-                        <a href="" id="btn2"><i class="fa-solid fa-xmark"></i></a>
+                        <a href="" id="closeContactUSbtn"><i class="fa-solid fa-xmark"></i></a>
                         <h1>聯絡我們</h1>
                         <h2>謝謝您的主動聯絡，請留下要諮詢的問題，我們會用以下資訊進行回覆。</h2>
                         <input type="text" placeholder=" 請輸入電子郵件">
@@ -27,5 +29,41 @@
                 </div>  
             </div>
         </div>
+        <script>
+            const contactUSbtn = document.getElementById('contactUSbtn');
+            const contactUS = document.getElementById('form');    
+            contactUSbtn.addEventListener('click', () => {
+            if (contactUS.style.display === 'none') {
+                // 👇️ this SHOWS the form
+                contactUS.style.display = 'block';
+            } else {
+                // 👇️ this HIDES the form
+                contactUS.style.display = 'none';
+            }
+            });
+            const closeContactUSbtn = document.getElementById('closeContactUSbtn');
+            closeContactUSbtn.addEventListener('click', () => {
+            const contactUS = document.getElementById('form'); 
+            if (contactUS.style.display === 'none') {
+                // 👇️ this SHOWS the form
+                contactUS.style.display = 'block';
+            } else {
+                // 👇️ this HIDES the form
+                contactUS.style.display = 'none';
+            }
+            });
+            const contactUSInner = document.getElementById('contactUSInner');
+            contactUSInner.addEventListener('click', () => {
+            // const contactUS = document.getElementById('contactUS');
+            const contactUS = document.getElementById('form'); 
+            if (contactUS.style.display === 'block') {
+                // 👇️ this SHOWS the form
+                contactUS.style.display = 'none';
+            } else {
+                // 👇️ this HIDES the form
+                contactUS.style.display = 'block';
+            }
+            });
+        </script>      
 </body>
 </html>

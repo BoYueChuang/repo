@@ -10,20 +10,57 @@
     <title>search</title>
 </head>
 <body>
-    <div class="search">
+    <button id="searchbtn"></button>
+    <div class="search" style="display: none;" id="search">
+        <div class="searchInner" id="searchInner"></div>
         <div class="search-modal" >
             <div class="search-modal-content">
                 <form>
                     <input type="text" placeholder="找商品" class="search-modal-content-text">
 
                     <div class="search-modal-content-icon">
-                        <a href="" id="btn2"><i class="fa-solid fa-xmark"></i></a>
-                        <a href="" id="btn2"><i class="fa-solid fa-magnifying-glass"></i></a>
+                        <a href="" id="closeSearchbtn"><i class="fa-solid fa-xmark"></i></a>
+                        <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
                     </div>
                 </form>
             </div>  
         </div>
     </div>
-
+    <script>
+        const searchbtn = document.getElementById('searchbtn');
+        const search = document.getElementById('search');    
+        searchbtn.addEventListener('click', () => {
+        if (search.style.display === 'none') {
+            // 👇️ this SHOWS the form
+            search.style.display = 'block';
+        } else {
+            // 👇️ this HIDES the form
+            search.style.display = 'none';
+        }
+        });
+        const closeSearchbtn = document.getElementById('closeSearchbtn');
+        closeSearchbtn.addEventListener('click', () => {
+        const search = document.getElementById('search'); 
+        if (search.style.display === 'none') {
+            // 👇️ this SHOWS the form
+            search.style.display = 'block';
+        } else {
+            // 👇️ this HIDES the form
+            search.style.display = 'none';
+        }
+        });
+        const searchInner = document.getElementById('searchInner');
+        searchInner.addEventListener('click', () => {
+        // const contactUS = document.getElementById('contactUS');
+        const search = document.getElementById('search'); 
+        if (search.style.display === 'block') {
+            // 👇️ this SHOWS the form
+            search.style.display = 'none';
+        } else {
+            // 👇️ this HIDES the form
+            search.style.display = 'block';
+        }
+        });
+    </script>
 </body>
 </html>
