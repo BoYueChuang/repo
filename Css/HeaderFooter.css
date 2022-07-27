@@ -60,7 +60,7 @@ a{
 }
 
 .nav-header-menu .nav-header-mainMenu-container li{
-    margin-right: 25px;
+    margin-right: 40px;
 }
 
 .nav-header-mainMenu-container-cateLi{
@@ -321,15 +321,12 @@ footer .footer-grid-underLine{
         display: flex;
         flex-direction: column;
     }
-    .nav-header-menu-rwd{
-        border: 1px solid red;
-
-    }
-    .nav-header-menu .nav-header-mainMenu-container li{
+    .nav-header-menu .nav-header-mainMenu-container > li{
         width: 100%;
         margin-right: 0px;
         text-align: center;
-        border-bottom:1px solid red ;
+        border-bottom:0.5px solid black ;
+        font-weight: 500;
     }
 
     .nav-header-mainMenu-container .nav-header-mainMenu-container-firstLi{
@@ -341,15 +338,34 @@ footer .footer-grid-underLine{
     }
 
     .nav-header-mainMenu-container-cateUl{
-        border-top: 2px solid red;
+        border-top: 0.5px solid black;
+        border-bottom: 0px;
         display: none;
+    }
+    .nav-header-mainMenu-container-cateUl li {
+        text-align: center;
+        width: 100%;
+        
+    }
+    .nav-header-mainMenu-container-cateUl li:nth-child(1) ul{
+        border-bottom: 0.5px solid black;
+    }
+  
+    .nav-header-mainMenu-container-cateUl li ul li{
+        border-bottom: 0.5px solid black;
+        font-weight: 400;
+        opacity: 0.6;
+    }
+    .nav-header-menu .nav-header-mainMenu-container .nav-header-mainMenu-container-cateUl li ul li a{
+        display: block;
+        font-size: 12px;
     }
 
     .nav-header-mainMenu-container-cateUl li:first-child ul li:nth-child(3){
-        border-bottom:0px solid red ;
+        border-bottom:0px solid black ;
     }
     .nav-header-mainMenu-container-cateUl li:last-child ul li:nth-child(3){
-        border-bottom:0px solid red ;
+        border-bottom:0px solid black ;
     }
     .nav-header-mainMenu-container-cateLi i{
         margin-left: 10px;
@@ -385,7 +401,7 @@ footer .footer-grid-underLine{
     .nav-header-menu .nav-header-actionMenu-container li{
         margin-right: 0px;
         text-align: center;
-        border-bottom:1px solid black ;
+        border-bottom:0.5px solid black ;
     }
 
     .nav-header-menu .nav-header-actionMenu-container a{
