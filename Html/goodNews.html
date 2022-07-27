@@ -11,7 +11,7 @@
 </head>
 <body>
 
-     <!-- nav -->
+    <!-- nav -->
     <nav class="nav">
         <div class="nav-wrapper">
                 <div class="nav-header-logo">
@@ -24,8 +24,26 @@
                     <div class="sideInner" id="sideInner"></div>
                     <div class="sideOuter">
                         <ul class="nav-header-mainMenu-container">
-                            <li><a href="../Html/productCategories.html">All Items</a></li>
-                            <li><a href="../Html/brandStory.html">Brand Story</a></li>
+                            <li class="nav-header-mainMenu-container-firstLi"><a href="../Html/productCategories.html">All Items</i></a></li>
+                            <li class="nav-header-mainMenu-container-cateLi" ><a id="humAccordionOne">All Items<i class="fa-solid fa-angle-up" id="humDownOne"></i></a>
+                                <ul class="nav-header-mainMenu-container-cateUl" id="humPanelOne">
+                                    <li>
+                                        <ul>
+                                            <li><a href="">TOP</a></li>
+                                            <li><a href="">BOTTOM</a></li>
+                                            <li><a href="">HAT</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="der">
+                                        <ul>
+                                            <li><a href="">TENT</a></li>
+                                            <li><a href="">TRAP</a></li>
+                                            <li><a>UTENSILS</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="brand"><a href="../Html/brandStory.html">Brand Story</a></li>
                             <li><a href="../Html/goodNews.html">Good News</a></li>
                             <li><a id="contactUSbtn">Contact Us</a></li>
                         </ul>
@@ -38,7 +56,6 @@
                 </div>
         </div>
     </nav>
-
 
     <!-- contactUS -->
     <div class="contactUS" id="form" style="display: none;">

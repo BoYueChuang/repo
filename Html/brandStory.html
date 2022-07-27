@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../Css/HeaderFooter.css">
     <link rel="stylesheet" href="../Css/brandStory.css">
@@ -23,8 +24,26 @@
                     <div class="sideInner" id="sideInner"></div>
                     <div class="sideOuter">
                         <ul class="nav-header-mainMenu-container">
-                            <li><a href="../Html/productCategories.html">All Items</a></li>
-                            <li><a href="../Html/brandStory.html">Brand Story</a></li>
+                            <li class="nav-header-mainMenu-container-firstLi"><a href="../Html/productCategories.html">All Items</i></a></li>
+                            <li class="nav-header-mainMenu-container-cateLi" ><a id="humAccordionOne">All Items<i class="fa-solid fa-angle-up" id="humDownOne"></i></a>
+                                <ul class="nav-header-mainMenu-container-cateUl" id="humPanelOne">
+                                    <li>
+                                        <ul>
+                                            <li><a href="">TOP</a></li>
+                                            <li><a href="">BOTTOM</a></li>
+                                            <li><a href="">HAT</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="der">
+                                        <ul>
+                                            <li><a href="">TENT</a></li>
+                                            <li><a href="">TRAP</a></li>
+                                            <li><a>UTENSILS</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="brand"><a href="../Html/brandStory.html">Brand Story</a></li>
                             <li><a href="../Html/goodNews.html">Good News</a></li>
                             <li><a id="contactUSbtn">Contact Us</a></li>
                         </ul>
@@ -136,7 +155,13 @@
         <div class="main-brandstory-header">
 
             <div class="main-brandstory-header-pic">
-                <img src="../pic/brandTitle.png" alt="">
+                <img src="../pic/brandTitle.png" alt="" data-aos="fade-right"
+                data-aos="fade-right" 
+                
+                data-aos-duration="900"
+                data-aos-easing="ease-in-out"
+                data-aos-anchor-placement="top-center"
+                >
             </div>
 
             <div class="main-brandstory-header-text">
@@ -145,12 +170,12 @@
 
         </div>
 
-        <div class="main-brandstory-center">
-            <div class="main-brandstory-center-p">
+        <div class="main-brandstory-center" >
+            <div class="main-brandstory-center-p"  data-aos="fade-up"
+            data-aos-duration="1500">
             <p>It was in the early spring of 2020 that Glamping Outdoor® was established. For the first time, that the two managers, who are close friends, came across outdoor camping together and experienced the camping life they'd never had before. Nevertheless, they never thought that they would fall in love with nature at the first touch. As designers, they believe that outdoor camping can be fashionable and cool at the same time. With such spirit, Glamping Outdoor® design is started up. The essence of the logo design is based on the mountain. It symbolizes the magnificence of the mountain and the precious treasure of life, and represents that Glamping Outdoor® will continue to develop and innovate its own products.Some friends dont understand this. They dont understand how desperate I am to have someone say, I love you and I support you just the way you are because youre wonderful just the way you are. They dont understand that I cant remember anyone ever saying that to me.</p>
             </div>
         </div>
-
 
         <div class="main-brandstory-footer">
 
@@ -159,11 +184,17 @@
             </div >
 
             <div class="main-brandstory-footer-pic">
-                <img src="../pic/brandfooter.png" alt="">
+                <img src="../pic/brandfooter.png" alt="" 
+                data-aos="fade-left" 
+                data-aos-duration="900"
+                data-aos-anchor-placement="top-center"
+                >
             </div>
         </div>
 
-        <div class="main-brandstory-lastText">
+        <div class="main-brandstory-lastText"  data-aos="fade-up"
+        data-aos-anchor-placement="bottom-bottom" data-aos-delay="200"
+        >
             <h2>You may hold my hand for a while</h2>
             <h3>but you hold my heart forever</h3>
         </div>
@@ -218,9 +249,10 @@
             </div>
         </div>
     </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="../JS/headerfooter.js"></script>
     <script>
-
+        AOS.init();
     </script>
 </body>
 </html>

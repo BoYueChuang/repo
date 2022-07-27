@@ -389,6 +389,9 @@ main .banner-bestSeller .banner-bestSeller-ReadMore:hover{
 
 
 @media screen and (max-width: 418px){
+a{
+    font-size: 14px;
+}
     /*-----------------brandstory breadcrumb-----------------*/
 main .main-productIntroduce-breadcrumb{
     margin: 55px auto 0;

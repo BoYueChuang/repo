@@ -4,6 +4,7 @@ contactUSbtn.addEventListener('click', () => {
 if (contactUS.style.display === 'none') {
     // 👇️ this SHOWS the form
     contactUS.style.display = 'block';
+    headerMenu.style.display = 'none'
 } else {
     // 👇️ this HIDES the form
     contactUS.style.display = 'none';
@@ -39,6 +40,7 @@ searchbtn.addEventListener('click', () => {
 if (search.style.display === 'none') {
     // 👇️ this SHOWS the form
     search.style.display = 'block';
+    headerMenu.style.display = 'none'
 } else {
     // 👇️ this HIDES the form
     search.style.display = 'none';
@@ -69,15 +71,17 @@ if (search.style.display === 'block') {
 });
 
 
-
+//CART HEADER
 const cart = document.getElementById('cart');
 cart.addEventListener('click', () => {
 const cartWrapper = document.getElementById('cartWrapper');
 
 if (cartWrapper.style.display === 'none') {
     cartWrapper.style.display = 'block';
+    headerMenu.style.display = 'none'
 } else {
     cartWrapper.style.display = 'none';
+
 }
 });
 
@@ -122,5 +126,19 @@ if (headerMenu.style.display === 'block') {
 } else {
     headerMenu.style.display = 'block';
 }
+});
+
+var humAcc = document.getElementById("humAccordionOne");
+humAcc.addEventListener("click", function() {
+    console.log("123");
+    var humPanelOne = document.getElementById("humPanelOne");
+    var humDownOne = document.getElementById("humDownOne")
+    if (humPanelOne.style.display === "block") {
+        humPanelOne.style.display = "none";
+        humDownOne.style.transform = "rotate(0deg)";
+    } else {
+        humPanelOne.style.display = "block";
+        humDownOne.style.transform = "rotate(180deg)";
+    }
 });
 
