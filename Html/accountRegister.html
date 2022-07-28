@@ -164,9 +164,12 @@
                 <hr>
                 <div class="account-content-form">
                     <form action="">
-                        <input type="text" placeholder="用戶名">
-                        <input type="text" placeholder="使用電郵註冊">
-                        <input type="text" placeholder="密碼(至少8個字元)">
+                        <input type="text" placeholder="用戶名(必須英文字母開頭且4位以上)" id="name">
+                        <span id="alertName"></span>
+                        <input type="email" placeholder="使用電郵註冊" id="email">
+                        <span id="alertEmail"></span>
+                        <input type="password" placeholder="密碼(至少8個字元,1個字母和1個數字)" id="password">
+                        <span id="alertPassword"></span>
                         <input type="date" placeholder="生日日期(YYYY/MM/DD)(選填)">
 
                         <h2>商品資訊及優惠</h2>
@@ -234,5 +237,52 @@
         </div>
     </footer>
     <script src="../JS/headerfooter.js"></script>
+    <script>
+        const name = document.querySelector("#name")
+        name.addEventListener("blur",function(){
+           let pattern = /^[a-zA-Z][a-zA-Z0-9_]{4,15}/;
+           let alertName = document.querySelector("#alertName")
+            if(pattern.test(name.value)){
+                alertName.innerHTML = ""
+                name.style.border = "1px solid black";
+            }else{
+                alertName.innerHTML = "<span>請輸入正確的用戶名格式</span>"
+                console.log(name.value);
+                name.style.border = "2px solid red";
+            }
+            return
+        })
+
+        const email = document.querySelector("#email")
+        email.addEventListener("blur",function(){
+            let alertEmail = document.querySelector("#alertEmail")
+            let pattern =  /^((([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+(\.([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+)*)|((\x22)((((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(([\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|\x21|[\x23-\x5b]|[\x5d-\x7e]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(\\([\x01-\x09\x0b\x0c\x0d-\x7f]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))))*(((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(\x22)))@((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))$/i;
+                if(pattern.test(email.value)){
+                    alertEmail.innerHTML = ""
+                    email.style.border = "1px solid black";
+                }else{
+                    alertEmail.innerHTML = "<span>請輸入正確的電子郵件格式</span>"
+                    console.log(email.value);
+                    email.style.border = "2px solid red";
+                }
+                return
+        })
+
+        const password = document.querySelector("#password")
+        password.addEventListener("blur",function(){
+            let alertPassword = document.querySelector("#alertPassword")
+            let pattern =  /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
+                if(pattern.test(password.value)){
+                    alertPassword.innerHTML = ""
+                    password.style.border = "1px solid black";
+                }else{
+                    alertPassword.innerHTML = "<span>請輸入正確的密碼格式</span>"
+                    console.log(password.value);
+                    password.style.border = "2px solid red";
+                }
+                return
+        })
+
+    </script>
 </body>
 </html>

@@ -4,7 +4,10 @@ contactUSbtn.addEventListener('click', () => {
 if (contactUS.style.display === 'none') {
     // 👇️ this SHOWS the form
     contactUS.style.display = 'block';
-    // headerMenu.style.display = 'none'
+    if(window.innerWidth < 418){
+        headerMenu.style.display = 'none'
+    }
+    
 } else {
     // 👇️ this HIDES the form
     contactUS.style.display = 'none';
@@ -40,7 +43,9 @@ searchbtn.addEventListener('click', () => {
 if (search.style.display === 'none') {
     // 👇️ this SHOWS the form
     search.style.display = 'block';
-    // headerMenu.style.display = 'none'
+    if(window.innerWidth <= 418){
+        headerMenu.style.display = 'none'
+    }
 } else {
     // 👇️ this HIDES the form
     search.style.display = 'none';
@@ -78,7 +83,9 @@ const cartWrapper = document.getElementById('cartWrapper');
 
 if (cartWrapper.style.display === 'none') {
     cartWrapper.style.display = 'block';
-    // headerMenu.style.display = 'none'
+    if(window.innerWidth < 418){
+        headerMenu.style.display = 'none'
+    }
 } else {
     cartWrapper.style.display = 'none';
 

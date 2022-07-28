@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>模擬購物車功能-jq</title>
+    <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css" />
+    <style>
+        *{
+    margin:0;
+    padding: 0;
+}
+
+table th,table td,input{
+    text-align: center;
+}
+table #checkAll{
+    width: 150px;
+}
+table #checkAll label{
+    cursor: pointer;
+    background: url(../img/confirm.png) no-repeat center left;
+    padding-left:10px;
+}
+ table .check label{
+    cursor: pointer;
+    background: url(../img/confirm.png) no-repeat center;
+}
+
+table #checkAll input, table .check input{
+    visibility: hidden;
+    
+}
+
+table input[type="text"]{
+    width: 50px;
+    overflow: hidden;
+}
+table span{
+    display: inline-block;
+    width: 20px;
+    background: #8C8C8C;
+    margin:0px 5px ;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+</style>
+    <script type="text/javascript" src="js/jquery-2.1.0.js" ></script>
+</head>
+<body>
+    
+    <table class="table">
+        <tr>
+            <th id="checkAll"><label><input type="checkbox" checked  />全選</label><button>刪除</button></th>
+            <th>商品名稱</th>
+            <th>商品價格(元)</th>
+            <th>數目</th>
+            <th>小計(元)</th>
+            <th>操作</th>
+        </tr>
+        <tr>
+            <td class="check"><label><input type="checkbox"  checked /></label></td>
+            <td>商品名稱1</td>
+            <td class="price">22.50</td>
+            <td><span class="sub">-</span><input type="text" value="1" class="num"/><span class="add">+</span></td>
+            <td class="subtotal">22.50</td>
+            <td class="del"><button>刪除</button></td>
+        </tr>
+        <tr>
+            <td class="check"><label><input type="checkbox" checked /></label></td>
+            <td>商品名稱2</td>
+            <td class="price">12.50</td>
+            <td><span class="sub">-</span><input type="text" value="1" class="num"/><span class="add">+</span></td>
+            <td class="subtotal">12.50</td>
+            <td class="del"><button>刪除</button></td>
+        </tr>
+        <tr>
+            <td class="check"><label><input type="checkbox" checked /></label></td>
+            <td>商品名稱3</td>
+            <td class="price">110.40</td>
+            <td><span class="sub">-</span><input type="text" value="1" class="num"/><span class="add">+</span></td>
+            <td class="subtotal">110.40</td>
+            <td class="del"><button>刪除</button></td>
+        </tr>
+        <tr>
+            <td colspan="5" style="text-align: right;">總件數：<i id="numAll">0</i>件  &nbsp; &nbsp;   總計：<i id="total">0.00</i>元</td>
+        </tr>
+    </table>
+    
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>    <script>
+        $(function() {
+
+// 全選
+$("#checkAll input").click(function() {
+    var flag = $(this).prop("checked");
+    if(flag) {
+        $(".check label input").prop("checked", true);
+
+        $("#checkAll label").css("background", "url(img/confirm.png) no-repeat center left");
+        $(".check label").css("background", "url(img/confirm.png) no-repeat center");
+
+    } else {
+        $(".check label input").prop("checked", false);
+
+        $("#checkAll label").css("background", "url(img/confirm_no.png) no-repeat center left");
+        $(".check label").css("background", "url(img/confirm_no.png) no-repeat center");
+    }
+    counts();
+    totalPrice();
+});
+
+//單選
+$(".check input").click(function() {
+    var flag = $(this).prop("checked"); //獲取當前input的狀態
+    var CL = $(".check input").length; //列表長度；
+    var CH = $(".check input:checked").length; //列表中被選中的長度
+
+    if(flag) {
+        $(this).parent("label").css("background", "url(img/confirm.png) no-repeat center");
+    } else {
+        $(this).parent("label").css("background", "url(img/confirm_no.png) no-repeat center");
+    }
+
+    if(CL == CH) {
+        $("#checkAll input").prop("checked", true);
+        $("#checkAll label").css("background", "url(img/confirm.png) no-repeat center left");
+    } else {
+        $("#checkAll input").prop("checked", false);
+        $("#checkAll label").css("background", "url(img/confirm_no.png) no-repeat center left");
+    }
+    counts();
+    totalPrice();
+})
+
+//數目加
+$(".add").click(function() {
+    var num = $(this).prev().val();
+    var price = parseFloat($(this).parent().siblings(".price").text());
+    num++;
+    $(this).prev().val(num);
+
+    //      小計
+    $(this).parent().siblings(".subtotal").text((price * num).toFixed(2));
+    counts();
+    totalPrice();
+})
+
+//數目減
+$(".sub").click(function() {
+    var num = $(this).next().val();
+    var price = parseFloat($(this).parent().siblings(".price").text());
+    num--;
+
+    if(num <= 0) {
+        num = 0
+    }
+    $(this).next().val(num);
+
+    //      小計
+    $(this).parent().siblings(".subtotal").text((price * num).toFixed(2));
+    counts();
+    totalPrice();
+})
+
+//文字框脫裡焦點處理
+$('.num').each(function(i) {
+    $(this).blur(function() {
+        let p = parseFloat($(this).parents('tr').find(".subtotal").text());
+        let c = parseFloat(this.value);
+        console.log(p*c);
+        $(this).parents('tr').find(".subtotal").text((c * p).toFixed(2));
+        counts();
+        totalPrice();
+    })
+})
+
+//單行刪除
+$(".del button").click(function() {
+    var flag = $(this).parent().siblings().find("input").prop("checked");
+    if(flag) {
+        if(confirm("是否確定刪除")) {
+            $(this).parents("tr").remove();
+            var CL = $(".check input").length; //列表長度；
+            if(CL == 0) {
+                $("#checkAll label input").prop("checked", false);
+                $("#checkAll label").css("background", "url(img/confirm_no.png) no-repeat center left");
+            }
+            counts();
+            totalPrice();
+        }
+    }
+})
+
+//全刪除
+$("#checkAll button").click(function() {
+    var flag = $(this).prev().children().prop("checked");
+    //           console.log(flag);
+    if(flag) {
+
+        if(confirm("是否確定刪除")) {
+
+            $(".check").parent().remove();
+            var CL = $(".check input").length; //列表長度；
+
+            if(CL == 0) {
+                $("#checkAll label input").prop("checked", false);
+                $("#checkAll label").css("background", "url(img/confirm_no.png) no-repeat center left");
+            }
+            counts();
+            totalPrice();
+        }
+
+    }
+})
+
+//總價格
+totalPrice();
+
+function totalPrice() {
+    var prices = 0;
+    $('.check input:checked').each(function(i) {
+        console.log()
+        prices += parseFloat($(this).parents("tr").find('.subtotal').text());
+    })
+    $('#total').text(prices);
+}
+//總數目
+counts();
+
+function counts() {
+    var sum = 0;
+    $('.check input:checked').each(function(i) {
+        sum += parseInt($(this).parents("tr").find('.num').val());
+    })
+    $('#numAll').text(sum);
+}
+
+})
+    </script>
+</body>
+</html>
