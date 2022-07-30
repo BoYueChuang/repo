@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../Css/HeaderFooter.css">
     <link rel="stylesheet" href="../Css/goodNewsMain.css">
@@ -149,7 +150,9 @@
         <div class="goodNewsMain">
 
 
-            <div class="goodNewsMain-contain">
+            <div class="goodNewsMain-contain" 
+            data-aos="fade-up"
+            data-aos-duration="2000">
                 <div class="goodNewsMain-contain-text">
                     <h1>Enjoy Journey</h1>
                     <h2>Enjoy Glamping</h2>
@@ -157,10 +160,15 @@
             </div>
 
             <div class="goodNewsMain-main">
-                <div class="goodNewsMain-main-topPic">
+                <div class="goodNewsMain-main-topPic"
+                data-aos="fade-zoom-in"
+                data-aos-duration="900"
+                data-aos-easing="ease-in-out"
+                data-aos-anchor-placement="top-center">
                     <h1>Enjoy Glamping</h1>
                 </div>
-                <div class="goodNewsMain-main-text">
+                <div class="goodNewsMain-main-text" data-aos="fade-up"
+                data-aos-duration="1500">
                     <h1>Enjoy Glamping</h1>
                     <p>It was in the early spring of 2020 that Glamping Outdoor® was established. For the first time, that the two managers, who are close friends, came across outdoor camping together and experienced the camping life they'd never had before. Nevertheless, they never thought that they would fall in love with nature at the first touch. As designers, they believe that outdoor camping can be fashionable and cool at the same time. With such spirit,  Glamping Outdoor® design is started up.
                     The essence of the logo design is based on the mountain. It symbolizes the magnificence of the mountain and the precious treasure of life, and represents that  Glamping Outdoor® will continue to develop and innovate its own products. 
@@ -170,7 +178,10 @@
                     <div class="goodNewsMain-main-underPic-uptext">
                         <h2>Travel</h2>
                     </div>
-                    <div class="goodNewsMain-main-underPic-undertext">
+                    <div class="goodNewsMain-main-underPic-undertext" data-aos="fade-zoom-in"
+                    data-aos-duration="900"
+                    data-aos-easing="ease-in-out"
+                    data-aos-anchor-placement="top-center">
                         <h3>Enjoy Glamping</h3>
                         <h1>Enjoy Glamping</h1>
                     </div>
@@ -229,6 +240,10 @@
             </div>
         </div>
     </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="../JS/headerfooter.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>

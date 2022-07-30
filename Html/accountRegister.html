@@ -170,7 +170,7 @@
                         <span id="alertEmail"></span>
                         <input type="password" placeholder="密碼(至少8個字元,1個字母和1個數字)" id="password">
                         <span id="alertPassword"></span>
-                        <input type="date" placeholder="生日日期(YYYY/MM/DD)(選填)">
+                        <input type="date">
 
                         <h2>商品資訊及優惠</h2>
                         <div class="checkMessage">
@@ -181,6 +181,7 @@
                             <input type="checkbox" id="agree">
                             <label for="agree">我同意<a href="">網站服務條款及隱私政策</a></label>
                         </div>
+                        <!-- <input type="submit" name="" id="" class="join" value="立即加入!" local.href="../Html/cartSystem.html"> -->
                         <a class="join" href="../Html/accountInformation.html">立即加入!</a>
                     </form>
                 </div>
@@ -238,19 +239,20 @@
     </footer>
     <script src="../JS/headerfooter.js"></script>
     <script>
+        
         const name = document.querySelector("#name")
         name.addEventListener("blur",function(){
-           let pattern = /^[a-zA-Z][a-zA-Z0-9_]{4,15}/;
-           let alertName = document.querySelector("#alertName")
-            if(pattern.test(name.value)){
-                alertName.innerHTML = ""
-                name.style.border = "1px solid black";
-            }else{
-                alertName.innerHTML = "<span>請輸入正確的用戶名格式</span>"
-                console.log(name.value);
-                name.style.border = "2px solid red";
-            }
-            return
+        let pattern = /^[a-zA-Z][a-zA-Z0-9_]{4,15}/;
+        let alertName = document.querySelector("#alertName")
+        if(pattern.test(name.value)){
+            alertName.innerHTML = ""
+            name.style.border = "1px solid black";
+        }else{
+            alertName.innerHTML = "<span>請輸入正確的用戶名格式</span>"
+            console.log(name.value);
+            name.style.border = "2px solid red";
+        }
+        
         })
 
         const email = document.querySelector("#email")
@@ -283,6 +285,27 @@
                 return
         })
 
+
+        const agree = document.querySelector('#agree')
+        // subscription.addEventListener('click', function(){
+        //     console.log(subscription.checked);
+        // })
+
+        const join = document.getElementsByClassName('join')[0]
+        console.log(join);
+        join.addEventListener('click', function(e){
+            // e.preventDefault()
+            // console.log(password);
+           
+        const subscription = document.querySelector('#subscription')
+        console.log(subscription.checked);
+  
+        // if(subscription.checked == 'true'){
+        // console.log('123');
+        // }
+
+        //   e.preventDefault()
+        })
     </script>
 </body>
 </html>

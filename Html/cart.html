@@ -61,43 +61,40 @@
             </div>
         </div>
         <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>   
+        <script>
+            
+            const cart = document.getElementById('cart');
+            cart.addEventListener('click', () => {
+            const cartWrapper = document.getElementById('cartWrapper');
 
-    <script>
-        
-        const cart = document.getElementById('cart');
-        cart.addEventListener('click', () => {
-        const cartWrapper = document.getElementById('cartWrapper');
+            if (cartWrapper.style.display === 'none') {
+                cartWrapper.style.display = 'block';
+            } else {
 
-        if (cartWrapper.style.display === 'none') {
-            cartWrapper.style.display = 'block';
-        } else {
+                cartWrapper.style.display = 'none';
+            }
+            });
 
-            cartWrapper.style.display = 'none';
-        }
-        });
+            const cartInner = document.getElementById('cartInner');
+            cartInner.addEventListener('click', () => {
+            const cartWrapper = document.getElementById('cartWrapper');
+            if (cartWrapper.style.display === 'block') {
+                cartWrapper.style.display = 'none';
+            } else {
+                cartWrapper.style.display = 'block';
+            }
+            });
 
-        const cartInner = document.getElementById('cartInner');
-        cartInner.addEventListener('click', () => {
-            console.log("123");
-        const cartWrapper = document.getElementById('cartWrapper');
-        if (cartWrapper.style.display === 'block') {
-            cartWrapper.style.display = 'none';
-        } else {
-            cartWrapper.style.display = 'block';
-        }
-        });
+            const closeCart = document.getElementById('closeCart');
+            closeCart.addEventListener('click', () => {
+            const cartWrapper = document.getElementById('cartWrapper');
 
-        const closeCart = document.getElementById('closeCart');
-        closeCart.addEventListener('click', () => {
-        const cartWrapper = document.getElementById('cartWrapper');
-
-        if (cartWrapper.style.display === 'none') {
-            cartWrapper.style.display = 'block';
-        } else {
-
-            cartWrapper.style.display = 'none';
-        }
-        });
-    </script>
+            if (cartWrapper.style.display === 'none') {
+                cartWrapper.style.display = 'block';
+            } else {
+                cartWrapper.style.display = 'none';
+            }
+            });
+        </script>
 </body>
 </html>

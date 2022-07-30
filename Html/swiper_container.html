@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+    <style>
+    .imageGallerySlider{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    margin: 80px auto 0px;
+    max-width: 1000px;
+    overflow: hidden;
+    
+    }
+
+.swiper-wrapper{
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+.swiper-wrapper img{
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.swiper-button-next,.swiper-button-prev{
+    color: gray;
+    padding: 10px;
+}
+
+:root{
+    --swiper-navigation-size:30px;
+}
+.swiper-pagination-bullet-active {
+    background-color: gray;
+}
+
+    </style>
+    <style>
+
+    </style>
+    <title>Document</title>
+</head>
+<body>
+     <div class="swiper-container imageGallerySlider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="../pic/slidesix.jpg">
+                </div>
+                <div class="swiper-slide">
+                    <img src="../pic/slidetwo.jpg">
+                </div>
+                <div class="swiper-slide">
+                    <img src="../pic/slidefive.jpg" alt="">
+                </div>
+                
+                
+                <div class="swiper-slide">
+                    <img src="../pic/slidethree.jpg">
+                </div>
+                <div class="swiper-slide">
+                    <img src="../pic/slideone.jpg">
+                </div>
+                
+            </div>
+            <div class="swiper-button-prev swiper-button-white"></div>
+            <div class="swiper-button-next swiper-button-white "></div>
+            <div class="swiper-pagination  imageGallerySwiperPagination"></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <script>
+        var swiper = new Swiper(".imageGallerySlider", {
+            loop: true,
+            noSwiping: true,
+            autoplay:{
+                delay : 2000
+            },
+            pagination: {
+            el: ".imageGallerySwiperPagination",
+            },
+            navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+            },
+        });
+      </script>
+</body>
+</html>

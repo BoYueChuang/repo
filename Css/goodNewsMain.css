@@ -44,7 +44,7 @@ main .goodNewsMain-main{
 /*-----------------.goodNewsMain-main-topPic-----------------*/
 
 main .goodNewsMain-main .goodNewsMain-main-topPic{
-    background-image: url('../pic/goodnewmainTop.png');
+    background-image: url('../pic/goodnewmainTop.jpg');
     background-repeat: no-repeat;
     width: 1000px;
     height: 1000px;
@@ -84,7 +84,7 @@ main .goodNewsMain-main .goodNewsMain-main-text p{
 /*-----------------goodNewsMain-main-underPic-----------------*/
 
 main .goodNewsMain-main .goodNewsMain-main-underPic{
-    background-image: url('../pic/goodnewmainUnder.png');
+    background-image: url('../pic/goodnewmainUnder.jpg');
     background-repeat: no-repeat;
     width: 1000px;
     height: 1000px;
@@ -179,7 +179,7 @@ main .goodNewsMain-main{
 /*-----------------.goodNewsMain-main-topPic-----------------*/
 
 main .goodNewsMain-main .goodNewsMain-main-topPic{
-    background-image: url('../pic/goodnewmainTop.png');
+    background-image: url('../pic/goodnewmainTop.jpg');
     background-size: contain;
     background-repeat: no-repeat;
     max-width: 414px;
@@ -222,7 +222,7 @@ main .goodNewsMain-main .goodNewsMain-main-text p{
 /*-----------------goodNewsMain-main-underPic-----------------*/
 
 main .goodNewsMain-main .goodNewsMain-main-underPic{
-    background-image: url('../pic/goodnewmainUnder.png');
+    background-image: url('../pic/goodnewmainUnder.jpg');
     background-size: contain;
     background-repeat: no-repeat;
     max-width: 414px;

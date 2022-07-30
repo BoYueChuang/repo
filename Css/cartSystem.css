@@ -150,6 +150,7 @@
 }
 
 .cartForm .cartForm-main .previous{
+	text-decoration: none;
 	width: 100px;
 	background: white;
 	font-weight: bold;
@@ -159,6 +160,21 @@
 	cursor: pointer;
 	padding: 10px 5px;
 	margin: 10px 5px;
+    font-size: 12px;
+	border: 0.5px solid #9E472D;
+}
+
+.cartForm .cartForm-main .previous-a{
+	display: block;
+	margin: 20px auto;
+	text-decoration: none;
+	width: 100px;
+	background: white;
+	font-weight: bold;
+	color: #9E472D;
+	border-radius: 1px;
+	cursor: pointer;
+	padding: 10px 30px;
     font-size: 12px;
 	border: 0.5px solid #9E472D;
 }
@@ -176,11 +192,13 @@
 
 }
 .cartForm .cartForm-main .action-button:hover, .cartForm .cartForm-main .action-button:focus {
-	box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
+	box-shadow: 0 0 0 2px white, 0 0 0 3px #9E472D;
 }
-
+.cartForm .cartForm-main .previous-a:hover, .cartForm .cartForm-main .previous-a:focus {
+	box-shadow: 0 0 0 2px white, 0 0 0 3px #9E472D;
+}
 .cartForm .cartForm-main .goCart:hover, .cartForm .cartForm-main .goCart:focus {
-	box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
+	box-shadow: 0 0 0 2px white, 0 0 0 3px #9E472D;
 }
 /*headings*/
 .fs-title {

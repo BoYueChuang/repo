@@ -254,7 +254,10 @@ main .account .account-content-form form input:hover{
         margin: 5px auto;
         line-height: 1;
     }
-    
+    #date{
+        width: 340px;
+
+    }
     
     main .account .account-content-form .checkMessage {
         text-align: left;

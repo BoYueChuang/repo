@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+    <style>
+
+/*-----------------best seller-----------------*/
+main .banner-bestSeller-rwd{
+    margin: 0 auto;
+    margin-top: 40px;
+    width: 100%;
+    max-width: 370px;
+}
+
+main .banner-bestSeller-rwd h2{
+    text-align: center;
+    font-size: 20px;
+    color: black;
+    margin: 20px auto 20px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+main .banner-product-bestSeller-rwd{
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+}
+
+
+main .banner-product-bestSeller-rwd li{
+    width: 110px;
+    padding: 1px;
+    background-color: white;
+}
+
+
+main .banner-product-bestSeller-rwd a{
+    text-decoration: none;
+}
+
+main .banner-product-bestSeller-rwd li:nth-child(2){
+    margin: 0 ;
+}
+
+main .banner-product-bestSeller-rwd img{
+    width: 100%;
+    display: block;
+    opacity: 1;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+main .banner-product-bestSeller-one-rwd{
+    position: relative;
+}
+
+main .banner-product-bestSeller-rwd p{
+    padding: 2px;
+    font-size: 8px;
+    line-height: 10px;
+    color: black;
+    text-align: center;
+}
+
+main .banner-product-bestSeller-rwd br + p{
+    margin-bottom: 10px;
+}
+
+main .banner-product-bestSeller-one-rwd:hover{
+    box-shadow: 0px 0px 0px rgba(31, 31, 31, 0.8);
+}
+
+main .banner-product-bestSeller-one-rwd:hover img{
+    opacity: 1;
+    background-color: black;
+}
+
+
+main .banner-bestSeller-rwd .banner-bestSeller-ReadMore-rwd{
+    display: block;
+    margin: 30px auto 20px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #9E472D;
+    line-height: 2;
+    width: 200px;
+    color: white;
+    letter-spacing: 1px;
+    font-weight: bold;
+    font-size: 10px;
+}
+
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <main>
+       <div class="banner-bestSeller-rwd swiper mySwiperBestSeller">
+        <h2>Best Seller</h2>
+        <ul class="banner-product-bestSeller-rwd swiper-wrapper" >
+
+            <li class="banner-product-bestSeller-one-rwd swiper-slide">
+                <a href="../Html/productIntroduce.html"><img src="../ALLITEMS/TENT/frontpageProductOne-one.jpeg" alt="">
+                    <p>TOUGH SCREEN 2-ROOM HOUSE MDX / CM-38139M000</p><br><p>NT$ 22000</p>
+                </a>
+            </li>
+
+
+
+            <li class="banner-product-bestSeller-one-rwd swiper-slide">
+                <a><img src="../ALLITEMS/TENT/frontpageProductTwo.jpeg" alt="">
+                    <p>TOUGH SCREEN 2-ROOM HOUSE MDX / CM-38139M000</p><br><p>NT$ 22000</p>
+                </a>
+            </li>
+
+
+            <li class="banner-product-bestSeller-one-rwd swiper-slide">
+                <a><img src="../ALLITEMS/TENT/frontpageProductThree.jpeg" alt="">
+                    <p>TOUGH SCREEN 2-ROOM HOUSE MDX / CM-38139M000</p><br><p>NT$ 22000</p>
+                </a>
+            </li>
+
+            
+            <li class="banner-product-bestSeller-one-rwd swiper-slide">
+                <a><img src="../ALLITEMS/TENT/frontpageProductTwo.jpeg" alt="">
+                    <p>TOUGH SCREEN 2-ROOM HOUSE MDX / CM-38139M000</p><br><p>NT$ 22000</p>
+                </a>
+            </li>
+
+        </ul>
+        <div class="swiper-pagination"></div>
+
+        <a href="../Html/productCategories.html" class="banner-bestSeller-ReadMore-rwd">READ MORE</a>
+    </div> 
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    
+    <script>
+    var swiper = new Swiper(".mySwiperBestSeller", {
+        effect: "cards",
+        grabCursor: true,
+      });
+    </script>
+</body>
+</html>

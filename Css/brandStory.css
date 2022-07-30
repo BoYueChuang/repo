@@ -78,7 +78,7 @@ main .main-brandstory-center{
     max-width: 1440px;
     width: 1440px;
     height: 1000px;
-    background-image: url("../pic/brandstory-center.png");
+    background-image: url("../pic/brandstory-center.jpg");
     display: flex;
     justify-content: center;
     align-items: center; 
@@ -208,7 +208,7 @@ main .main-brandstory-center{
     max-width: 414px;
     width: 100%;
     height: 100%;
-    background-image: url("../pic/brandstory-center.png");
+    background-image: url("../pic/brandstory-center.jpg");
 }
 
 
