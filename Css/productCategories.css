@@ -92,7 +92,38 @@ main .banner-bestSeller h2{
 main .banner-bestSeller-select{
     display: flex;
     justify-content: flex-end;
-    padding-right: 48px;
+    padding-right: 20px;
+}
+main .banner-bestSeller-select ul{
+    width: 250px;
+}
+
+main .banner-bestSeller-select a{
+    padding-left: 15px;
+}
+main .banner-bestSeller-select ul > li{
+    font-size: 20px;
+    line-height: 2;
+}
+main .banner-bestSeller-li {
+    border: 2px solid #D9D9D9;
+}
+main .banner-bestSeller-select ul li:last-child ul li{
+    border: 1px solid #D9D9D9;
+}
+main .banner-bestSeller-select ul li:last-child ul li{
+    border-top: 0px;
+}
+main .banner-bestSeller-li i{
+    margin-left: 110px;
+}
+
+main .banner-bestSeller-li a{
+    font-weight: 600;
+}
+
+main .banner-bestSeller-select ul li ul{
+    display: none;
 }
 
 main .banner-product-bestSeller{
@@ -265,7 +296,41 @@ main .banner-bestSeller h2{
 }
 
 main .banner-bestSeller-select{
-    padding-right: 8px;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 10px;
+    margin-top: 20px;
+}
+main .banner-bestSeller-select ul{
+    width: 150px;
+}
+
+main .banner-bestSeller-select a{
+    padding-left: 5px;
+}
+main .banner-bestSeller-select ul > li{
+    font-size: 12px;
+    line-height: 2;
+}
+main .banner-bestSeller-li {
+    border: 2px solid #D9D9D9;
+}
+main .banner-bestSeller-select ul li:last-child ul li{
+    border: 1px solid #D9D9D9;
+}
+main .banner-bestSeller-select ul li:last-child ul li{
+    border-top: 0px;
+}
+main .banner-bestSeller-li i{
+    margin-left: 65px;
+}
+
+main .banner-bestSeller-li a{
+    font-weight: 600;
+}
+
+main .banner-bestSeller-select ul li ul{
+    display: none;
 }
 
 main .banner-product-bestSeller{

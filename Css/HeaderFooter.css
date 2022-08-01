@@ -58,9 +58,11 @@ a{
     flex-direction: row;
     justify-content: center;
 }
-
+.nav-header-menu .nav-header-mainMenu-container ul{
+    width: 100%;
+}
 .nav-header-menu .nav-header-mainMenu-container li{
-    margin-right: 40px;
+    width: 130px;
 }
 
 .nav-header-mainMenu-container-cateLi{
@@ -70,9 +72,14 @@ a{
 .nav-header-menu .nav-header-mainMenu-container a{
     text-decoration: none;
     color: white;
-    font-size: 20px;
+    font-size: 18px;
     opacity: 1;
     letter-spacing: 1px;
+}
+
+.nav-header-mainMenu-container-firstLi a{
+    display: block;
+    padding-left: 15px;
 }
 .fa-bars{
     display: none;
@@ -87,7 +94,7 @@ a{
     margin-top: 30px;
     display: flex;
     flex-wrap: nowrap;
-    margin-left: 470px;
+    margin-left: 440px;
 }
 .nav-header-menu .nav-header-actionMenu-container li{
     margin-right: 15px;

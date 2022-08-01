@@ -191,13 +191,20 @@
                 <div class="banner-bestSeller">
                     <h2>ALL ITEMS</h2>
                     <div class="banner-bestSeller-select">
-                        <select>
-                            <option>商品排序</option>
-                            <option>上架時間：由新到舊</option>
-                            <option>上架時間：由舊到新</option>
-                            <option>價格：由高到低</option>
-                            <option>價格：由低到高</option>
-                        </select>
+                        <ul>
+                            <li class="banner-bestSeller-li">
+                                <a class="accordion" id="accordionThree">商品排序 <i class="fa-solid fa-angle-up" id="downThree"></i></a> 
+
+                            </li>
+                            <li>
+                                <ul id="panelThree" class="banner-bestSeller-ul">
+                                    <li><a>上架時間：由新到舊</a></li>
+                                    <li><a>上架時間：由舊到新</a></li>
+                                    <li><a>價格：由高到低</a></li>
+                                    <li><a>價格：由低到高</a></li>
+                                </ul>
+                            </li>
+                        </ul>
                     </div>
                     <ul class="banner-product-bestSeller">
 
@@ -398,22 +405,36 @@
             }
         });
 
+        var acc2 = document.getElementById("accordionThree");
+        acc2.addEventListener("click", function() {
+            console.log("123");
+            var panelThree = document.getElementById("panelThree");
+            var downThree = document.getElementById("downThree")
+            if (panelThree.style.display === "block") {
+                panelThree.style.display = "none";
+                downThree.style.transform = "rotate(0deg)";
+            } else {
+                panelThree.style.display = "block";
+                downThree.style.transform = "rotate(180deg)";
+            }
+        });
+
 
 
     
-    //加入購物車
-    const goCart = document.querySelector('.goCart');
-    goCart.addEventListener('click', function(){
-        console.log("123");
-    const cartWrapper = document.getElementById('cartWrapper');
+        //加入購物車
+        const goCart = document.querySelector('.goCart');
+        goCart.addEventListener('click', function(){
+            console.log("123");
+        const cartWrapper = document.getElementById('cartWrapper');
 
-    if (cartWrapper.style.display === 'none') {
-        cartWrapper.style.display = 'block';
-    } else {
+        if (cartWrapper.style.display === 'none') {
+            cartWrapper.style.display = 'block';
+        } else {
 
-        cartWrapper.style.display = 'none';
-    }
-    });
+            cartWrapper.style.display = 'none';
+        }
+        });
 
 
     </script>

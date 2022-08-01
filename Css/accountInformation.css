@@ -90,15 +90,15 @@ main .account .account-content .editPassword a{
 
 
 main .account-content .join{
-    padding: 5px 200px;
+    padding: 2px 200px;
     margin: 20px auto;
     color: white;
     background-color: #9E472D;
-    font-size: 16px;
-    line-height: 2.5;
+    font-size: 20px;
+    line-height:2;
     display: block;
     text-decoration: none;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
     text-align: center;
 }
 

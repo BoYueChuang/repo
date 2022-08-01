@@ -175,7 +175,7 @@
                     <label for="">密碼</label>
                     <a href="../Html/editPassword.html">設定新密碼</a>
                 </div>
-                <a class="join" href="">儲存</a>
+                <a class="join" id="save">儲存</a>
             </div>
         </div>
     </main>
@@ -228,6 +228,15 @@
             </div>
         </div>
     </footer>
+    <script src="../JS/sweetAlert.js"></script>
     <script src="../JS/headerfooter.js"></script>
+    <script>
+        const save = document.getElementById("save")
+        save.addEventListener("click", function(){
+            // console.log("123");
+            document.body.scrollTop = document.documentElement.scrollTop = 0;
+            swal("儲存成功!", "You clicked the button!", "success");
+        })
+    </script>
 </body>
 </html>
