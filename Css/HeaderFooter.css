@@ -335,6 +335,9 @@ footer .footer-grid-underLine{
         border-bottom:0.5px solid black ;
         font-weight: 500;
     }
+    .nav-header-menu .nav-header-mainMenu-container li{
+        margin-left: 0px;
+    }
 
     .nav-header-mainMenu-container .nav-header-mainMenu-container-firstLi{
         display: none;
