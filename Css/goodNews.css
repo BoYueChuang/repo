@@ -297,6 +297,9 @@ height: 100%;
 .demo .goodNews-one-text-scroll {
     padding-top: 70px;
 }
+.demo .goodNews-one-text-scroll a{
+    display: block;
+}
 .demo .goodNews-one-text-scroll span {
     position: absolute;
     top: 0;

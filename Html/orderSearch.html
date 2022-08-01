@@ -67,8 +67,8 @@
                 <h1>聯絡我們</h1>
                 <h2>謝謝您的主動聯絡，請留下要諮詢的問題，我們會用以下資訊進行回覆。</h2>
                 <input type="text" placeholder=" 請輸入電子郵件">
-                <textarea name="" id="" cols="30" rows="10" placeholder=" 請輸入您的訊息，若是詢問店內商品，請備註商品名稱"></textarea>
-                <button>發送</button>
+                <textarea name="" id="talk" cols="30" rows="10" maxlength="150" placeholder=" 請輸入您的訊息，若是詢問店內商品，請備註商品名稱"></textarea>
+                <p id="feedback"></p>                <button>發送</button>
             </form>
         </div>  
     </div>
@@ -234,5 +234,18 @@
         </div>
     </footer>
     <script src="../JS/headerfooter.js"></script>
+    <script src="../JS/jQuery3_2_1.js"></script>
+    <script>
+        $(function () {
+            let textMax = $('#talk').attr('maxlength')
+            $('#feedback').html(`<span style="color:red";>${textMax}</span> / 150`)
+            $('#talk').keyup(function(){
+                let textLength = $('#talk').val().length
+                $('#feedback').html(`<span style="color:red";>${textMax - textLength}</span> / 150`) //${表達式}
+            })
+
+            // console.log(textLength);
+        });	
+    </script>
 </body>
 </html>

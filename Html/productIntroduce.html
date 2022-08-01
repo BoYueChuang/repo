@@ -67,8 +67,8 @@
                     <h1>聯絡我們</h1>
                     <h2>謝謝您的主動聯絡，請留下要諮詢的問題，我們會用以下資訊進行回覆。</h2>
                     <input type="text" placeholder=" 請輸入電子郵件">
-                    <textarea name="" id="" cols="30" rows="10" placeholder=" 請輸入您的訊息，若是詢問店內商品，請備註商品名稱"></textarea>
-                    <button>發送</button>
+                    <textarea name="" id="talk" cols="30" rows="10" maxlength="150" placeholder=" 請輸入您的訊息，若是詢問店內商品，請備註商品名稱"></textarea>
+                    <p id="feedback"></p>                    <button>發送</button>
                 </form>
             </div>  
         </div>
@@ -354,9 +354,9 @@
             </div>
         </div>
     </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="../JS/zoom.js"></script>
 
+    <script src="../JS/jQuery3_2_1.js"></script>    
+    <script src="../JS/zoom.js"></script>
     <script src="../JS/headerfooter.js"></script>
     <script>
     var acc = document.getElementById("accordionOne");
@@ -409,22 +409,21 @@
 
     jQuery(function(){
     
-    if(!$.fn.imagezoomsl){
+        if(!$.fn.imagezoomsl){
+            $('.msg').show();
+            return;
+        }
+        else $('.msg').hide();
 
-        $('.msg').show();
-        return;
-    }
-    else $('.msg').hide();
-
-    // plugin initialization
-    $('.image').imagezoomsl({
-        innerzoommagnifier: true,
-        classmagnifier: "magnifier",
-        magnifycursor: 'crosshair',
-        magnifiersize: [100, 100],
-        // disables the scrolling of the document with the mouse wheel when the cursor is over the image
-        disablewheel: false
-    });
+        // plugin initialization
+        $('.image').imagezoomsl({
+            innerzoommagnifier: true,
+            classmagnifier: "magnifier",
+            magnifycursor: 'crosshair',
+            magnifiersize: [100, 100],
+            // disables the scrolling of the document with the mouse wheel when the cursor is over the image
+            disablewheel: false
+        });
     });
     
     
