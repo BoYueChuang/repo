@@ -457,6 +457,8 @@ footer .footer-grid-underLine{
     }
 
 /*-----------------footer故事-----------------*/
+
+
 footer .footer-grid-menu .footer-grid-menu-information{
     padding-top: 10px;
     height: 100%;
@@ -486,10 +488,6 @@ footer .footer-grid-menu .footer-grid-menu-information h1{
     letter-spacing: 1px;
 }
 
-footer .footer-grid-menu .footer-grid-menu-information p{
-    line-height: 20px;
-    letter-spacing: 1px;
-}
 
 /*-----------------footer關於我們-----------------*/
 
@@ -501,7 +499,11 @@ footer .footer-grid-menu .footer-grid-menu-information p{
 
 .footer-grid-menu-contact{
     display: none;
+
 }
+
+
+
 /*-----------------footerICON-----------------*/
 footer .footer-grid-menu .footer-grid-menu-icon{
     padding-left: 0px;

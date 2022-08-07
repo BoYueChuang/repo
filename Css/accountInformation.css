@@ -154,8 +154,11 @@ main .account .account-content-form form input:hover{
     }
     select{
         font-size: 14px;
-        padding: 10px;
+        padding:5px;
         margin-bottom: 20px;
+        background-color: white;
+        outline: 1px solid rgba(0, 0, 0, 0.3);
+        /* outline: none; */
     }
     main .account{
         max-width: 399px;

@@ -10,8 +10,8 @@
     <title>productIntroduce</title>
 </head>
 <body>
-   <!-- nav -->
-   <nav class="nav">
+<!-- nav -->
+<nav class="nav">
     <div class="nav-wrapper">
             <div class="nav-header-logo">
                 <a href="./frontPage.html"><img src="../LOGOVersion/1x/white.png" alt=""></a>
@@ -28,15 +28,15 @@
                             <ul class="nav-header-mainMenu-container-cateUl" id="humPanelOne">
                                 <li>
                                     <ul>
-                                        <li><a href="">TOP</a></li>
-                                        <li><a href="">BOTTOM</a></li>
-                                        <li><a href="">HAT</a></li>
+                                        <li><a href="../Html/productCategories.html">TOP</a></li>
+                                        <li><a href="../Html/productCategories.html">BOTTOM</a></li>
+                                        <li><a href="../Html/productCategories.html">HAT</a></li>
                                     </ul>
                                 </li>
                                 <li class="der">
                                     <ul>
-                                        <li><a href="">TENT</a></li>
-                                        <li><a href="">TRAP</a></li>
+                                        <li><a href="../Html/productCategories.html">TENT</a></li>
+                                        <li><a href="../Html/productCategories.html">TRAP</a></li>
                                         <li><a>UTENSILS</a></li>
                                     </ul>
                                 </li>
@@ -79,7 +79,7 @@
     <div class="cartWrapper"  id="cartWrapper" style="display: none;">
         <div class="cartInner" id="cartInner"></div>
         <div class="cart" id="showCart">
-            <div class="cart-modal">
+            <div class="cart-modal" >
                 <div class="cart-modal-content">
 
                     <div class="cart-modal-content-top">
@@ -97,22 +97,23 @@
                             <span>TOUGH SCREEN 2-ROOM HOUSE MDX / CM-38139M000</span>
                             <ul>
                                 <li><span>NT$ 22000 &nbsp x</span></li>
-                                <li><a href=""><i class="fa-solid fa-minus"></i></a></li>
-                                <li>1</li>
-                                <li><a href=""><i class="fa-solid fa-plus"></i></a></li>
+                                <li><a class="subtract"><i class="fa-solid fa-minus"></i></a></li>
+                                <li><span id="text" value="1">1</span></li>
+                                <li><a class="plus"><i class="fa-solid fa-plus"></i></a></li>
                             </ul>
                         </div>
                         <div class="cart-modal-content-main-cancel">
-                            <a><i class="fa-solid fa-xmark"></i></a>
+                            <a id="xmark"><i class="fa-solid fa-xmark"></i></a>
                         </div>
                     </div>
+                   
 
                     <div class="cart-modal-content-total">
                         <div class="cart-modal-content-total-title">
                             <span>合計:</span>
                         </div>
                         <div class="cart-modal-content-total-money">
-                            <span>NT$ 22000</span>
+                            <span>NT:</span><span id="money">22000</span>
                         </div>
                     </div>
 
@@ -124,7 +125,7 @@
                 </div>  
             </div>  
             </div>
-        </div>
+    </div>
 
     <!-- search -->   
     <div class="search" style="display: none;" id="search">
@@ -183,9 +184,9 @@
                     </div>
                     <div class="productIntroduce-template-productMain-quantity">
                         <ul>
-                            <li><a class="minus"><i class="fa-solid fa-minus"></i></a></li>
-                            <li><span class="count">1</span></li>
-                            <li><a id="pluss"><i class="fa-solid fa-plus"></i></a></li>
+                            <li><a id="reducePI"><i class="fa-solid fa-minus"></i></a></li>
+                            <li><span id="countPI">1</span></li>
+                            <li><a id="plusPI"><i class="fa-solid fa-plus"></i></a></li>
                         </ul>
                     </div>
                     <div class="productIntroduce-template-productMain-cart-followList">
@@ -357,6 +358,8 @@
 
     <script src="../JS/jQuery3_2_1.js"></script>    
     <script src="../JS/zoom.js"></script>
+    <script src="../JS/sweetAlert.js"></script>
+    <script src="../JS/smallCart.js"></script>
     <script src="../JS/headerfooter.js"></script>
     <script>
     var acc = document.getElementById("accordionOne");
@@ -425,6 +428,36 @@
             disablewheel: false
         });
     });
+
+    let reducePI = document.getElementById('reducePI')
+    reducePI.addEventListener('click',function(){
+        let countPI = document.getElementById('countPI')
+        console.log(countPI);
+        let one = 1
+        let countPTtext = countPI.innerText
+        console.log(countPTtext);
+        countPTtext -= one
+        countPI.innerText = countPTtext
+        if( countPI.innerText < 2){
+            countPI.innerText = 1
+    }
+
+    })
+
+    let plusPI = document.getElementById('plusPI')
+    plusPI.addEventListener('click',function(){
+        let countPI = document.getElementById('countPI')
+        console.log(countPI);
+        let one = 1
+        let countPTtext = Number(countPI.innerText)
+        console.log(countPTtext);
+        countPTtext += one
+        countPI.innerText = countPTtext
+    //     if( countPI.innerText < 2){
+    //         countPI.innerText = 1
+    // }
+
+    })
     
     
    

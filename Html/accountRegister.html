@@ -28,15 +28,15 @@
                             <ul class="nav-header-mainMenu-container-cateUl" id="humPanelOne">
                                 <li>
                                     <ul>
-                                        <li><a href="">TOP</a></li>
-                                        <li><a href="">BOTTOM</a></li>
-                                        <li><a href="">HAT</a></li>
+                                        <li><a href="../Html/productCategories.html">TOP</a></li>
+                                        <li><a href="../Html/productCategories.html">BOTTOM</a></li>
+                                        <li><a href="../Html/productCategories.html">HAT</a></li>
                                     </ul>
                                 </li>
                                 <li class="der">
                                     <ul>
-                                        <li><a href="">TENT</a></li>
-                                        <li><a href="">TRAP</a></li>
+                                        <li><a href="../Html/productCategories.html">TENT</a></li>
+                                        <li><a href="../Html/productCategories.html">TRAP</a></li>
                                         <li><a>UTENSILS</a></li>
                                     </ul>
                                 </li>
@@ -79,52 +79,70 @@
     <div class="cartWrapper"  id="cartWrapper" style="display: none;">
         <div class="cartInner" id="cartInner"></div>
         <div class="cart" id="showCart">
-        <div class="cart-modal">
-            <div class="cart-modal-content">
+            <div class="cart-modal" >
+                <div class="cart-modal-content">
 
-                <div class="cart-modal-content-top">
-                    <div class="cart-modal-content-top-title">購物車</div>
+                    <div class="cart-modal-content-top">
+                        <div class="cart-modal-content-top-title">購物車</div>
 
-                    <div class="cart-modal-content-top-xmark"><a id="closeCart"><i class="fa-solid fa-xmark"></i></a></div>
-                </div>
-                
-
-                <div class="cart-modal-content-main">
-                    <div class="cart-modal-content-main-img">
-                        <img src="../ALLITEMS/TENT/frontpageProductOne-one.jpeg" alt="">
+                        <div class="cart-modal-content-top-xmark"><a id="closeCart"><i class="fa-solid fa-xmark"></i></a></div>
                     </div>
-                    <div class="cart-modal-content-main-information">
-                        <span>TOUGH SCREEN 2-ROOM HOUSE MDX / CM-38139M000</span>
-                        <ul>
-                            <li><span>NT$ 22000 &nbsp x</span></li>
-                            <li><a href=""><i class="fa-solid fa-minus"></i></a></li>
-                            <li>1</li>
-                            <li><a href=""><i class="fa-solid fa-plus"></i></a></li>
-                        </ul>
-                    </div>
-                    <div class="cart-modal-content-main-cancel">
-                        <a><i class="fa-solid fa-xmark"></i></a>
-                    </div>
-                </div>
+                    
 
-                <div class="cart-modal-content-total">
-                    <div class="cart-modal-content-total-title">
-                        <span>合計:</span>
+                    <div class="cart-modal-content-main">
+                        <div class="cart-modal-content-main-img">
+                            <img src="../ALLITEMS/TENT/frontpageProductOne-one.jpeg" alt="">
+                        </div>
+                        <div class="cart-modal-content-main-information">
+                            <span>TOUGH SCREEN 2-ROOM HOUSE MDX / CM-38139M000</span>
+                            <ul>
+                                <li><span>NT$ 22000 &nbsp x</span></li>
+                                <li><a class="subtract"><i class="fa-solid fa-minus"></i></a></li>
+                                <li><span id="text" value="1">1</span></li>
+                                <li><a class="plus"><i class="fa-solid fa-plus"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="cart-modal-content-main-cancel">
+                            <a id="xmark"><i class="fa-solid fa-xmark"></i></a>
+                        </div>
                     </div>
-                    <div class="cart-modal-content-total-money">
-                        <span>NT$ 22000</span>
+                   
+
+                    <div class="cart-modal-content-total">
+                        <div class="cart-modal-content-total-title">
+                            <span>合計:</span>
+                        </div>
+                        <div class="cart-modal-content-total-money">
+                            <span>NT:</span><span id="money">22000</span>
+                        </div>
                     </div>
-                </div>
 
 
-                <div class="cart-modal-content-bill">
-                    <button onclick="location.href='../Html/cartSystem.html'">訂單結帳</button>
-                </div>
+                    <div class="cart-modal-content-bill">
+                        <button onclick="location.href='../Html/cartSystem.html'">訂單結帳</button>
+                    </div>
 
+                </div>  
             </div>  
-        </div>  
+            </div>
+        </div>
+    <!-- search -->   
+    <div class="search" style="display: none;" id="search">
+        <div class="searchInner" id="searchInner"></div>
+        <div class="search-modal" >
+            <div class="search-modal-content">
+                <form>
+                    <input type="text" placeholder="找商品" class="search-modal-content-text">
+
+                    <div class="search-modal-content-icon">
+                        <a href="" id="closeSearchbtn"><i class="fa-solid fa-xmark"></i></a>
+                        <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+                    </div>
+                </form>
+            </div>  
         </div>
     </div>
+
 
     <!-- search -->   
     <div class="search" style="display: none;" id="search">
@@ -170,7 +188,7 @@
                         <span id="alertEmail"></span>
                         <input type="password" placeholder="密碼(至少8個字元,1個字母和1個數字)" id="password">
                         <span id="alertPassword"></span>
-                        <input type="date">
+                        <input type="date"  value="2022-08-09">
 
                         <h2>商品資訊及優惠</h2>
                         <div class="checkMessage">
@@ -182,7 +200,7 @@
                             <label for="agree">我同意<a href="">網站服務條款及隱私政策</a></label>
                         </div>
                         <!-- <input type="submit" name="" id="" class="join" value="立即加入!" local.href="../Html/cartSystem.html"> -->
-                        <a class="join" href="../Html/accountInformation.html">立即加入!</a>
+                        <a class="join">立即加入!</a>
                     </form>
                 </div>
             </div>
@@ -238,75 +256,92 @@
         </div>
     </footer>
     <script src="../JS/headerfooter.js"></script>
+    <script src="../JS/sweetAlert.js"></script>
+    <script src="../JS/smallCart.js"></script>
     <script src="../JS/jQuery3_2_1.js"></script>
     <script>
         
         const name = document.querySelector("#name")
+        let alertNameTrue = true
         name.addEventListener("blur",function(){
         let pattern = /^[a-zA-Z][a-zA-Z0-9_]{4,15}/;
         let alertName = document.querySelector("#alertName")
         if(pattern.test(name.value)){
             alertName.innerHTML = ""
             name.style.border = "1px solid black";
+            alertNameTrue = true
         }else{
             alertName.innerHTML = "<span>請輸入正確的用戶名格式</span>"
             console.log(name.value);
             name.style.border = "2px solid red";
+            alertNameTrue = false
         }
         
         })
 
         const email = document.querySelector("#email")
+        let alertEmailTrue = true
         email.addEventListener("blur",function(){
             let alertEmail = document.querySelector("#alertEmail")
             let pattern =  /^((([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+(\.([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+)*)|((\x22)((((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(([\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|\x21|[\x23-\x5b]|[\x5d-\x7e]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(\\([\x01-\x09\x0b\x0c\x0d-\x7f]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))))*(((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(\x22)))@((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))$/i;
                 if(pattern.test(email.value)){
                     alertEmail.innerHTML = ""
                     email.style.border = "1px solid black";
+                    alertEmailTrue = true
                 }else{
                     alertEmail.innerHTML = "<span>請輸入正確的電子郵件格式</span>"
                     console.log(email.value);
                     email.style.border = "2px solid red";
+                    alertEmailTrue = false
                 }
                 return
         })
 
         const password = document.querySelector("#password")
+        let alertPasswordTrue = true
         password.addEventListener("blur",function(){
             let alertPassword = document.querySelector("#alertPassword")
             let pattern =  /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
                 if(pattern.test(password.value)){
                     alertPassword.innerHTML = ""
                     password.style.border = "1px solid black";
+                    alertPasswordTrue = true
                 }else{
                     alertPassword.innerHTML = "<span>請輸入正確的密碼格式</span>"
                     console.log(password.value);
                     password.style.border = "2px solid red";
+                    alertPasswordTrue = false
                 }
                 return
         })
 
+        const agree = document.getElementById('agree')
+        console.log(agree);
+        agree.addEventListener('click', function(){
+            console.log('123');
+            console.log(this.checked);
+        })
 
-        const agree = document.querySelector('#agree')
-        // subscription.addEventListener('click', function(){
-        //     console.log(subscription.checked);
-        // })
+        const subscription = document.querySelector('#subscription')
+        console.log(subscription);
+        subscription.addEventListener('click', function(){
+            console.log('123');
+            console.log(this.checked);
+        })
 
         const join = document.getElementsByClassName('join')[0]
         console.log(join);
-        join.addEventListener('click', function(e){
-            // e.preventDefault()
-            // console.log(password);
-           
-        const subscription = document.querySelector('#subscription')
-        console.log(subscription.checked);
-  
-        // if(subscription.checked == 'true'){
-        // console.log('123');
-        // }
+        join.addEventListener('click',function(e){
+            if(agree.checked == true && subscription.checked == true && alertNameTrue == true && alertEmailTrue == true && alertPasswordTrue == true){
+                console.log('true');
+                this.setAttribute("href", "../Html/accountInformation.html");
+            }else{
+                console.log('false');
+                swal("格式有誤", "You clicked the button!", "error");
+            }
 
-        //   e.preventDefault()
         })
+        
 
         $(function () {
             let textMax = $('#talk').attr('maxlength')
@@ -315,8 +350,6 @@
                 let textLength = $('#talk').val().length
                 $('#feedback').html(`<span style="color:red";>${textMax - textLength}</span> / 150`) //${表達式}
             })
-
-            // console.log(textLength);
         });	
     </script>
 </body>

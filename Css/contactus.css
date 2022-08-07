@@ -67,6 +67,8 @@
     margin: 10px 0;
     line-height: 3;
     padding: 5px;
+    outline: none;
+    border: 1px solid black;
 }
 
 .contactUS .contactUS-modal .contactUS-modal-content form textarea{
@@ -75,12 +77,14 @@
     line-height: 1.6;
     resize:none;
     padding: 5px;
+    border: 1px solid black;
 }
 .contactUS .contactUS-modal .contactUS-modal-content form p {
     margin-bottom: 20px;
     margin-top: 5px;
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
+    
 
 }
 .contactUS .contactUS-modal .contactUS-modal-content form button{

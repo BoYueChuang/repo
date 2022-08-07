@@ -29,15 +29,15 @@
                                 <ul class="nav-header-mainMenu-container-cateUl" id="humPanelOne">
                                     <li>
                                         <ul>
-                                            <li><a href="">TOP</a></li>
-                                            <li><a href="">BOTTOM</a></li>
-                                            <li><a href="">HAT</a></li>
+                                            <li><a href="../Html/productCategories.html">TOP</a></li>
+                                            <li><a href="../Html/productCategories.html">BOTTOM</a></li>
+                                            <li><a href="../Html/productCategories.html">HAT</a></li>
                                         </ul>
                                     </li>
                                     <li class="der">
                                         <ul>
-                                            <li><a href="">TENT</a></li>
-                                            <li><a href="">TRAP</a></li>
+                                            <li><a href="../Html/productCategories.html">TENT</a></li>
+                                            <li><a href="../Html/productCategories.html">TRAP</a></li>
                                             <li><a>UTENSILS</a></li>
                                         </ul>
                                     </li>
@@ -69,7 +69,8 @@
                     <h2>謝謝您的主動聯絡，請留下要諮詢的問題，我們會用以下資訊進行回覆。</h2>
                     <input type="text" placeholder=" 請輸入電子郵件">
                     <textarea name="" id="talk" cols="30" rows="10" maxlength="150" placeholder=" 請輸入您的訊息，若是詢問店內商品，請備註商品名稱"></textarea>
-                    <p id="feedback"></p>                    <button>發送</button>
+                    <p id="feedback"></p>                    
+                    <button>發送</button>
                 </form>
             </div>  
         </div>
@@ -80,7 +81,7 @@
     <div class="cartWrapper"  id="cartWrapper" style="display: none;">
         <div class="cartInner" id="cartInner"></div>
         <div class="cart" id="showCart">
-            <div class="cart-modal">
+            <div class="cart-modal" >
                 <div class="cart-modal-content">
 
                     <div class="cart-modal-content-top">
@@ -98,22 +99,23 @@
                             <span>TOUGH SCREEN 2-ROOM HOUSE MDX / CM-38139M000</span>
                             <ul>
                                 <li><span>NT$ 22000 &nbsp x</span></li>
-                                <li><a href=""><i class="fa-solid fa-minus"></i></a></li>
-                                <li>1</li>
-                                <li><a href=""><i class="fa-solid fa-plus"></i></a></li>
+                                <li><a class="subtract"><i class="fa-solid fa-minus"></i></a></li>
+                                <li><span id="text" value="1">1</span></li>
+                                <li><a class="plus"><i class="fa-solid fa-plus"></i></a></li>
                             </ul>
                         </div>
                         <div class="cart-modal-content-main-cancel">
-                            <a><i class="fa-solid fa-xmark"></i></a>
+                            <a id="xmark"><i class="fa-solid fa-xmark"></i></a>
                         </div>
                     </div>
+                   
 
                     <div class="cart-modal-content-total">
                         <div class="cart-modal-content-total-title">
                             <span>合計:</span>
                         </div>
                         <div class="cart-modal-content-total-money">
-                            <span>NT$ 22000</span>
+                            <span>NT:</span><span id="money">22000</span>
                         </div>
                     </div>
 
@@ -126,6 +128,23 @@
             </div>  
             </div>
         </div>
+    <!-- search -->   
+    <div class="search" style="display: none;" id="search">
+        <div class="searchInner" id="searchInner"></div>
+        <div class="search-modal" >
+            <div class="search-modal-content">
+                <form>
+                    <input type="text" placeholder="找商品" class="search-modal-content-text">
+
+                    <div class="search-modal-content-icon">
+                        <a href="" id="closeSearchbtn"><i class="fa-solid fa-xmark"></i></a>
+                        <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+                    </div>
+                </form>
+            </div>  
+        </div>
+    </div>
+
 
     <!-- search -->   
     <div class="search" style="display: none;" id="search">
@@ -155,13 +174,7 @@
         <div class="main-brandstory-header">
 
             <div class="main-brandstory-header-pic">
-                <img src="../pic/brandTitle.jpg" alt="" data-aos="fade-right"
-                data-aos="fade-right" 
-                
-                data-aos-duration="900"
-                data-aos-easing="ease-in-out"
-                data-aos-anchor-placement="top-center"
-                >
+                <img src="../pic/brandTitle.jpg" alt="">
             </div>
 
             <div class="main-brandstory-header-text">
@@ -171,8 +184,7 @@
         </div>
 
         <div class="main-brandstory-center" >
-            <div class="main-brandstory-center-p"  data-aos="fade-up"
-            data-aos-duration="1500">
+            <div class="main-brandstory-center-p">
             <p>It was in the early spring of 2020 that Glamping Outdoor® was established. For the first time, that the two managers, who are close friends, came across outdoor camping together and experienced the camping life they'd never had before. Nevertheless, they never thought that they would fall in love with nature at the first touch. As designers, they believe that outdoor camping can be fashionable and cool at the same time. With such spirit, Glamping Outdoor® design is started up. The essence of the logo design is based on the mountain. It symbolizes the magnificence of the mountain and the precious treasure of life, and represents that Glamping Outdoor® will continue to develop and innovate its own products.Some friends dont understand this. They dont understand how desperate I am to have someone say, I love you and I support you just the way you are because youre wonderful just the way you are. They dont understand that I cant remember anyone ever saying that to me.</p>
             </div>
         </div>
@@ -185,16 +197,11 @@
 
             <div class="main-brandstory-footer-pic">
                 <img src="../pic/brandfooter.jpg" alt="" 
-                data-aos="fade-left" 
-                data-aos-duration="900"
-                data-aos-anchor-placement="top-center"
                 >
             </div>
         </div>
 
-        <div class="main-brandstory-lastText"  data-aos="fade-up"
-        data-aos-anchor-placement="bottom-bottom" data-aos-delay="200"
-        >
+        <div class="main-brandstory-lastText">
             <h2>You may hold my hand for a while</h2>
             <h3>but you hold my heart forever</h3>
         </div>
@@ -250,10 +257,15 @@
         </div>
     </footer>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="../JS/sweetAlert.js"></script>
     <script src="../JS/headerfooter.js"></script>
+    <script src="../JS/smallCart.js"></script>
     <script src="../JS/jQuery3_2_1.js"></script>
     <script>
-        AOS.init();
+        
+            AOS.init();
+    
+      
         $(function () {
             let textMax = $('#talk').attr('maxlength')
             $('#feedback').html(`<span style="color:red";>${textMax}</span> / 150`)

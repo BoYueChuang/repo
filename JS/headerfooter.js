@@ -118,6 +118,7 @@ if (cartWrapper.style.display === 'none') {
 
 const navBar = document.getElementById('navBar');
 navBar.addEventListener('click', () => {
+    console.log('123');
 const headerMenu = document.getElementById('headerMenu');
 if (headerMenu.style.display === 'block') {
     headerMenu.style.display = 'none';

@@ -277,8 +277,12 @@ main .account .account-content-form form input:hover{
         width: 250px;
         margin: 15px auto;
         line-height: 2;
+        border: 0.5px solid black;
+        
+   
     }
-    
+    input:focus {
+        outline: none; }
     main .account .account-content-form form h2{
         font-size: 14px;
         font-weight: bold;

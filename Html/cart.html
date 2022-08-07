@@ -38,16 +38,17 @@
                             </ul>
                         </div>
                         <div class="cart-modal-content-main-cancel">
-                            <a><i class="fa-solid fa-xmark"></i></a>
+                            <a id="xmark"><i class="fa-solid fa-xmark"></i></a>
                         </div>
                     </div>
+                   
 
                     <div class="cart-modal-content-total">
                         <div class="cart-modal-content-total-title">
                             <span>合計:</span>
                         </div>
                         <div class="cart-modal-content-total-money">
-                            <span id="money" value="22000">NT$ 22000</span>
+                            <span>NT:</span><span id="money">22000</span>
                         </div>
                     </div>
 
@@ -95,6 +96,106 @@
                 cartWrapper.style.display = 'none';
             }
             });
+
+            let subtract = document.getElementsByClassName('subtract')[0];
+            subtract.addEventListener('click', function(e){
+                console.log('123');
+                let text = document.getElementById('text')
+
+                console.log(text);
+                let one = 1
+                let count =  text.innerText
+                count = count -  one
+
+                console.log(count);
+            
+                text.innerText = count
+                // console.log(typeof(count));
+            
+                if( text.innerText < 2){
+                    text.innerText = 1
+                }
+                console.log(text.innerText);
+
+                let money = document.getElementById('money')
+                console.log(money);
+
+                let moneyCount = Number(money.innerText)
+                console.log( typeof(moneyCount));
+               
+                let two =  22000
+                moneyCount -= two
+                console.log(moneyCount);
+                money.innerHTML = `${moneyCount}`
+
+
+                console.log(moneyCount);
+                console.log(money);
+
+                if( money.innerText < 22000){
+                    money.innerText = 22000
+                }
+
+
+
+            })
+
+            let plus = document.getElementsByClassName('plus')[0];
+            plus.addEventListener('click', function(e){
+                console.log('123');
+                let text = document.getElementById('text')
+
+                console.log(text);
+                let one = 1
+                let count =  Number(text.innerText)
+                count = count +  one
+
+                console.log(count);
+            
+                text.innerText = count
+                console.log(text.innerText);
+
+                let money = document.getElementById('money')
+                console.log(money);
+
+                let moneyCount = Number(money.innerText)
+                console.log( typeof(moneyCount));
+               
+                let two =  22000
+                moneyCount += two
+                console.log(moneyCount);
+                money.innerHTML = `${moneyCount}`
+
+
+                console.log(moneyCount);
+                console.log(money);
+                
+            })
+            let content_main_img = document.getElementsByClassName("cart-modal-content-main-img")[0];
+            let content_main_information = document.getElementsByClassName("cart-modal-content-main-information")[0];
+            let content_main_cancel= document.getElementsByClassName("cart-modal-content-main-cancel")[0];
+            let content_main_total= document.getElementsByClassName("cart-modal-content-total")[0];
+
+            let content_main = document.getElementsByClassName("cart-modal-content-main")[0];
+           
+            
+            let xmark = document.getElementById('xmark')
+            xmark.addEventListener('click', function(){
+                console.log('123');
+                let sure = true
+                if(confirm('確定要刪除')){
+                    content_main_img.style.display = 'none'
+                    content_main_information.style.display = 'none'
+                    content_main_cancel.style.display = 'none'
+                    content_main_total.style.display = 'none'
+                    content_main.style.borderBottom = 0
+                }else{
+
+                }
+                
+                
+            })
+
         </script>
 </body>
 </html>

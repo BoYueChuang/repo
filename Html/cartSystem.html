@@ -28,15 +28,15 @@
                                 <ul class="nav-header-mainMenu-container-cateUl" id="humPanelOne">
                                     <li>
                                         <ul>
-                                            <li><a href="">TOP</a></li>
-                                            <li><a href="">BOTTOM</a></li>
-                                            <li><a href="">HAT</a></li>
+                                            <li><a href="../Html/productCategories.html">TOP</a></li>
+                                            <li><a href="../Html/productCategories.html">BOTTOM</a></li>
+                                            <li><a href="../Html/productCategories.html">HAT</a></li>
                                         </ul>
                                     </li>
                                     <li class="der">
                                         <ul>
-                                            <li><a href="">TENT</a></li>
-                                            <li><a href="">TRAP</a></li>
+                                            <li><a href="../Html/productCategories.html">TENT</a></li>
+                                            <li><a href="../Html/productCategories.html">TRAP</a></li>
                                             <li><a>UTENSILS</a></li>
                                         </ul>
                                     </li>
@@ -79,7 +79,7 @@
     <div class="cartWrapper"  id="cartWrapper" style="display: none;">
         <div class="cartInner" id="cartInner"></div>
         <div class="cart" id="showCart">
-            <div class="cart-modal">
+            <div class="cart-modal" >
                 <div class="cart-modal-content">
 
                     <div class="cart-modal-content-top">
@@ -97,22 +97,23 @@
                             <span>TOUGH SCREEN 2-ROOM HOUSE MDX / CM-38139M000</span>
                             <ul>
                                 <li><span>NT$ 22000 &nbsp x</span></li>
-                                <li><a href=""><i class="fa-solid fa-minus"></i></a></li>
-                                <li>1</li>
-                                <li><a href=""><i class="fa-solid fa-plus"></i></a></li>
+                                <li><a class="subtract"><i class="fa-solid fa-minus"></i></a></li>
+                                <li><span id="text" value="1">1</span></li>
+                                <li><a class="plus"><i class="fa-solid fa-plus"></i></a></li>
                             </ul>
                         </div>
                         <div class="cart-modal-content-main-cancel">
-                            <a><i class="fa-solid fa-xmark"></i></a>
+                            <a id="xmark"><i class="fa-solid fa-xmark"></i></a>
                         </div>
                     </div>
+                   
 
                     <div class="cart-modal-content-total">
                         <div class="cart-modal-content-total-title">
                             <span>合計:</span>
                         </div>
                         <div class="cart-modal-content-total-money">
-                            <span>NT$ 22000</span>
+                            <span>NT:</span><span id="money">22000</span>
                         </div>
                     </div>
 
@@ -124,7 +125,7 @@
                 </div>  
             </div>  
             </div>
-        </div>
+    </div>
 
     <!-- search -->   
     <div class="search" style="display: none;" id="search">
@@ -532,6 +533,7 @@
 
 <script src="../JS/headerfooter.js"></script>
 <script src="../JS/sweetAlert.js"></script>
+<script src="../JS/smallCart.js"></script>
 <script src="../JS/jQuery3_2_1.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js" integrity="sha512-0QbL0ph8Tc8g5bLhfVzSqxe9GERORsKhIn1IrpxDAgUsbBGz/V7iSav2zzW325XGd1OMLdL4UiqRJj702IeqnQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script>

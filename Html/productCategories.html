@@ -10,8 +10,8 @@
     <title>productCategories</title>
 </head>
 <body>
-   <!-- nav -->
-   <nav class="nav">
+<!-- nav -->
+<nav class="nav">
     <div class="nav-wrapper">
             <div class="nav-header-logo">
                 <a href="./frontPage.html"><img src="../LOGOVersion/1x/white.png" alt=""></a>
@@ -28,15 +28,15 @@
                             <ul class="nav-header-mainMenu-container-cateUl" id="humPanelOne">
                                 <li>
                                     <ul>
-                                        <li><a href="">TOP</a></li>
-                                        <li><a href="">BOTTOM</a></li>
-                                        <li><a href="">HAT</a></li>
+                                        <li><a href="../Html/productCategories.html">TOP</a></li>
+                                        <li><a href="../Html/productCategories.html">BOTTOM</a></li>
+                                        <li><a href="../Html/productCategories.html">HAT</a></li>
                                     </ul>
                                 </li>
                                 <li class="der">
                                     <ul>
-                                        <li><a href="">TENT</a></li>
-                                        <li><a href="">TRAP</a></li>
+                                        <li><a href="../Html/productCategories.html">TENT</a></li>
+                                        <li><a href="../Html/productCategories.html">TRAP</a></li>
                                         <li><a>UTENSILS</a></li>
                                     </ul>
                                 </li>
@@ -79,7 +79,7 @@
 <div class="cartWrapper"  id="cartWrapper" style="display: none;">
     <div class="cartInner" id="cartInner"></div>
     <div class="cart" id="showCart">
-        <div class="cart-modal">
+        <div class="cart-modal" >
             <div class="cart-modal-content">
 
                 <div class="cart-modal-content-top">
@@ -97,22 +97,23 @@
                         <span>TOUGH SCREEN 2-ROOM HOUSE MDX / CM-38139M000</span>
                         <ul>
                             <li><span>NT$ 22000 &nbsp x</span></li>
-                            <li><a href=""><i class="fa-solid fa-minus"></i></a></li>
-                            <li>1</li>
-                            <li><a href=""><i class="fa-solid fa-plus"></i></a></li>
+                            <li><a class="subtract"><i class="fa-solid fa-minus"></i></a></li>
+                            <li><span id="text" value="1">1</span></li>
+                            <li><a class="plus"><i class="fa-solid fa-plus"></i></a></li>
                         </ul>
                     </div>
                     <div class="cart-modal-content-main-cancel">
-                        <a><i class="fa-solid fa-xmark"></i></a>
+                        <a id="xmark"><i class="fa-solid fa-xmark"></i></a>
                     </div>
                 </div>
+               
 
                 <div class="cart-modal-content-total">
                     <div class="cart-modal-content-total-title">
                         <span>合計:</span>
                     </div>
                     <div class="cart-modal-content-total-money">
-                        <span>NT$ 22000</span>
+                        <span>NT:</span><span id="money">22000</span>
                     </div>
                 </div>
 
@@ -124,24 +125,24 @@
             </div>  
         </div>  
         </div>
-    </div>
+</div>
 
-    <!-- search -->   
-    <div class="search" style="display: none;" id="search">
-        <div class="searchInner" id="searchInner"></div>
-        <div class="search-modal" >
-            <div class="search-modal-content">
-                <form>
-                    <input type="text" placeholder="找商品" class="search-modal-content-text">
+<!-- search -->   
+<div class="search" style="display: none;" id="search">
+    <div class="searchInner" id="searchInner"></div>
+    <div class="search-modal" >
+        <div class="search-modal-content">
+            <form>
+                <input type="text" placeholder="找商品" class="search-modal-content-text">
 
-                    <div class="search-modal-content-icon">
-                        <a href="" id="closeSearchbtn"><i class="fa-solid fa-xmark"></i></a>
-                        <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
-                    </div>
-                </form>
-            </div>  
-        </div>
+                <div class="search-modal-content-icon">
+                    <a href="" id="closeSearchbtn"><i class="fa-solid fa-xmark"></i></a>
+                    <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+                </div>
+            </form>
+        </div>  
     </div>
+</div>
 
    <!-----------------------main----------------------->
 
@@ -213,7 +214,7 @@
                                 <p>TOUGH SCREEN 2-ROOM HOUSE MDX / CM-38139M000</p><br><p>NT$ 22000</p>
                             </a>
                             <div class="banner-product-bestSeller-middle">
-                                <a class="goCart"><i class="fa-solid fa-cart-shopping"></i>Add To Cart</a>
+                                <a class="goCart"><i class="fa-solid fa-cart-shopping" ></i>Add To Cart</a>
                             </div>                       
                         </li>
 
@@ -375,7 +376,10 @@
     </footer>
 
     <script src="../JS/headerfooter.js"></script>
+    <script src="../JS/smallCart.js"></script>
+    <script src="../JS/sweetAlert.js"></script>
     <script src="../JS/jQuery3_2_1.js"></script>
+    
     <script>
         var acc = document.getElementById("accordionOne");
         acc.addEventListener("click", function() {
@@ -420,19 +424,11 @@
         });
 
         //加入購物車
-        const goCart = document.querySelector('.goCart');
-        goCart.addEventListener('click', function(){
-            console.log("123");
-        const cartWrapper = document.getElementById('cartWrapper');
 
-        if (cartWrapper.style.display === 'none') {
-            cartWrapper.style.display = 'block';
-        } else {
-
-            cartWrapper.style.display = 'none';
-        }
-        });
-
+        $('#goCart').click(function(){
+            $('#cartWrapper').slideToggle()
+        })
+       
         $(function () {
             let textMax = $('#talk').attr('maxlength')
             $('#feedback').html(`<span style="color:red";>${textMax}</span> / 150`)
