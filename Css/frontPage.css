@@ -329,6 +329,35 @@ main .banner-brandStory  .banner-brandStory-text h2{
         
     }
 }
+
+@media screen and (max-width: 1520px){
+    .imageGallerySlider{
+        display: flex;
+        justify-content: center;
+        margin: 270px auto 0px;
+        max-width: 1000px;
+        
+    }
+    main .banner{
+        max-width: 1520px;
+        width: 100%;
+        height: 900px;
+    }
+
+    main .banner .banner-text{
+        position: relative;
+        top: 58%;
+        left: 5%;
+    }
+
+    .imageGallerySlider{
+        display: flex;
+        justify-content: center;
+        margin: 65px auto 0px;
+        max-width: 1000px;
+        
+    }
+}
 @media screen and (max-width: 1440px){
     .imageGallerySlider{
         display: flex;
