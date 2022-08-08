@@ -363,15 +363,15 @@
                             </div>
                             <div class="cart-modal-content-form-address">
                                 <label for="deliverWay">送貨地址</label>
-                                <div class="cart-modal-content-form-deliverAddress">
-                                    <select name="" id="" class="cart-modal-content-form-deliverCounty">
+                                <div class="cart-modal-content-form-deliverAddress" id="cartTwzipcode">
+                                    <!-- <select name="" id="" class="cart-modal-content-form-deliverCounty">
                                         <option value="">縣市</option>
                                         <option value="">新北市</option>
                                     </select>
                                     <select name="" id="" class="cart-modal-content-form-deliverPlace">
                                         <option value="">地區</option>
                                         <option value="">板橋區</option>
-                                    </select>
+                                    </select> -->
                                 </div>  
                                 <input type="text" name="" id="deliverWay"  placeholder="請輸入地址">
                             </div>
@@ -382,7 +382,12 @@
                         <h3>付款資料</h3>
                     </div>
                     <div class="cart-modal-content-form-patInformation"> 
-                            <input type="text" placeholder="卡號">
+                            <div class="cart-modal-content-form-patInformation-card">
+                                <input type="text" placeholder="卡號" maxlength="4" class="card">
+                                <input type="text" placeholder="卡號" maxlength="4" class="card">
+                                <input type="text" placeholder="卡號" maxlength="4" class="card">
+                                <input type="text" placeholder="卡號" maxlength="4" class="card">
+                            </div>
                             <input type="text" placeholder="持卡人姓名">
                             <input type="text" placeholder="有效期(MM/YY)">
                             <input type="text" placeholder="安全碼">
@@ -538,7 +543,9 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery-twzipcode@1.7.14/jquery.twzipcode.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js" integrity="sha512-0QbL0ph8Tc8g5bLhfVzSqxe9GERORsKhIn1IrpxDAgUsbBGz/V7iSav2zzW325XGd1OMLdL4UiqRJj702IeqnQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script>
+
     $("#twzipcode").twzipcode();
+    $("#cartTwzipcode").twzipcode();
     
     var current_fs, next_fs, previous_fs; //fieldsets
     var left, opacity, scale; //fieldset properties which we will animate
@@ -629,6 +636,44 @@
 
         // console.log(textLength);
     });	
+
+    document.addEventListener("DOMContentLoaded",function(e){
+        var cards = document.getElementsByClassName("card");
+        // console.log(cards);
+        for(let i = 0; i < cards.length; i++){
+            // console.log(i);
+            cards[i].addEventListener("keydown", function(e){
+                // e.preventDefault();
+                // console.log(e.which);
+                if((e.which>=48 && e.which<=57) || e.which == 8){
+                    // console.log(e.target.value.length);
+                    if( e.target.value.length == 0 && e.which == 8){
+                        // console.log(this);
+                        let previous_el = this.previousElementSibling;
+                        console.log(previous_el);
+                        previous_el.focus();
+                    }
+                }else{
+                    e.preventDefault();
+                    
+                }
+            })
+            cards[i].addEventListener("keyup", function(e){
+                // console.log(e.target.value);
+                let str = (e.target.value).replace(/\D/g, "");
+                // console.log(str);
+                e.target.value = str;
+                // console.log(str.length);
+                if(e.target.value.length == 4){
+                    let next_el = this.nextElementSibling;
+                    // console.log(next_el);
+                    if(next_el){
+                        next_el.focus()
+                    }
+                } 
+            })
+        }
+    })
 </script>
 </body>
 </html>

@@ -386,6 +386,21 @@
 	margin: 20px;
 }
 
+.cart-modal-content-form-patInformation-card{
+	max-width: 310px;
+	width: 308px;
+	display: flex;
+	margin: 0 auto;
+}
+
+.cart-modal-content-form-patInformation .cart-modal-content-form-patInformation-card input{
+	width: 65px;
+	
+	margin: 30px 8px 20px 0;
+	/* margin-right: 8px; */
+	text-align: center;
+}
+
 /* 索取發票 */
 .cart-modal-content-form .cart-modal-content-formFive{
 	display: flex;
