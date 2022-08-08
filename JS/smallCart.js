@@ -14,7 +14,7 @@ subtract.addEventListener('click', function(e){
     text.innerText = count
     // console.log(typeof(count));
 
-    if( text.innerText < 2){
+    if( text.innerText < 1){
         text.innerText = 1
         swal("單位數量不能小於 1", "You clicked the button!", "warning");
     }
@@ -52,11 +52,17 @@ plus.addEventListener('click', function(e){
     let one = 1
     let count =  Number(text.innerText)
     count = count +  one
-
+    
     console.log(count);
 
     text.innerText = count
     console.log(text.innerText);
+
+    if( count > 5){
+        count = 5
+        text.innerText = 5
+        swal("單位數量已超過庫存", "You clicked the button!", "warning");
+    }
 
     let money = document.getElementById('money')
     console.log(money);
@@ -68,6 +74,11 @@ plus.addEventListener('click', function(e){
     moneyCount += two
     console.log(moneyCount);
     money.innerHTML = `${moneyCount}`
+    
+    if( money.innerText >= 110000){
+        money.innerText = 110000
+    }
+    
 
 
     console.log(moneyCount);

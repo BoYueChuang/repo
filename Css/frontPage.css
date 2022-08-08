@@ -78,6 +78,7 @@ main .banner-product{
     margin-top: 75px;
     max-width: 1000px;
     width: 100%;
+  
 }
 
 main .banner-product .banner-product-apparel{
@@ -88,6 +89,8 @@ main .banner-product .banner-product-apparel{
     height: 490px;
     max-width: 490px;
     background-size: cover;
+    position: relative;
+    
 }
 
 main .banner-product .banner-product-camping{
@@ -97,11 +100,14 @@ main .banner-product .banner-product-camping{
     height: 490px;
     max-width: 490px;
     background-size: cover;
+    position: relative;
 }
 
-main .banner-product h1{
-    width: 100%;
-    height: 100%;
+main  .banner-product .banner-product-apparel h1{
+    position: absolute;
+    top: 310px;
+    left: 50%;
+    transform: translate(-50%, -50%);
     line-height: 40px;
     color: white;
     font-weight: bold;
@@ -109,7 +115,20 @@ main .banner-product h1{
     font-size: 32px;
     letter-spacing: 5px;
     display: block;
-    padding-top: 334px;
+}
+
+main  .banner-product .banner-product-camping h1{
+    position: absolute;
+    top: 310px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 40px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    font-size: 32px;
+    letter-spacing: 5px;
+    display: block;
 }
 main .banner-product a{
     display: block;
@@ -404,6 +423,7 @@ main .banner-product .banner-product-apparel{
     height: 180px;
     max-width: 180px;
     background-size: cover;
+    position: relative;
 }
 
 main .banner-product .banner-product-camping{
@@ -413,11 +433,14 @@ main .banner-product .banner-product-camping{
     height: 180px;
     max-width: 180px;
     background-size: cover;
+    position: relative;
 }
 
-main .banner-product h1{
-    width: 100%;
-    height: 100%;
+main .banner-product .banner-product-apparel h1{
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translate(-50%, -50%);
     line-height: 20px;
     color: white;
     font-weight: bold;
@@ -425,7 +448,20 @@ main .banner-product h1{
     font-size: 14px;
     letter-spacing: 3px;
     display: block;
-    padding-top: 100px;
+}
+
+main  .banner-product .banner-product-camping h1{
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 20px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    font-size: 14px;
+    letter-spacing: 3px;
+    display: block;
 }
 main .banner-product a{
     display: block;

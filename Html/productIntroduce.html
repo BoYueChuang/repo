@@ -438,7 +438,7 @@
         console.log(countPTtext);
         countPTtext -= one
         countPI.innerText = countPTtext
-        if( countPI.innerText < 2){
+        if( countPI.innerText < 1){
             countPI.innerText = 1
             swal("單位數量不能小於 1", "You clicked the button!", "warning");
     }
@@ -454,6 +454,12 @@
         console.log(countPTtext);
         countPTtext += one
         countPI.innerText = countPTtext
+        if( countPTtext > 5){
+            countPTtext = 5
+            countPI.innerText = 5
+        swal("單位數量已超過庫存", "You clicked the button!", "warning");
+    }
+
     //     if( countPI.innerText < 2){
     //         countPI.innerText = 1
     // }
