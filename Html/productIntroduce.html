@@ -66,9 +66,10 @@
                     <a href="" id="closeContactUSbtn"><i class="fa-solid fa-xmark"></i></a>
                     <h1>聯絡我們</h1>
                     <h2>謝謝您的主動聯絡，請留下要諮詢的問題，我們會用以下資訊進行回覆。</h2>
-                    <input type="text" placeholder=" 請輸入電子郵件">
+                    <input type="text" placeholder=" 請輸入電子郵件" id="emailContact">
                     <textarea name="" id="talk" cols="30" rows="10" maxlength="150" placeholder=" 請輸入您的訊息，若是詢問店內商品，請備註商品名稱"></textarea>
-                    <p id="feedback"></p>                    <button>發送</button>
+                    <p id="feedback"></p>                    
+                    <button id="sendContact">發送</button>
                 </form>
             </div>  
         </div>
@@ -226,7 +227,7 @@
                                     規格：前庭、紗門、透氣循環、網狀置物袋、電線導口、側邊窗、營燈掛勾、吊掛式內帳
                                     耐水壓：外帳／約2,000mm （臥室 ）、約2,000mm （客廳 ）、地板／約2,000mm
                                     附屬配件：前庭柱×2、營釘、營繩、營鎚、收納袋
-                                        </p>
+                                </p>
                         </div>
                     </div>
 
@@ -360,6 +361,7 @@
     <script src="../JS/zoom.js"></script>
     <script src="../JS/sweetAlert.js"></script>
     <script src="../JS/smallCart.js"></script>
+    <script src="../JS/account.js"></script>
     <script src="../JS/headerfooter.js"></script>
     <script>
     var acc = document.getElementById("accordionOne");
@@ -460,11 +462,19 @@
         swal("單位數量已超過庫存", "You clicked the button!", "warning");
     }
 
-    //     if( countPI.innerText < 2){
-    //         countPI.innerText = 1
-    // }
 
     })
+
+    $(function () {
+        let textMax = $('#talk').attr('maxlength')
+        $('#feedback').html(`<span style="color:red";>${textMax}</span> / 150`)
+        $('#talk').keyup(function(){
+            let textLength = $('#talk').val().length
+            $('#feedback').html(`<span style="color:red";>${textMax - textLength}</span> / 150`) //${表達式}
+        })
+
+        // console.log(textLength);
+    });	
     
     
    
