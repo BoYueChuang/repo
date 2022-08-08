@@ -298,18 +298,21 @@
 	margin: 0 auto;
 }
 .cart-modal-content-form-deliverAddress{
+	max-width: 306px;
+	width: 306px;
 	display: flex;
 	justify-content: space-between;
 	margin: 10px 0;
 }
 
-.cart-modal-content-form-deliverAddress .cart-modal-content-form-deliverCounty{
-	width: 140px;
+.cart-modal-content-form-address .cart-modal-content-form-deliverAddress input{
+	width: 173px;
 }
 
-.cart-modal-content-form-deliverAddress .cart-modal-content-form-deliverPlace{
-	width: 140px;
+.cart-modal-content-form-address .cart-modal-content-form-deliverAddress select{
+	width: 65px;
 }
+
 
 
 .cart-modal-content-form-addressWay{
@@ -767,25 +770,15 @@
 	}
 	
 	.cart-modal-content-form-address{
-		width: 306px;
+		width: 300px;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		margin: 0 auto;
 	}
-	.cart-modal-content-form-deliverAddress{
-		display: flex;
-		justify-content: space-between;
-		margin: 10px 0;
-	}
+
 	
-	.cart-modal-content-form-deliverAddress .cart-modal-content-form-deliverCounty{
-		width: 140px;
-	}
-	
-	.cart-modal-content-form-deliverAddress .cart-modal-content-form-deliverPlace{
-		width: 140px;
-	}
+
 	
 	
 	.cart-modal-content-form-addressWay{
@@ -949,6 +942,38 @@
 		margin: 10px;
 		flex-grow: 1;	
 	}
+
+	.cart-modal-content-form-patInformation-card{
+		max-width: 310px;
+		width: 308px;
+		display: flex;
+		justify-content: space-between;
+		margin: 0 auto;
+	}
+	
+	.cart-modal-content-form-patInformation .cart-modal-content-form-patInformation-card input{
+		width: 58px;
+		margin: 30px 0px 20px 0;
+		/* margin-right: 8px; */
+		text-align: center;
+	}
+	.cart-modal-content-form-address .cart-modal-content-form-deliverAddress input{
+		width: 70px;
+	}
+	.cart-modal-content-form-address .cart-modal-content-form-deliverAddress select{
+		width: 80px;
+	}
+	.cart-modal-content-form-deliverAddress{
+		max-width: 306px;
+		width: 306px;
+		display: flex;
+		justify-content: space-between;
+		margin: 10px 0;
+	}
+
+
+
+
 }
 
 
