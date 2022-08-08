@@ -166,9 +166,9 @@
                 <div class="account-content-form">
                     <form action="">
                         <h1>請輸入你的登入資訊</h1>
-                        <input type="text" placeholder="電郵或手機號碼">
-                        <input type="password" placeholder="密碼">
-                        <a href="../Html/productCategories.html">開始購物吧!</a>
+                        <input type="text" placeholder="電郵或手機號碼" id="phoneACC">
+                        <input type="password" placeholder="密碼" id="passwordACC">
+                        <a id="shopACC">開始購物吧!</a>
                     </form>
                     <div class="account-content-form-forget">
                         <a href="../Html/forgetPassword.html">忘記密碼?</a>
@@ -247,6 +247,27 @@
         
         
         
+
+        shopACC.addEventListener("click",function(){
+        let phoneACC = document.getElementById("phoneACC")
+        let passwordACC = document.getElementById("passwordACC")
+
+        let patternEmail =  /^((([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+(\.([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+)*)|((\x22)((((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(([\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|\x21|[\x23-\x5b]|[\x5d-\x7e]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(\\([\x01-\x09\x0b\x0c\x0d-\x7f]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))))*(((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(\x22)))@((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))$/i;
+        let patternPhone =  /^(09)[0-9]{8}$/;
+        let patternPassword =  /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
+
+        if(patternEmail.test(phoneACC.value) || patternPhone.test(phoneACC.value) && patternPassword.test(passwordACC.value)){
+            this.setAttribute("href", "../Html/productCategories.html");
+            phoneACC.value = ""
+            passwordACC.value = ""
+        }else{
+            phoneACC.value = ""
+            passwordACC.value = ""
+            swal("帳密錯誤", "You clicked the button!", "error");
+
+        }
+        return
+        })
 
         
       
