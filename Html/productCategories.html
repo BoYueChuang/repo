@@ -214,7 +214,7 @@
                                 <p>TOUGH SCREEN 2-ROOM HOUSE MDX / CM-38139M000</p><br><p>NT$ 22000</p>
                             </a>
                             <div class="banner-product-bestSeller-middle">
-                                <a class="goCart"><i class="fa-solid fa-cart-shopping" ></i>Add To Cart</a>
+                                <a class="goCart" ><i class="fa-solid fa-cart-shopping" ></i>Add To Cart</a>
                             </div>                       
                         </li>
 
@@ -425,9 +425,19 @@
 
         //加入購物車
 
-        $('#goCart').click(function(){
-            $('#cartWrapper').slideToggle()
-        })
+        const goCart = document.querySelector('.goCart');
+        goCart.addEventListener('click', function(){
+            console.log("123");
+        const cartWrapper = document.getElementById('cartWrapper');
+
+        if (cartWrapper.style.display === 'none') {
+            cartWrapper.style.display = 'block';
+        } else {
+
+            cartWrapper.style.display = 'none';
+        }
+        });
+
        
         $(function () {
             let textMax = $('#talk').attr('maxlength')
