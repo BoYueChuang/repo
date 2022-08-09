@@ -137,7 +137,7 @@ main .productIntroduce-template-productMain-cart-followList{
 /*-----------------productIntroduce-template-productMain-cart-----------------*/
 
 main .productIntroduce-template-productMain .productIntroduce-template-productMain-cart{
-    background-color: #9E472D;
+    background-color: white;
     border: 1px solid #9E472D;
     width: 48%;
 }
@@ -145,7 +145,7 @@ main .productIntroduce-template-productMain .productIntroduce-template-productMa
 
 main .productIntroduce-template-productMain .productIntroduce-template-productMain-cart a{
     display: block;
-    color: white;
+    color: #9E472D;
     text-decoration: none;
     line-height: 2;
     text-align: center;
@@ -153,8 +153,13 @@ main .productIntroduce-template-productMain .productIntroduce-template-productMa
     height: auto;
 }
 
+main .productIntroduce-template-productMain .productIntroduce-template-productMain-cart:hover{
+    background-color: #9E472D;
+}
+
 main .productIntroduce-template-productMain .productIntroduce-template-productMain-cart a:hover,main .productIntroduce-template-productMain .productIntroduce-template-productMain-cart a:focus {
 	box-shadow: 0 0 0 2px white, 0 0 0 3px #9E472D;
+    color: white;
 }
 main .productIntroduce-template-productMain .productIntroduce-template-productMain-cart a i{
     padding-right: 20px;
@@ -176,8 +181,12 @@ main .productIntroduce-template-productMain .productIntroduce-template-productMa
     width: 100%;
     height: auto;
 }
+main .productIntroduce-template-productMain .productIntroduce-template-productMain-followList:hover{
+    background-color: #9E472D;
+}
 main .productIntroduce-template-productMain .productIntroduce-template-productMain-followList a:hover,main .productIntroduce-template-productMain .productIntroduce-template-productMain-followList a:focus {
 	box-shadow: 0 0 0 2px white, 0 0 0 3px #9E472D;
+    color: white;
 }
 
 main .productIntroduce-template-productMain .productIntroduce-template-productMain-followList a i{
@@ -552,7 +561,8 @@ main .productIntroduce-template-productMain .productIntroduce-template-productMa
 
 main .productIntroduce-template-productMain .productIntroduce-template-productMain-cart a{
     display: block;
-    color: white;
+    background-color:white;
+    color: #9E472D;
     text-decoration: none;
     line-height: 2;
     text-align: center;
@@ -562,6 +572,8 @@ main .productIntroduce-template-productMain .productIntroduce-template-productMa
 
 main .productIntroduce-template-productMain .productIntroduce-template-productMain-cart a:hover,main .productIntroduce-template-productMain .productIntroduce-template-productMain-cart a:focus {
 	box-shadow: 0 0 0 2px white, 0 0 0 3px #9E472D;
+    background-color:#9E472D;
+    color: white;
 }
 main .productIntroduce-template-productMain .productIntroduce-template-productMain-cart a i{
     padding-right: 20px;
